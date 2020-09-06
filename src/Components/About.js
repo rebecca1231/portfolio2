@@ -1,4 +1,5 @@
 import React from "react";
+import myFace from '../myFace.jpeg'
 
 const About = () => {
   return (
@@ -13,6 +14,7 @@ const About = () => {
         I'm a full stack developer.
       </div>{" "}
       <div >
+          <img src={myFace} alt="face" style={{maxWidth:"10rem", borderRadius:"50%"}} />
         <p style={{lineHeight:1.5}}>
           I often use React, Node JS, and MongoDB to build web applications with
           responsive design and proper functionality. I have experience with
