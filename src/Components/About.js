@@ -1,5 +1,6 @@
 import React from "react";
 import myFace from '../myFace.jpeg'
+import EmWaterfall from '../EmWaterfall.jpeg'
 
 const About = () => {
   return (
@@ -27,7 +28,10 @@ const About = () => {
           form of MongoDB. Check it out here. It's part of the Microservices and
           Api challenges on Free Code Camp. I intend to use the knowledge I
           gained from making this simple Api to create more complex and
-          interactive sites in the future. When I'm not learning something new
+          interactive sites in the future. 
+          </p>
+          <img src={EmWaterfall} style={{display: "inline", maxWidth:"15rem", borderRadius:"10%"}} />
+          <p>When I'm not learning something new
           chances are I'm playing with my fluffy dog. She loves to fetch and
           learn new tricks. Tummy rubs are also a major theme. image of my dog!
         </p>
