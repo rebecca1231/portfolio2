@@ -1,0 +1,72 @@
+.box {
+    display: flex;
+  }
+  
+  #top {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  h1 {
+    font-family: "Lobster Two";
+    font-size: 3rem;
+    margin: 1rem;
+  }
+  
+  h2 {
+    margin-left: 2.5rem;
+  }
+  
+  h3,
+  h2 {
+    font-family: Merriweather;
+  }
+  
+  h3 {
+    line-height: 1.5;
+    font-size: 1.5rem;
+  }
+  
+  p {
+    line-height: 1.5;
+    font-size: 1.15rem;
+  }
+  
+  .content {
+    background-color: #e8f9e9;
+    padding: 1rem;
+  }
+  
+  .content > p,
+  h3 {
+    margin: 2rem 10rem;
+  }
+  
+  .content2 {
+    background-color: #116979;
+    color: #fff;
+    padding: 1rem;
+  }
+   p, h3 {
+  margin: 2rem 1rem 2rem 10rem;
+  }
+  
+  #Em {
+    max-width: 15rem;
+    border-radius: 10%;
+  }
+  
+  @media (max-width: 768px) {
+    p,
+    h3 {
+      margin: 1rem;
+    }
+    .content > p,
+    h3 {
+      margin: 1rem;
+    }
+  #Em {
+    max-width:10rem;
+  }
+  }
+  

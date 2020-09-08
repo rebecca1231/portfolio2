@@ -1,47 +1,83 @@
 import React from "react";
-import myFace from '../myFace.jpeg'
-import EmWaterfall from '../EmWaterfall.jpeg'
+import myFace from "../myFace.jpeg";
+import EmWaterfall from "../EmWaterfall.jpeg";
+import "./About.css";
 
 const About = () => {
   return (
-    <div className="ui container" style={{ fontFamily: "Poppins" }}>
-      <div className="ui grid">
-        <div className="four wide column">
-        <img className="ui image" src={myFace} alt="face" style={{maxWidth:"10rem", borderRadius:"50%"}} />
-
+    <div style={{ fontFamily: "Poppins" }}>
+      <div className="box" id="top">
+        <div className="image1">
+          <img
+            className="face"
+            src={myFace}
+            alt="face"
+            style={{ maxWidth: "10rem", borderRadius: "50%" }}
+          />
         </div>
-        <div className="nine wide column">
-      <div
-        className="ui huge header"
-        style={{ fontSize: "3rem", margin:0 }}
-      >
-        Hi, I'm Rebecca.
+
+        <div className="head">
+          <h1 className="" style={{}}>
+            Hi, I'm Rebecca.
+          </h1>
+          <h2>I build web applications.</h2>{" "}
+        </div>
       </div>
-      <div className="ui large header" style={{ marginLeft: "2.5rem" }}>
-        I'm a full stack developer.
-      </div>{" "}
-      </div>
-      <div >
-        <p style={{lineHeight:1.5}}>
-          I often use React, Node JS, and MongoDB to build web applications with
-          responsive design and proper functionality. I have experience with
-          libraries like D3 for Data Visualization, Bootstrap for styling, and
-          many more. I'm constantly learning new things. Currently those things
-          include gaining more experience with cloud engineering and security.
+
+      <div className="content">
+        <h3>Responsive </h3>
+        <p>
+          Your site should always look beautiful. Responsive sites reshape
+          themselves to fit any screen size. I design apps that look just as
+          good on a large monitor as they do on your phone.
         </p>
-        <p style={{lineHeight:1.5}} >
-          My latest project is a simple exercise tracker using Atlas, the cloud
-          form of MongoDB. Check it out here. It's part of the Microservices and
-          Api challenges on Free Code Camp. I intend to use the knowledge I
-          gained from making this simple Api to create more complex and
-          interactive sites in the future. 
-          </p>
-          <img className="ui image"  src={EmWaterfall} style={{display: "inline", maxWidth:"15rem", borderRadius:"10%"}} />
-          <p>When I'm not learning something new
-          chances are I'm playing with my fluffy dog. She loves to fetch and
-          learn new tricks. Tummy rubs are also a major theme. image of my dog!
+
+        <h3>Dynamic</h3>
+        <p>
+          Your application needs more than beauty. It needs to bend and flow as
+          people interact with it, whether that's loading alternate data into a
+          graph or switching between forms. I build applications that
+          dynamically transform at the click of a button.
         </p>
-      </div>
+
+        <h3> Secure </h3>
+        <p>
+          From login to payments, a lot of information has to travel the web. I
+          use the latest technologies to keep important data safe.
+        </p>
+
+        <h3>Technical</h3>
+        <p>
+          I'm a <strong>JavaScript</strong> developer.
+          <br />I use <strong> React and Node JS </strong> to build fullstack
+          applications. I keep important information in the cloud with MongoDB.
+          <br />
+          <strong>D3js</strong> helps me create beautiful, animated charts and
+          graphs to visualize important data.
+          <br />I use <strong>CSS with flexbox</strong> for styling.
+          I often use Bootstrap, Semantic UI, Styled Components, or
+          SASS with Bulma for extra style and pizzazz.
+        </p>
+</div>
+<div className="content2">
+        <h3> About Me </h3>
+
+        <div className="box">
+          <div>
+            <p>
+              I have the best dog ever. We enjoy long walks together. She loves
+              to play fetch and learn new tricks.
+            </p>
+            <p>
+              I also like to learn new things. I enjoy travel and improving my
+              foreign language skills (Spanish, Portuguese and Japanese).
+            </p>
+          </div>
+
+          <div>
+            <img id="Em" alt="pet" src={EmWaterfall} />
+          </div>
+        </div>
       </div>
     </div>
   );
