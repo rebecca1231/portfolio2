@@ -1,5 +1,6 @@
 import React from "react";
 import "./Cards.css";
+import Card from './Card'
 
 //make an array of objects 
 //name, description, link, pictures
@@ -11,9 +12,9 @@ const Cards = () => {
   return (
     <div>
       <div className="flex-grid">
-        <div className="col">1</div>
-        <div className="col">2</div>
-        <div className="col">3</div>
+        <div className="col"><Card/> </div>
+        <div className="col"> <Card/> </div>
+        <div className="col"> <Card/> </div>
       </div>
     </div>
   );

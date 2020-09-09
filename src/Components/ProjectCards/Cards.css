@@ -4,8 +4,12 @@
   .col {
     flex: 1;
   }
+
+  img {
+    max-width: 20rem;
+  }
   
-  @media (max-width: 400px) {
+  @media (max-width: 700px) {
     .flex-grid {
       display: block;
     }
