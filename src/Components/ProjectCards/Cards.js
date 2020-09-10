@@ -1,9 +1,15 @@
 import React from "react";
+import styled from "styled-components";
 
 import Card from "./Card";
 import { projectData } from "./projectData";
 
 import "./card.css"
+
+const CardContainer = styled.div`
+
+`;
+
 
 const Cards = () => {
   

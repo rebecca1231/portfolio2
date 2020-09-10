@@ -1,8 +1,15 @@
 import React, { useState, useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import styled from "styled-components";
+
 
 gsap.registerPlugin(ScrollTrigger);
+
+const CarDiv = styled.div`
+
+`;
+
 
 const Card = ({ title, image, description, tech, skill }) => {
   const [show, setShow] = useState(false);
@@ -40,10 +47,10 @@ const Card = ({ title, image, description, tech, skill }) => {
       onMouseLeave={() => setShow(false)}
     >
       {show === true ? (
-        <div className="card-text">
+        <>
           <h3>{title}</h3> <p>About: {description}</p> <p>Tech: {tech}</p>{" "}
           <p>Skills: {skill}</p>
-        </div>
+        </>
       ) : (
         <img src={image} alt="project" />
       )}
