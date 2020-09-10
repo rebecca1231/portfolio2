@@ -1,0 +1,14 @@
+
+img {
+  width:45vw;
+  }
+  .my-card {
+    width: 45vw;
+  }
+  .cards {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    
+  }
+  

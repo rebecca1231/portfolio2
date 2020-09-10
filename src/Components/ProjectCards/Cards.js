@@ -1,23 +1,25 @@
 import React from "react";
-import "./Cards.css";
-import Card from './Card'
 
-//make an array of objects 
-//name, description, link, pictures
-//  div picture / link (a)
-//on hover: picture goes white-ish, white overlay?  and new div with title, dexcription show up
+import Card from "./Card";
+import { projectData } from "./projectData";
 
+import "./card.css"
 
 const Cards = () => {
-  return (
-    <div>
-      <div className="flex-grid">
-        <div className="col"><Card/> </div>
-        <div className="col"> <Card/> </div>
-        <div className="col"> <Card/> </div>
+  
+  return projectData.map((obj) => {
+    return (
+      <div className="cards">
+        <Card
+          image={obj.image}
+          title={obj.title}
+          description={obj.description}
+          tech={obj.tech}
+          skill={obj.skill}
+        />
       </div>
-    </div>
-  );
+    );
+  });
 };
 
 export default Cards;
