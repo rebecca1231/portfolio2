@@ -21,6 +21,11 @@ const CarDiv = styled.div`
     overflow: hidden;
     margin: 0 auto;
   }
+  @media (min-width: 900px ){
+    width:800px;
+    height:450px;
+
+  }
 `;
 
 const Card = ({ title, image1, image2, url, description, tech }) => {

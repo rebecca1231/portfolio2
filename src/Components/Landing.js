@@ -1,20 +1,28 @@
 import React, { useRef, useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import styled from "styled-components";
 
 import { projectData } from "./ProjectCards/projectData";
 import Card from "./ProjectCards/Card";
 import Contact from "./Contact";
 
-gsap.registerPlugin(ScrollTrigger);
+const Triangle = styled.div`
+  width: 0; 
+  height: 0; 
+  margin: 1rem auto 0;
+  border-left: 40vw solid transparent;
+  border-right: 40vw solid transparent;
+  
+  border-top: 10vw solid #d3d3d3;
+`
 
-const animation = (ref) => {
-  return {};
-};
+gsap.registerPlugin(ScrollTrigger);
 
 const Landing = () => {
   const cardsRef = useRef(null);
   const contactRef = useRef(null);
+  const project = projectData[0];
 
   const animation = (ref) => {
     return {
@@ -34,10 +42,9 @@ const Landing = () => {
     gsap.from(contactRef.current, animation(contactRef));
   }, []);
 
-  const project = projectData[0];
   return (
     <div
-      className="ui container"
+      className=""
       style={{ fontFamily: "Poppins", marginTop: "2rem" }}
     >
       <div>
@@ -63,18 +70,19 @@ const Landing = () => {
           url={project.url}
         />
       </div>
-<div ></div>
-     
-      <div ref={contactRef} style={{ marginTop: "2rem", }}>
+      <div className="" ref={contactRef} style={{backgroundColor:"#585858", width:"100%", paddingBottom:"15px"}} >
+      <Triangle/>
+      <div className="ui container">
         <div
           id="contact"
           className="ui large header"
-          style={{ fontSize: "2rem", marginLeft: "1rem" }}
+          style={{ fontSize: "2rem", marginLeft: "1rem", marginTop:"0.5rem" }}
         >
           Get in Touch
         </div>
 
         <Contact />
+      </div>
       </div>
     </div>
   );
