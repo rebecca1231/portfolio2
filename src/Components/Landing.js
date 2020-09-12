@@ -14,7 +14,7 @@ const Triangle = styled.div`
   border-left: 40vw solid transparent;
   border-right: 40vw solid transparent;
   
-  border-top: 10vw solid #d3d3d3;
+  border-top: 10vw solid #F5F5F5;
 `
 
 gsap.registerPlugin(ScrollTrigger);
@@ -70,7 +70,7 @@ const Landing = () => {
           url={project.url}
         />
       </div>
-      <div className="" ref={contactRef} style={{backgroundColor:"#585858", width:"100%", paddingBottom:"15px"}} >
+      <div className="" ref={contactRef} style={{backgroundColor:"#808080", width:"100%", paddingBottom:"15px"}} >
       <Triangle/>
       <div className="ui container">
         <div

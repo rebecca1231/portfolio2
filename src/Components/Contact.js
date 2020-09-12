@@ -31,7 +31,7 @@ export default function ContactUs() {
     <div className="">
       {sent === false ? (
         <>
-          <form className="ui inverted form" onSubmit={sendEmail}>
+          <form className="ui inverted big form" onSubmit={sendEmail}>
             <input type="hidden" name="contact_number" />
             <div className="field">
               <label>Name</label>
