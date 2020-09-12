@@ -28,7 +28,8 @@ export const projectData = [
     title: "Movie Fight",
     description: "Summons and compares movie stats.",
     skill: "I learned to make API calls and debounce submit functions.",
-    tech: "HTML, CSS, JavaScript"
+    tech: "HTML, CSS, JavaScript",
+    url: ""
   },
   {
     image1: ecomm1,
@@ -36,7 +37,8 @@ export const projectData = [
     title: "Online Shop Site",
     description: "Users can add and delete items from a cart.",
     skill: "I learned to track user interaction.",
-    tech: "JavaScript, Nodejs, HTML, CSS"
+    tech: "JavaScript, Nodejs, HTML, CSS",
+    url: ""
   },
   {
     image1: maze1,

@@ -32,8 +32,8 @@ const Ul = styled.ul`
     transition: transform 0.3s ease-in-out;
     justify-content: flex-start;
     border-bottom: none;
-    box-shadow: ${({open}) => (open ? "-5px 0 5px #c0c0c0" : "none")};
-    z-index:19;
+    box-shadow: ${({ open }) => (open ? "-5px 0 5px #c0c0c0" : "none")};
+    z-index: 19;
 
     a {
       padding: 10px;
@@ -57,14 +57,20 @@ const RightNav = ({ open, set }) => {
       >
         About
       </Link>
-      <Link
+      <a
         onClick={() => set(!open)}
-        to="/contact"
+        href="#contact"
         style={{ padding: "10px", color: "teal" }}
       >
         Contact
-      </Link>
-      <a href="#top-project">Top Project</a>
+      </a>
+      <a
+        href="#top-project"
+        style={{ padding: "10px", color: "teal" }}
+        onClick={() => set(!open)}
+      >
+        Top Projects
+      </a>
       <Link
         onClick={() => set(!open)}
         to="/projects"
@@ -72,7 +78,7 @@ const RightNav = ({ open, set }) => {
       >
         All Projects
       </Link>
-      
+
       <a
         style={{ padding: "10px", color: "teal" }}
         href="https://sleepy-ridge-95118.herokuapp.com/"

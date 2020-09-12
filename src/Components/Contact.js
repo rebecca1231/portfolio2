@@ -64,7 +64,7 @@ export default function ContactUs() {
               />
             </div>
             <div className="field">
-              <input className="ui button teal" type="submit" value="Send" />
+              <input className="ui big button teal" type="submit" value="Send" />
             </div>
           </form>
         </>

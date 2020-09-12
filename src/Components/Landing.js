@@ -23,6 +23,9 @@ const Landing = () => {
   const cardsRef = useRef(null);
   const contactRef = useRef(null);
   const project = projectData[0];
+  const project2 = projectData[1];
+  const project3 = projectData[2]
+
 
   const animation = (ref) => {
     return {
@@ -59,8 +62,9 @@ const Landing = () => {
           className="ui large header"
           style={{ fontSize: "2rem", marginLeft: "1rem" }}
         >
-          Top Project: Opine
+          Top Projects
         </div>
+        <div className="ui large header" ></div>
         <Card
           title={project.title}
           image1={project.image1}
@@ -68,6 +72,22 @@ const Landing = () => {
           description={project.description}
           tech={project.tech}
           url={project.url}
+        />
+        <Card
+          title={project2.title}
+          image1={project2.image1}
+          image2={project2.image2}
+          description={project2.description}
+          tech={project2.tech}
+          url={project2.url}
+        />
+        <Card
+          title={project3.title}
+          image1={project3.image1}
+          image2={project3.image2}
+          description={project3.description}
+          tech={project3.tech}
+          url={project3.url}
         />
       </div>
       <div className="" ref={contactRef} style={{backgroundColor:"#808080", width:"100%", paddingBottom:"15px"}} >
