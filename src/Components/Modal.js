@@ -14,6 +14,7 @@ const ModalWindow = styled.div`
   text-align: center;
   height: 90vh;
   width: 90vw;
+  padding:10px;
 `;
 
 const Overlay = styled.div`
