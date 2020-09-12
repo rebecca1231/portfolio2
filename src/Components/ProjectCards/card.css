@@ -1,14 +1,43 @@
+*{
+  margin:0;
+}
+.cards {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: auto auto ;
+}
+
+.my-card{
+  width:45vw;
+}
+
+.card-text {
+  padding: 20px 0;
+margin: 0 auto;
+}
 
 img {
-  width:45vw;
-  }
-  .my-card {
-    width: 45vw;
-  }
+  width: 100%;
+}
+
+
+
+@media screen and (max-width: 500px) {
   .cards {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-    
+    display: block;
   }
-  
+img{
+width:100%
+}
+  .my-card {
+    width: 90vw;
+    max-height: 300px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    border: 1px gray solid;
+  }
+
+  .card-text {
+    padding: 20px;
+  }
+}

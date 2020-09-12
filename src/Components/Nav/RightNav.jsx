@@ -15,7 +15,7 @@ const Ul = styled.ul`
     padding: 10px;
     text-decoration: none;
     font-family: Roboto;
-    color: #26a19b;
+    color: teal;
   }
 
   @media (max-width: 768px) {
@@ -32,13 +32,14 @@ const Ul = styled.ul`
     transition: transform 0.3s ease-in-out;
     justify-content: flex-start;
     border-bottom: none;
-    box-shadow: ${({open}) => (open ? "-5px 10px 15px 5px #c0c0c0" : "none")};
+    box-shadow: ${({open}) => (open ? "-5px 0 5px #c0c0c0" : "none")};
+    z-index:19;
 
     a {
       padding: 10px;
       text-decoration: none;
       font-family: Roboto;
-      color: #26a19b;
+      color: teal;
     }
   }
 `;
@@ -52,19 +53,19 @@ const RightNav = ({ open, set }) => {
       <Link
         to="/about"
         onClick={() => set(!open)}
-        style={{ padding: "10px", color: "#26a19b" }}
+        style={{ padding: "10px", color: "teal" }}
       >
         About
       </Link>
       <Link
         onClick={() => set(!open)}
         to="/contact"
-        style={{ padding: "10px", color: "#26a19b" }}
+        style={{ padding: "10px", color: "teal" }}
       >
         Contact
       </Link>
       <a
-        style={{ padding: "10px", color: "#26a19b" }}
+        style={{ padding: "10px", color: "teal" }}
         href="https://sleepy-ridge-95118.herokuapp.com/"
       >
         Opine
