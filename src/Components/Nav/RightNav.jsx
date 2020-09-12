@@ -64,6 +64,15 @@ const RightNav = ({ open, set }) => {
       >
         Contact
       </Link>
+      <a href="#top-project">Top Project</a>
+      <Link
+        onClick={() => set(!open)}
+        to="/projects"
+        style={{ padding: "10px", color: "teal" }}
+      >
+        All Projects
+      </Link>
+      
       <a
         style={{ padding: "10px", color: "teal" }}
         href="https://sleepy-ridge-95118.herokuapp.com/"
