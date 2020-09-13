@@ -50,13 +50,13 @@ const RightNav = ({ open, set }) => {
       <Link onClick={() => set(!open)} to="/">
         Home
       </Link>
-      <Link
-        to="/about"
+      <a
+        href="#about"
         onClick={() => set(!open)}
         style={{ padding: "10px", color: "teal" }}
       >
         About
-      </Link>
+      </a>
       <a
         onClick={() => set(!open)}
         href="#contact"

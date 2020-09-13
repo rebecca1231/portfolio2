@@ -8,13 +8,23 @@ const ModalWindow = styled.div`
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   background-color: #fff;
   z-index: 2;
-  text-align: center;
+  text-align: left;
   height: 90vh;
   width: 90vw;
-  padding:10px;
+  padding: 10px;
+
+  .text-box {
+    font-size: 1.5rem;
+    line-height: 1.25;
+  }
+  @media (min-width: 500px) {
+    .button {
+      margin-left: 40%;
+    }
+  }
 `;
 
 const Overlay = styled.div`
@@ -29,7 +39,7 @@ const Overlay = styled.div`
 
 const ProjectImage = styled.div`
   width: 75%;
-  max-height: 500px;
+  height: 40%;
   margin: 0 auto;
   overflow: hidden;
   border-bottom: 2px solid #d3d3d3;
@@ -58,22 +68,30 @@ const Modal = ({ description, tech, url, image, onClose }) => {
     <>
       <Overlay>
         <ModalWindow onPointerLeave={onClose} ref={modRef}>
+          <button
+            style={{ margin: "5px" }}
+            className="ui icon button right floated"
+            onClick={onClose}
+          >
+            <i className="close icon"></i>
+          </button>
           <ProjectImage>
             {" "}
             <img src={image} />{" "}
           </ProjectImage>
-          <h3 className="ui large header" >Description: {description} </h3>
-          <p>Tools Used: {tech} </p>
-          <a className="ui button purple" href={url} target="_blank" >
-            See Live Site
-          </a>
-          <button
-            style={{ margin: "5px" }}
-            className="ui basic button orange"
-            onClick={onClose}
-          >
-            X
-          </button>
+          <div className="text-box">
+            <p>
+              <strong>About: </strong>
+              {description}{" "}
+            </p>
+            <p>
+              <strong>Main Tools: </strong>
+              {tech}{" "}
+            </p>
+            <a className="ui basic big button teal" href={url} target="_blank">
+              See Live Site
+            </a>
+          </div>
         </ModalWindow>
       </Overlay>
     </>,

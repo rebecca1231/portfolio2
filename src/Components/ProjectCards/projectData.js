@@ -20,7 +20,7 @@ export const projectData = [
     title: "Opine",
     description: "Users can send email polls and see the resulting data in charts.",
     skill: "Fullstack site with custom backend API and database.",
-    tech: "ReactJs, Nodejs, D3js, MongoDB, Expressjs"
+    tech: "React JS, Node JS, D3 JS, MongoDB, Express JS"
   },
   {
     image1: movieFight1,

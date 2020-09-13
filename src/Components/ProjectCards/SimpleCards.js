@@ -1,15 +1,14 @@
 import React from "react";
 
-import Card from "./Card";
+import SimpleCard from "./SimpleCard";
 import { projectData } from "./projectData";
 
-
-const Cards = () => {
+const SimpleCards = () => {
   
   return projectData.map((obj) => {
     return (
       <div >
-        <Card
+        <SimpleCard
           image1={obj.image1}
           image2={obj.image2}
           title={obj.title}
@@ -22,4 +21,4 @@ const Cards = () => {
   });
 };
 
-export default Cards;
+export default SimpleCards;

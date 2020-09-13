@@ -6,6 +6,7 @@ import styled from "styled-components";
 import { projectData } from "./ProjectCards/projectData";
 import Card from "./ProjectCards/Card";
 import Contact from "./Contact";
+import Skills from './Skills'
 
 const Triangle = styled.div`
   width: 0; 
@@ -14,7 +15,7 @@ const Triangle = styled.div`
   border-left: 40vw solid transparent;
   border-right: 40vw solid transparent;
   
-  border-top: 10vw solid #F5F5F5;
+  border-top: 10vw solid #Fff;
 `
 
 gsap.registerPlugin(ScrollTrigger);
@@ -90,6 +91,11 @@ const Landing = () => {
           url={project3.url}
         />
       </div>
+<div>
+  <Skills />
+</div>
+
+
       <div className="" ref={contactRef} style={{backgroundColor:"#808080", width:"100%", paddingBottom:"15px"}} >
       <Triangle/>
       <div className="ui container">
