@@ -6,21 +6,21 @@ import maze1 from "../../projectImages/maze1.png";
 import maze2 from "../../projectImages/maze2.png";
 import tindog1 from "../../projectImages/tindog1.png";
 import tindog2 from "../../projectImages/tindog2.png";
-import opine1 from "../../projectImages/opine1.png"
-import opine2 from "../../projectImages/opine2.png"
-import opine3 from "../../projectImages/opine3.png"
-
+import opine1 from "../../projectImages/opine1.png";
+import opine2 from "../../projectImages/opine2.png";
+import opine3 from "../../projectImages/opine3.png";
 
 export const projectData = [
   {
     image1: opine1,
     image2: opine2,
-    image3:opine3,
-    url:"https://sleepy-ridge-95118.herokuapp.com/",
+    image3: opine3,
+    url: "https://sleepy-ridge-95118.herokuapp.com/",
     title: "Opine",
-    description: "Users can send email polls and see the resulting data in charts.",
+    description:
+      "Users can send email polls and see the resulting data in charts",
     skill: "Fullstack site with custom backend API and database.",
-    tech: "React JS, Node JS, D3 JS, MongoDB, Express JS"
+    tech: "React, Node JS, D3 JS, MongoDB, Express JS",
   },
   {
     image1: movieFight1,
@@ -29,7 +29,7 @@ export const projectData = [
     description: "Summons and compares movie stats.",
     skill: "I learned to make API calls and debounce submit functions.",
     tech: "HTML, CSS, JavaScript",
-    url: ""
+    url: "",
   },
   {
     image1: ecomm1,
@@ -37,8 +37,8 @@ export const projectData = [
     title: "Online Shop Site",
     description: "Users can add and delete items from a cart.",
     skill: "I learned to track user interaction.",
-    tech: "JavaScript, Nodejs, HTML, CSS",
-    url: ""
+    tech: "HTML, CSS, JavaScript, Node JS",
+    url: "",
   },
   {
     image1: maze1,
@@ -46,7 +46,8 @@ export const projectData = [
     title: "Maze Game",
     description: "You can use the asdw keys to move the ball.",
     skill: "I learned DOM manipulation with Javascript and Matterjs.",
-    tech: "JavaScript"
+    tech: "HTML, CSS, JavaScript",
+    url:"https://rebecca1231.github.io/maze/"
   },
   {
     image1: tindog1,
@@ -54,6 +55,6 @@ export const projectData = [
     title: "Dog Tinder",
     description: "This is all about website design.",
     skill: "I learned about UX/UI principles.",
-    tech: "HTML, CSS"
-  }
+    tech: "HTML, CSS",
+  },
 ];

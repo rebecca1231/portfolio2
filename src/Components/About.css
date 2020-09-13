@@ -1,14 +1,9 @@
 .box {
     display: flex;
   }
-  
-  #top {
-    padding: 1rem;
-    margin-bottom: 1rem;
-  }
+
   
   h1 {
-    font-family: "Lobster Two";
     font-size: 3rem;
     margin: 1rem;
   }

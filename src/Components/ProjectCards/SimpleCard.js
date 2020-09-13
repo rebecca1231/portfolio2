@@ -52,7 +52,7 @@ const SimpleCard = ({ title, image1, image2, url, description, tech }) => {
               <a style={{marginLeft:"1rem"}}
             className="ui large basic teal button" href={url}
           >
-            See it live
+            Check it out
           </a>
     
     </CardBox>

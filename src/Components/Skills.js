@@ -27,7 +27,7 @@ const Skills = () => {
   const size = isBigScreen ? "huge" : "big";
   return (
     <div className="ui container" style={{ margin: "4rem auto" }}>
-      <div className="ui large header"> My Toolkit</div>
+      <div className="ui large header"> My Toolbox</div>
       <div className="ui small header"></div>
       <SkillBox>
         <div className="skill">
@@ -40,12 +40,12 @@ const Skills = () => {
           <br />
           HTML
         </div>
-
         <div className="skill">
-          <i className={`${size} git square icon`}></i>
+          <i className={`${size} js square icon`}></i>
           <br />
-          Git
+          JavaScript
         </div>
+
         <div className="skill">
           <i className={`${size} node icon`}></i>
           <br />
@@ -54,12 +54,12 @@ const Skills = () => {
         <div className="skill">
           <i className={`${size} react icon`}></i>
           <br />
-          React JS
+          React
         </div>
         <div className="skill">
-          <i className={`${size} js square icon`}></i>
+          <i className={`${size} git square icon`}></i>
           <br />
-          JavaScript, ES6
+          Git
         </div>
         <div className="skill">
           <i className={`${size} mobile alternate icon`}></i>

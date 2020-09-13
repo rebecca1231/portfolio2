@@ -6,27 +6,29 @@ import styled from "styled-components";
 import { projectData } from "./ProjectCards/projectData";
 import Card from "./ProjectCards/Card";
 import Contact from "./Contact";
-import Skills from './Skills'
+import Skills from "./Skills";
+import About from "./About";
 
 const Triangle = styled.div`
-  width: 0; 
-  height: 0; 
+  width: 0;
+  height: 0;
   margin: 1rem auto 0;
   border-left: 40vw solid transparent;
   border-right: 40vw solid transparent;
-  
-  border-top: 10vw solid #Fff;
-`
+
+  border-top: 10vw solid #fff;
+`;
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Landing = () => {
   const cardsRef = useRef(null);
   const contactRef = useRef(null);
+  const aboutRef = useRef(null);
+
   const project = projectData[0];
   const project2 = projectData[1];
-  const project3 = projectData[2]
-
+  const project3 = projectData[2];
 
   const animation = (ref) => {
     return {
@@ -44,13 +46,11 @@ const Landing = () => {
   useEffect(() => {
     gsap.from(cardsRef.current, animation(cardsRef));
     gsap.from(contactRef.current, animation(contactRef));
+    gsap.from(aboutRef.current, animation(aboutRef));
   }, []);
 
   return (
-    <div
-      className=""
-      style={{ fontFamily: "Poppins", marginTop: "2rem" }}
-    >
+    <div className="" style={{ fontFamily: "Poppins", marginTop: "2rem" }}>
       <div>
         <div className="ui huge header" style={{ fontSize: "5rem" }}>
           Dream it.
@@ -65,7 +65,7 @@ const Landing = () => {
         >
           Top Projects
         </div>
-        <div className="ui large header" ></div>
+        <div className="ui large header"></div>
         <Card
           title={project.title}
           image1={project.image1}
@@ -91,24 +91,39 @@ const Landing = () => {
           url={project3.url}
         />
       </div>
-<div>
-  <Skills />
-</div>
+      <div id="about" className="ui container" ref={aboutRef}>
+        <About />
 
-
-      <div className="" ref={contactRef} style={{backgroundColor:"#808080", width:"100%", paddingBottom:"15px"}} >
-      <Triangle/>
-      <div className="ui container">
-        <div
-          id="contact"
-          className="ui large header"
-          style={{ fontSize: "2rem", marginLeft: "1rem", marginTop:"0.5rem" }}
-        >
-          Get in Touch
+        <div>
+          <Skills />
         </div>
-
-        <Contact />
       </div>
+
+      <div
+        className=""
+        ref={contactRef}
+        style={{
+          backgroundColor: "#808080",
+          width: "100%",
+          paddingBottom: "15px",
+        }}
+      >
+        <Triangle />
+        <div className="ui container">
+          <div
+            id="contact"
+            className="ui large header"
+            style={{
+              fontSize: "2rem",
+              marginLeft: "1rem",
+              marginTop: "0.5rem",
+            }}
+          >
+            Get in Touch
+          </div>
+
+          <Contact />
+        </div>
       </div>
     </div>
   );
