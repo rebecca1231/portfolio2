@@ -50,11 +50,24 @@ const Landing = () => {
   }, []);
 
   return (
-    <div className="" style={{ fontFamily: "Poppins", marginTop: "2rem" }}>
+    <div>
       <div>
-        <div className="ui huge header" style={{ fontSize: "5rem" }}>
+      <div className="ui large header" style={{ fontSize: "2rem" }}>
           Dream it.
         </div>
+        <div
+          className="ui big header"
+          style={{ marginLeft: "3rem", fontSize: "3rem" }}
+        >
+          Believe it.
+        </div>
+        <div
+          className="ui huge header"
+          style={{ marginLeft: "6rem", fontSize: "4rem" }}
+        >
+          Build it.
+        </div>
+        
       </div>
 
       <div style={{ marginTop: "2rem" }} ref={cardsRef}>
@@ -91,6 +104,11 @@ const Landing = () => {
           url={project3.url}
         />
       </div>
+
+      <div
+        className="ui container"
+        style={{ margin: "5rem", borderBottom: "10px dotted #008080" }}
+      ></div>
       <div id="about" className="ui container" ref={aboutRef}>
         <About />
 
@@ -109,7 +127,7 @@ const Landing = () => {
         }}
       >
         <Triangle />
-        <div className="ui container">
+        <div className="">
           <div
             id="contact"
             className="ui large header"
