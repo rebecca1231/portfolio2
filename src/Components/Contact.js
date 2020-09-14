@@ -14,7 +14,7 @@ export default function ContactUs() {
         "service_ts0cbib",
         "template_ymcpv5c",
         e.target,
-        "user_fXK9H9tV0VfVcqQbo28id"
+        ID
       )
       .then(
         (result) => {
@@ -28,7 +28,7 @@ export default function ContactUs() {
   }
 
   return (
-    <div className="">
+    <div>
       {sent === false ? (
         <>
           <form className="ui inverted big form" onSubmit={sendEmail}>
