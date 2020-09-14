@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import { init } from "emailjs-com";
-init("user_fXK9H9tV0VfVcqQbo28id");
+import {ID} from '../config'
+init(ID);
 
 export default function ContactUs() {
   const [sent, setSent] = useState(false);
@@ -28,7 +29,7 @@ export default function ContactUs() {
   }
 
   return (
-    <div>
+    <div className="ui container">
       {sent === false ? (
         <>
           <form className="ui inverted big form" onSubmit={sendEmail}>

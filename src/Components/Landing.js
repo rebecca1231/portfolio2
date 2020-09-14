@@ -51,8 +51,8 @@ const Landing = () => {
 
   return (
     <div>
-      <div>
-      <div className="ui large header" style={{ fontSize: "2rem" }}>
+      <div className="ui container">
+      <div className="ui large header" style={{ fontSize: "2rem"}}>
           Dream it.
         </div>
         <div
@@ -67,7 +67,7 @@ const Landing = () => {
         >
           Build it.
         </div>
-        
+        <div></div>
       </div>
 
       <div style={{ marginTop: "2rem" }} ref={cardsRef}>
@@ -127,7 +127,7 @@ const Landing = () => {
         }}
       >
         <Triangle />
-        <div className="">
+        <div className="ui container">
           <div
             id="contact"
             className="ui large header"
@@ -139,8 +139,9 @@ const Landing = () => {
           >
             Get in Touch
           </div>
-
+            <div className="ui container">
           <Contact />
+          </div>
         </div>
       </div>
     </div>
