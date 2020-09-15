@@ -5,13 +5,21 @@ import styled from "styled-components";
 import Modal from "../Modal";
 
 const CarDiv = styled.div`
-    width: 500px;
-    height: 300px;
-    padding: 20px 0;
-    margin: 0 auto;
-    overflow: hidden;
-  
+  width: 500px;
+  height: 300px;
+  margin: 0 auto 1rem;
+  overflow: hidden;
+  border: 2px teal solid;
+  border-radius: 5px;
 
+.text {
+display:flex;
+flex-direction:column;
+align-items: center;
+justify-content:space-evenly;
+margin-top:10%;
+
+}
   img {
     width: 100%;
   }
@@ -19,16 +27,14 @@ const CarDiv = styled.div`
     width: 300px;
     height: 175px;
     overflow: hidden;
-    margin: 0 auto;
   }
-  @media (min-width: 900px ){
-    width:800px;
-    height:450px;
-
+  @media (min-width: 900px) {
+    width: 800px;
+    height: 450px;
   }
 `;
 
-const Card = ({ title, image1, image2, url, description, tech }) => {
+const Card = ({ title, image1, image2, url, github, description, tech }) => {
   const [show, setShow] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const h3Ref = useRef(null);
@@ -36,26 +42,35 @@ const Card = ({ title, image1, image2, url, description, tech }) => {
 
   useEffect(() => {
     gsap.from(h3Ref.current, {
-      duration: 0.3,
-      y: -5,
-      ease: "none",
+      duration: 0.75,
+      y: -50,
+      ease: "back"
     });
+    gsap.from(bRef.current, {
+      duration: 0.75,
+      y: 50,
+      ease: "back"
+    });
+
   }, [show]);
 
   return (
-    <CarDiv
-      key={title}
-      id={title}
-      onPointerEnter={() => setShow(true)}
-      onPointerLeave={() => setShow(false)}
-    >
+    <CarDiv key={title} id={title} onPointerDown={() => setShow(true)}>
       {show === true ? (
-        <div style={{ height: "100%", padding: "10%" }}>
-          <h3 ref={h3Ref}>{title}</h3> <br />
+        <>
+         <button
+         className="ui basic icon button right floated"
+         onClick={() => setShow(false)}
+       >
+         <i className="close icon"></i>
+       </button>
+        <div className="ui container text">
+         
+          <h3 className="ui large header" ref={h3Ref}>{title}</h3> 
           <button
             ref={bRef}
             className="ui basic teal button"
-            onPointerDown={() => setIsOpen(true)}
+            onClick={() => setIsOpen(true)}
           >
             Learn More
           </button>
@@ -70,11 +85,15 @@ const Card = ({ title, image1, image2, url, description, tech }) => {
               tech={tech}
               description={description}
               url={url}
+              github={github}
+title={title}
             />
+          
           ) : (
             ""
           )}
         </div>
+        </>
       ) : (
         <img src={image1} alt="project" />
       )}

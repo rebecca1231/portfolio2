@@ -47,36 +47,29 @@ const Ul = styled.ul`
 const RightNav = ({ open, set }) => {
   return (
     <Ul open={open}>
-      <Link onClick={() => set(!open)} to="/">
+       <Link onClick={() => set(!open)} to="/">
         Home
       </Link>
-      <a
-        href="#about"
+      <Link
+        to="/about"
         onClick={() => set(!open)}
         style={{ padding: "10px", color: "teal" }}
       >
         About
-      </a>
-      <a
+      </Link>
+      <Link
         onClick={() => set(!open)}
-        href="#contact"
+        to="/contact"
         style={{ padding: "10px", color: "teal" }}
       >
         Contact
-      </a>
-      <a
-        href="#top-project"
-        style={{ padding: "10px", color: "teal" }}
-        onClick={() => set(!open)}
-      >
-        Top Projects
-      </a>
+      </Link>
       <Link
-        onClick={() => set(!open)}
-        to="/projects"
+        to="projects"
         style={{ padding: "10px", color: "teal" }}
+        onClick={() => set(!open)}
       >
-        All Projects
+        Projects
       </Link>
 
       <a

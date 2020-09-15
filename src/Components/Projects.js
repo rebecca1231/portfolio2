@@ -1,4 +1,4 @@
-import React, {useRef, useEffect} from "react";
+import React from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -11,21 +11,22 @@ const Projects = () => {
     <div
       className="ui container"
     >
-      <div>
-        <div
-          className="ui huge header"
-        >
+        <div className="ui large header" style={{ fontSize: "1.5rem" }}>
           Dream it.
         </div>
         <div
-                  className="ui medium header"
-                  style={{marginLeft:"2rem"}}
-
+          className="ui big header"
+          style={{ marginLeft: "2rem", fontSize: "2rem" }}
         >
-          Believe it. Build it.
+          Believe it.
         </div>
-      </div>
-      <div style={{marginTop:"2rem"}} >
+        <div
+          className="ui huge header"
+          style={{ marginLeft: "4rem", fontSize: "2.5rem" }}
+        >
+          Build it.
+          </div>
+<div style={{marginTop:"2rem"}} >
       <SimpleCards />
       </div>
     </div>

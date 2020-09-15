@@ -20,11 +20,27 @@ const ModalWindow = styled.div`
     font-size: 1.5rem;
     line-height: 1.25;
   }
-  @media (min-width: 500px) {
-    .button {
-      margin-left: 40%;
+  .modal-top {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .links{
+    display:flex;
+    justify-content:center;
+    padding:10px;
+  }
+
+  @media (max-width: 500) {
+    .text-box {
+      line-height: 1;
+      font-size: 1rem;
+    }
+    .links {
+      padding:0;
     }
   }
+  
 `;
 
 const Overlay = styled.div`
@@ -52,7 +68,7 @@ const ProjectImage = styled.div`
   }
 `;
 
-const Modal = ({ description, tech, url, image, onClose }) => {
+const Modal = ({ description, tech, url, image, onClose, github, title }) => {
   const modRef = useRef(null);
 
   useEffect(() => {
@@ -60,7 +76,7 @@ const Modal = ({ description, tech, url, image, onClose }) => {
       duration: 1,
       y: 50,
       opacity: 0,
-      ease: "back",
+      ease: "back"
     });
   }, []);
 
@@ -68,16 +84,18 @@ const Modal = ({ description, tech, url, image, onClose }) => {
     <>
       <Overlay>
         <ModalWindow onPointerLeave={onClose} ref={modRef}>
-          <button
-            style={{ margin: "5px" }}
-            className="ui icon button right floated"
-            onClick={onClose}
-          >
-            <i className="close icon"></i>
-          </button>
+          <div className="modal-top">
+            <h3 className="ui large header">{title}</h3>
+            <button
+              style={{ margin: "5px" }}
+              className="ui icon basic button mini right floated"
+              onClick={onClose}
+            >
+              <i className="close icon"></i>
+            </button>
+          </div>
           <ProjectImage>
-            {" "}
-            <img src={image} />{" "}
+            <img src={image} />
           </ProjectImage>
           <div className="text-box">
             <p>
@@ -88,10 +106,26 @@ const Modal = ({ description, tech, url, image, onClose }) => {
               <strong>Main Tools: </strong>
               {tech}{" "}
             </p>
-            <a className="ui basic big button teal" href={url} target="_blank">
-              See Live Site
+            </div>
+            <div className="links">
+            {url ? (
+              <>
+                <a
+                  className="ui basic big button teal"
+                  href={url}
+                  target="_blank"
+                >
+                  See Live Site
+                </a>{" "}
+              </>
+            ) : (
+              ""
+            )}
+            <a className="ui basic big button" href={github} target="_blank">
+              Code <i className="github icon"></i>
             </a>
           </div>
+
         </ModalWindow>
       </Overlay>
     </>,

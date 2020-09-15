@@ -21,6 +21,7 @@ export const projectData = [
       "Users can send email polls and see the resulting data in charts",
     skill: "Fullstack site with custom backend API and database.",
     tech: "React, Node JS, D3 JS, MongoDB, Express JS",
+    github: "https://www.github.com/rebecca1231/opine"
   },
   {
     image1: movieFight1,
@@ -29,7 +30,7 @@ export const projectData = [
     description: "Summons and compares movie stats.",
     skill: "I learned to make API calls and debounce submit functions.",
     tech: "HTML, CSS, JavaScript",
-    url: "",
+    github: "https://www.github.com/rebecca1231/movieFight"
   },
   {
     image1: ecomm1,
@@ -38,7 +39,7 @@ export const projectData = [
     description: "Users can add and delete items from a cart.",
     skill: "I learned to track user interaction.",
     tech: "HTML, CSS, JavaScript, Node JS",
-    url: "",
+    github: "https://www.github.com/rebecca1231/ecommv1"
   },
   {
     image1: maze1,
@@ -47,7 +48,8 @@ export const projectData = [
     description: "You can use the asdw keys to move the ball.",
     skill: "I learned DOM manipulation with Javascript and Matterjs.",
     tech: "HTML, CSS, JavaScript",
-    url:"https://rebecca1231.github.io/maze/"
+    url: "https://rebecca1231.github.io/maze/",
+    github: "https://www.github.com/rebecca1231/maze"
   },
   {
     image1: tindog1,
@@ -56,5 +58,6 @@ export const projectData = [
     description: "This is all about website design.",
     skill: "I learned about UX/UI principles.",
     tech: "HTML, CSS",
-  },
+    github: "https://www.github.com/rebecca1231/tindog"
+  }
 ];

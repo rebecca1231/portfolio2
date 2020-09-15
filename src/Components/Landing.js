@@ -1,4 +1,5 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import styled from "styled-components";
@@ -9,22 +10,13 @@ import Contact from "./Contact";
 import Skills from "./Skills";
 import About from "./About";
 
-const Triangle = styled.div`
-  width: 0;
-  height: 0;
-  margin: 1rem auto 0;
-  border-left: 40vw solid transparent;
-  border-right: 40vw solid transparent;
-
-  border-top: 10vw solid #fff;
-`;
-
 gsap.registerPlugin(ScrollTrigger);
 
 const Landing = () => {
   const cardsRef = useRef(null);
   const contactRef = useRef(null);
   const aboutRef = useRef(null);
+  const borderRef = useRef(null);
 
   const project = projectData[0];
   const project2 = projectData[1];
@@ -32,19 +24,29 @@ const Landing = () => {
 
   const animation = (ref) => {
     return {
-      duration: 1,
+      duration: 0.75,
       autoAlpha: 0,
       y: 10,
       ease: "power4.in",
       scrollTrigger: {
         trigger: ref.current,
-        start: "top center+=100",
-      },
+        start: "top center+=200"
+      }
     };
   };
 
   useEffect(() => {
     gsap.from(cardsRef.current, animation(cardsRef));
+    gsap.from(borderRef.current, {
+      duration: 1,
+      y: -200,
+      ease: "bounce",
+      scrollTrigger: {
+        trigger: borderRef.current,
+        start: "top center+=200"
+      }
+    });
+    
     gsap.from(contactRef.current, animation(contactRef));
     gsap.from(aboutRef.current, animation(aboutRef));
   }, []);
@@ -52,7 +54,7 @@ const Landing = () => {
   return (
     <div>
       <div className="ui container">
-      <div className="ui large header" style={{ fontSize: "2rem"}}>
+        <div className="ui large header" style={{ fontSize: "2rem" }}>
           Dream it.
         </div>
         <div
@@ -67,7 +69,14 @@ const Landing = () => {
         >
           Build it.
         </div>
-        <div></div>
+        <Link
+          to="contact"
+          style={{ marginLeft: "8rem" }}
+          className="ui basic button huge teal"
+        >
+          Get in touch <i className="envelope outline right floated icon"></i>
+
+        </Link>
       </div>
 
       <div style={{ marginTop: "2rem" }} ref={cardsRef}>
@@ -86,6 +95,7 @@ const Landing = () => {
           description={project.description}
           tech={project.tech}
           url={project.url}
+          github={project.github}
         />
         <Card
           title={project2.title}
@@ -94,6 +104,7 @@ const Landing = () => {
           description={project2.description}
           tech={project2.tech}
           url={project2.url}
+          github={project2.github}
         />
         <Card
           title={project3.title}
@@ -102,47 +113,28 @@ const Landing = () => {
           description={project3.description}
           tech={project3.tech}
           url={project3.url}
+          github={project3.github}
         />
       </div>
 
       <div
+        ref={borderRef}
         className="ui container"
-        style={{ margin: "5rem", borderBottom: "10px dotted #008080" }}
+        style={{
+          margin: "5rem",
+          borderBottom: "40px dotted rgba(0, 128, 128, 0.25)",
+          width: "40%"
+        }}
       ></div>
       <div id="about" className="ui container" ref={aboutRef}>
         <About />
-
         <div>
           <Skills />
         </div>
       </div>
 
-      <div
-        className=""
-        ref={contactRef}
-        style={{
-          backgroundColor: "#808080",
-          width: "100%",
-          paddingBottom: "15px",
-        }}
-      >
-        <Triangle />
-        <div className="ui container">
-          <div
-            id="contact"
-            className="ui large header"
-            style={{
-              fontSize: "2rem",
-              marginLeft: "1rem",
-              marginTop: "0.5rem",
-            }}
-          >
-            Get in Touch
-          </div>
-            <div className="ui container">
-          <Contact />
-          </div>
-        </div>
+      <div ref={contactRef}>
+        <Contact />
       </div>
     </div>
   );
