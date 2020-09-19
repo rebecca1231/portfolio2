@@ -15,7 +15,7 @@ export const projectData = [
     image1: opine1,
     image2: opine2,
     image3: opine3,
-    url: "https://sleepy-ridge-95118.herokuapp.com/",
+    url: "https://www.opine.app",
     title: "Opine",
     description:
       "Users can send email polls and see the resulting data in charts",

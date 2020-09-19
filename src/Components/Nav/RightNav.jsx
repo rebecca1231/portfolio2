@@ -98,7 +98,7 @@ const RightNav = ({ open, set }) => {
       <a
       className="links"
         style={{ padding: "10px", color: "teal" }}
-        href="https://sleepy-ridge-95118.herokuapp.com/"
+        href="https://www.opine.app"
         rel="noopener norefferer"
       >
         Opine
