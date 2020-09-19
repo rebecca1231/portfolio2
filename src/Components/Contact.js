@@ -39,7 +39,6 @@ export default function ContactUs() {
         backgroundColor: "#e8e8e8",
         width: "100%",
         paddingBottom: "15px"
-
       }}
     >
       <Triangle />
@@ -49,7 +48,7 @@ export default function ContactUs() {
         style={{
           fontSize: "2rem",
           marginLeft: "1rem",
-          marginTop: "0.5rem",
+          marginTop: "0.5rem"
         }}
       >
         Get in Touch
@@ -104,8 +103,15 @@ export default function ContactUs() {
             <p>Your message has been sent!</p>
           </div>
         )}
-        <a href="https://www.linkedin.com/in/rebeccahirai" target="_blank"  style={{marginTop:"2rem"}} className="ui basic teal basic huge icon button" >Let's connect on <i className=" large linkedin icon"></i></a>
-
+        <a
+          href="https://www.linkedin.com/in/rebeccahirai"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ marginTop: "2rem" }}
+          className="ui basic teal basic huge icon button"
+        >
+          Let's connect on <i className=" large linkedin icon"></i>
+        </a>
       </div>
     </div>
   );

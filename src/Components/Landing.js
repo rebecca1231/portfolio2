@@ -1,18 +1,18 @@
 import React, { useRef, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import styled from "styled-components";
 
 import { projectData } from "./ProjectCards/projectData";
 import Card from "./ProjectCards/Card";
 import Contact from "./Contact";
-import Skills from "./Skills";
 import About from "./About";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Landing = () => {
+  const history = useHistory();
+
   const cardsRef = useRef(null);
   const contactRef = useRef(null);
   const aboutRef = useRef(null);
@@ -46,7 +46,7 @@ const Landing = () => {
         start: "top center+=200"
       }
     });
-    
+
     gsap.from(contactRef.current, animation(contactRef));
     gsap.from(aboutRef.current, animation(aboutRef));
   }, []);
@@ -69,14 +69,13 @@ const Landing = () => {
         >
           Build it.
         </div>
-        <Link
-          to="contact"
+        <button
+          onClick={() => history.push("/contact")}
           style={{ marginLeft: "8rem" }}
           className="ui basic button huge teal"
         >
           Get in touch <i className="envelope outline right floated icon"></i>
-
-        </Link>
+        </button>
       </div>
 
       <div style={{ marginTop: "2rem" }} ref={cardsRef}>
@@ -126,10 +125,9 @@ const Landing = () => {
           width: "40%"
         }}
       ></div>
-      <div id="about" className="ui container" ref={aboutRef}>
+      <div id="about" ref={aboutRef}>
         <About />
         <div>
-          <Skills />
         </div>
       </div>
 

@@ -25,10 +25,10 @@ const ModalWindow = styled.div`
     justify-content: space-between;
   }
 
-  .links{
-    display:flex;
-    justify-content:center;
-    padding:10px;
+  .links {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
   }
 
   @media (max-width: 500) {
@@ -37,10 +37,9 @@ const ModalWindow = styled.div`
       font-size: 1rem;
     }
     .links {
-      padding:0;
+      padding: 0;
     }
   }
-  
 `;
 
 const Overlay = styled.div`
@@ -76,7 +75,7 @@ const Modal = ({ description, tech, url, image, onClose, github, title }) => {
       duration: 1,
       y: 50,
       opacity: 0,
-      ease: "back"
+      ease: "back",
     });
   }, []);
 
@@ -95,7 +94,7 @@ const Modal = ({ description, tech, url, image, onClose, github, title }) => {
             </button>
           </div>
           <ProjectImage>
-            <img src={image} />
+            <img src={image} alt={title} />
           </ProjectImage>
           <div className="text-box">
             <p>
@@ -106,14 +105,15 @@ const Modal = ({ description, tech, url, image, onClose, github, title }) => {
               <strong>Main Tools: </strong>
               {tech}{" "}
             </p>
-            </div>
-            <div className="links">
+          </div>
+          <div className="links">
             {url ? (
               <>
                 <a
                   className="ui basic big button teal"
                   href={url}
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   See Live Site
                 </a>{" "}
@@ -121,11 +121,15 @@ const Modal = ({ description, tech, url, image, onClose, github, title }) => {
             ) : (
               ""
             )}
-            <a className="ui basic big button" href={github} target="_blank">
+            <a
+              className="ui basic big button"
+              href={github}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Code <i className="github icon"></i>
             </a>
           </div>
-
         </ModalWindow>
       </Overlay>
     </>,

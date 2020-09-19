@@ -4,10 +4,9 @@ import SimpleCard from "./SimpleCard";
 import { projectData } from "./projectData";
 
 const SimpleCards = () => {
-  
   return projectData.map((obj) => {
     return (
-      <div >
+      <div>
         <SimpleCard
           image1={obj.image1}
           image2={obj.image2}
@@ -17,7 +16,8 @@ const SimpleCards = () => {
           skill={obj.skill}
           url={obj.url}
           github={obj.github}
-
+          details={obj.details}
+          skill={obj.skill}
         />
       </div>
     );

@@ -1,21 +1,31 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 const Ul = styled.ul`
   list-style: none;
   display: flex;
   flex-flow: row nowrap;
-  font-family: Poppins;
   font-size: 1.25rem;
   justify-content: flex-end;
   border-bottom: 2px solid #f1f1f1;
+  border-left: 2px solid #f1f1f1;
+  position: fixed;
+  right: 0;
+  top:0;
+  margin:0;
+  z-index:20;
+  background-color: #fff;
 
-  a {
+
+
+  .links {
     padding: 10px;
     text-decoration: none;
     font-family: Roboto;
     color: teal;
+    cursor:pointer;
+
   }
 
   @media (max-width: 768px) {
@@ -35,7 +45,7 @@ const Ul = styled.ul`
     box-shadow: ${({ open }) => (open ? "-5px 0 5px #c0c0c0" : "none")};
     z-index: 19;
 
-    a {
+    .links {
       padding: 10px;
       text-decoration: none;
       font-family: Roboto;
@@ -45,36 +55,51 @@ const Ul = styled.ul`
 `;
 
 const RightNav = ({ open, set }) => {
+  const history = useHistory();
+
   return (
     <Ul open={open}>
-       <Link onClick={() => set(!open)} to="/">
+      <div className="links"
+        onClick={() => {
+          history.push("/");
+          set(!open);
+        }}
+      >
         Home
-      </Link>
-      <Link
-        to="/about"
-        onClick={() => set(!open)}
+      </div>
+      <div className="links"
+        onClick={() => {
+          history.push("/about");
+          set(!open);
+        }}
         style={{ padding: "10px", color: "teal" }}
       >
         About
-      </Link>
-      <Link
-        onClick={() => set(!open)}
-        to="/contact"
+      </div>
+      <div className="links"
+        onClick={() => {
+          set(!open);
+          history.push("/contact");
+        }}
         style={{ padding: "10px", color: "teal" }}
       >
         Contact
-      </Link>
-      <Link
-        to="projects"
+      </div>
+      <div className="links"
         style={{ padding: "10px", color: "teal" }}
-        onClick={() => set(!open)}
+        onClick={() => {
+          set(!open);
+          history.push("/projects");
+        }}
       >
         Projects
-      </Link>
+      </div>
 
       <a
+      className="links"
         style={{ padding: "10px", color: "teal" }}
         href="https://sleepy-ridge-95118.herokuapp.com/"
+        rel="noopener norefferer"
       >
         Opine
       </a>
