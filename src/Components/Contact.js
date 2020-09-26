@@ -42,13 +42,10 @@ export default function ContactUs() {
       }}
     >
       <Triangle />
-      <div
+      <div className="ui container large header"
         id="contact"
-        className="ui large header"
         style={{
-          fontSize: "2rem",
-          marginLeft: "1rem",
-          marginTop: "0.5rem"
+          marginBottom:"1rem"
         }}
       >
         Get in Touch
@@ -110,7 +107,7 @@ export default function ContactUs() {
           style={{ marginTop: "2rem" }}
           className="ui basic teal basic huge icon button"
         >
-          Let's connect on <i className=" large linkedin icon"></i>
+          Let's connect on <i className="large linkedin icon"></i>
         </a>
       </div>
     </div>

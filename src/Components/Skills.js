@@ -26,7 +26,7 @@ const Skills = () => {
 
   const size = isBigScreen ? "huge" : "big";
   return (
-    <div className="ui container" style={{ margin: "4rem auto" }}>
+    <div style={{ margin: "4rem auto" }}>
       <div className="ui large header"> My Toolbox</div>
       <div className="ui small header"></div>
       <SkillBox>

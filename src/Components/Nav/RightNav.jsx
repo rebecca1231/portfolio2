@@ -8,24 +8,21 @@ const Ul = styled.ul`
   flex-flow: row nowrap;
   font-size: 1.25rem;
   justify-content: flex-end;
-  border-bottom: 2px solid #f1f1f1;
   border-left: 2px solid #f1f1f1;
   position: fixed;
   right: 0;
-  top:0;
-  margin:0;
-  z-index:20;
+  top: 0;
+  margin: 0;
+  z-index: 20;
   background-color: #fff;
-
-
+  width: 100vw;
 
   .links {
     padding: 10px;
     text-decoration: none;
     font-family: Roboto;
     color: teal;
-    cursor:pointer;
-
+    cursor: pointer;
   }
 
   @media (max-width: 768px) {
@@ -59,7 +56,8 @@ const RightNav = ({ open, set }) => {
 
   return (
     <Ul open={open}>
-      <div className="links"
+      <div
+        className="links"
         onClick={() => {
           history.push("/");
           set(!open);
@@ -67,7 +65,8 @@ const RightNav = ({ open, set }) => {
       >
         Home
       </div>
-      <div className="links"
+      <div
+        className="links"
         onClick={() => {
           history.push("/about");
           set(!open);
@@ -76,7 +75,8 @@ const RightNav = ({ open, set }) => {
       >
         About
       </div>
-      <div className="links"
+      <div
+        className="links"
         onClick={() => {
           set(!open);
           history.push("/contact");
@@ -85,7 +85,8 @@ const RightNav = ({ open, set }) => {
       >
         Contact
       </div>
-      <div className="links"
+      <div
+        className="links"
         style={{ padding: "10px", color: "teal" }}
         onClick={() => {
           set(!open);
@@ -96,12 +97,20 @@ const RightNav = ({ open, set }) => {
       </div>
 
       <a
-      className="links"
+        className="links"
         style={{ padding: "10px", color: "teal" }}
         href="https://www.opine.app"
+        target="_blank"
         rel="noopener norefferer"
       >
         Opine
+      </a>
+      <a
+        className="links"
+        style={{ padding: "10px", color: "teal" }}
+        href="https://blog.rebeccahirai.com"
+      >
+        Blog
       </a>
     </Ul>
   );

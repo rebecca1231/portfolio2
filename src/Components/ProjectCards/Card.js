@@ -12,14 +12,13 @@ const CarDiv = styled.div`
   border: 2px teal solid;
   border-radius: 5px;
 
-.text {
-display:flex;
-flex-direction:column;
-align-items: center;
-justify-content:space-evenly;
-margin-top:10%;
-
-}
+  .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 10%;
+  }
   img {
     width: 100%;
   }
@@ -44,55 +43,54 @@ const Card = ({ title, image1, image2, url, github, description, tech }) => {
     gsap.from(h3Ref.current, {
       duration: 0.75,
       y: -50,
-      ease: "back"
+      ease: "back",
     });
     gsap.from(bRef.current, {
       duration: 0.75,
       y: 50,
-      ease: "back"
+      ease: "back",
     });
-
   }, [show]);
 
   return (
     <CarDiv key={title} id={title} onPointerDown={() => setShow(true)}>
       {show === true ? (
         <>
-         <button
-         className="ui basic icon button right floated"
-         onClick={() => setShow(false)}
-       >
-         <i className="close icon"></i>
-       </button>
-        <div className="ui container text">
-         
-          <h3 className="ui large header" ref={h3Ref}>{title}</h3> 
           <button
-            ref={bRef}
-            className="ui basic teal button"
-            onClick={() => setIsOpen(true)}
+            className="ui basic icon button right floated"
+            onClick={() => setShow(false)}
           >
-            Learn More
+            <i className="close icon"></i>
           </button>
-          {isOpen === true ? (
-            <Modal
-              open={isOpen}
-              onClose={() => {
-                setIsOpen(false);
-                setShow(false);
-              }}
-              image={image2}
-              tech={tech}
-              description={description}
-              url={url}
-              github={github}
-title={title}
-            />
-          
-          ) : (
-            ""
-          )}
-        </div>
+          <div className="ui container text">
+            <h3 className="ui large header" ref={h3Ref}>
+              {title}
+            </h3>
+            <button
+              ref={bRef}
+              className="ui basic teal button"
+              onClick={() => setIsOpen(true)}
+            >
+              Learn More
+            </button>
+            {isOpen === true ? (
+              <Modal
+                open={isOpen}
+                onClose={() => {
+                  setIsOpen(false);
+                  setShow(false);
+                }}
+                image={image2}
+                tech={tech}
+                description={description}
+                url={url}
+                github={github}
+                title={title}
+              />
+            ) : (
+              ""
+            )}
+          </div>
         </>
       ) : (
         <img src={image1} alt="project" />

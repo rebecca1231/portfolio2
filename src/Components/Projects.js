@@ -4,7 +4,7 @@ import SimpleCards from "./ProjectCards/SimpleCards";
 
 const Projects = () => {
   return (
-    <div className="ui container">
+    <div className="ui container" style={{marginTop:"3.5rem"}}>
       <div className="ui large header" style={{ fontSize: "1.5rem" }}>
         Dream it.
       </div>
