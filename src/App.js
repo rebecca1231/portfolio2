@@ -1,32 +1,25 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import Header from './Components/Header'
-import Footer from './Components/Footer';
-import Landing from './Components/Landing';
-import Contact from './Components/Contact';
-import About from './Components/About'
-import Projects from './Components/Projects'
-import './styles/index.scss'
-
+import Header from "./Components/Header";
+import Footer from "./Components/Footer";
+import Landing from "./Components/Landing";
+import Contact from "./Components/Contact";
+import About from "./Components/About";
+import Projects from "./Components/Projects";
+import ProjectOpine from './Components/Projects/ProjectOpine'
+import "./styles/index.scss";
 
 function App() {
   return (
     <Router>
       <Header />
       <Switch>
-        <Route path="/about">
-          <About />
-        </Route>
-        <Route path="/contact">
-          <Contact />
-        </Route>
-        <Route exact path="/">
-          <Landing />
-        </Route>
-        <Route exact path="/projects">
-          <Projects />
-        </Route>
+        <Route path="/about" component={About} />
+        <Route path="/contact" component={Contact} /> 
+        <Route exact path="/" component={Landing} />
+        <Route exact path="/projects" component={Projects} />
+        <Route path="/projects/opine" component={ProjectOpine} />
       </Switch>
       <Footer />
     </Router>

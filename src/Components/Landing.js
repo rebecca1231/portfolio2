@@ -2,11 +2,44 @@ import React, { useRef, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import myFace from "../myFace copy.jpeg";
+import styled from "styled-components";
+import fluffybg from "../fluffybg.jpeg";
 
 import { projectData } from "./ProjectCards/projectData";
 import Card from "./ProjectCards/Card";
 import Contact from "./Contact";
 import About from "./About";
+
+const Me = styled.div`
+  max-width: 800px;
+  margin: auto;
+  background-image: url(${fluffybg});
+  background-repeat: no-repeat;
+  background-size: 800px auto;
+  background-position: top;
+  height: 50vh;
+  img {
+    max-width: 10rem;
+    border-radius: 10px;
+  }
+
+  p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    padding: 10px 0;
+  }
+
+  @media (max-width: 750px) {
+    margin-bottom: 0.5rem;
+    background-size: 700px auto;
+    background-position: top;
+
+    p {
+      font-size: 1.2rem;
+    }
+  }
+`;
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -14,9 +47,10 @@ const Landing = () => {
   const history = useHistory();
 
   const cardsRef = useRef(null);
-  const contactRef = useRef(null);
   const aboutRef = useRef(null);
   const borderRef = useRef(null);
+  const topRef = useRef(null);
+  const headRef = useRef(null);
 
   const project = projectData[0];
   const project2 = projectData[1];
@@ -37,48 +71,62 @@ const Landing = () => {
 
   useEffect(() => {
     gsap.from(cardsRef.current, animation(cardsRef));
+    gsap.from(topRef.current, animation(topRef));
+    gsap.from(headRef.current, {
+      duration: 1,
+      x: 200,
+      scrollTrigger: {
+        trigger: headRef.current,
+        start: "top center+=200",
+      },
+    });
     gsap.from(borderRef.current, {
       duration: 1,
-      y: -200,
-      ease: "bounce",
+      x: -500,
       scrollTrigger: {
         trigger: borderRef.current,
         start: "top center+=200",
       },
     });
 
-    gsap.from(contactRef.current, animation(contactRef));
     gsap.from(aboutRef.current, animation(aboutRef));
   }, []);
 
   return (
     <div>
-      <div className="ui container">
-        <div style={{marginTop:"3.5rem"}}>
-          <div className="ui large header" style={{ fontSize: "2rem" }}>
-            Dream it.
-          </div>
+      <div style={{ marginTop: "50px" }}>
+        <div
+          className="ui container"
+          style={{
+            marginTop: "7rem",
+            maxWidth: "750px",
+            padding: "2px",
+            marginBottom: "1rem",
+          }}
+        >
+          <h2> Hi,</h2>
+          <h2>I'm Rebecca.</h2>
+        </div>
+        <Me ref={topRef}>
           <div
-            className="ui big header"
-            style={{ marginLeft: "", fontSize: "3rem" }}
+            style={{
+              backgroundColor: "rgba(255,255,255, 0.75)",
+            }}
           >
-            Believe it.
-          </div>
-          <div
-            className="ui huge header"
-            style={{ marginLeft: "", fontSize: "4rem" }}
-          >
-            Build it.
-          </div>
-          <div style={{ textAlign:"center", margin:'auto' }}>
-            <button
-              onClick={() => history.push("/contact")}
-              className="ui basic button huge teal"
+            <div
+              ref={headRef}
+              className="ui container"
+              style={{ maxWidth: "750px", padding: "2px" }}
             >
-              Get in touch{" "}
-              <i className="envelope outline right floated icon"></i>
-            </button>
+              <p>
+                I enjoy nature with my fluffy dog and <br />I love building
+                stuff with code.
+              </p>
+            </div>
           </div>
+        </Me>
+        <div>
+          <div style={{ textAlign: "center", margin: "auto" }}></div>
         </div>
 
         <div style={{ marginTop: "2rem" }} ref={cardsRef}>
@@ -123,16 +171,16 @@ const Landing = () => {
           ref={borderRef}
           className="ui container"
           style={{
-            margin: "5rem",
+            marginTop: "2rem",
             borderBottom: "40px dotted rgba(0, 128, 128, 0.25)",
             width: "40%",
           }}
-        ></div>
+        />
         <div id="about" ref={aboutRef}>
           <About />
         </div>
       </div>
-      <div ref={contactRef}>
+      <div>
         <Contact />
       </div>
     </div>

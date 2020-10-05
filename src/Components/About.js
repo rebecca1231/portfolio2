@@ -1,32 +1,36 @@
-import React from "react"
-import myFace from "../myFace copy.jpeg"
-import styled from "styled-components"
+import React, { useEffect, useRef } from "react";
+import styled from "styled-components";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+import myFace from "../myFace copy.jpeg";
+import wasabi from "../wasabi.jpg";
 
 const Container = styled.div`
-margin: 0 auto;
-max-width: 750px;
-padding: 1rem;
-line-height:1.5;
-font-size:1.25rem;
+  margin: 0 auto;
+  max-width: 750px;
+  padding: 1rem;
+  line-height: 1.5;
+  font-size: 1.25rem;
 
-
-
-display: flex;
-flex-direction: column;
-min-height: 100vh;
-
-`
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+`;
 
 const Me = styled.div`
   display: flex;
   flex-direction: row;
   align-items: space-between;
   justify-content: center;
-  margin-top: 5rem;
+  margin-top: 2rem;
   img {
     max-width: 10rem;
-    border-radius: 50%;
-    border: 2px solid #008080;
+    border-radius: 10%;
+  }
+
+  h2 {
+    color: teal;
   }
 
   p {
@@ -34,29 +38,45 @@ const Me = styled.div`
     line-height: 1.25;
   }
 
-  @media (max-width:750px){
-    margin-bottom:0.5rem;
+  @media (max-width: 750px) {
+    margin-bottom: 0.5rem;
 
     p {
-      font-size:1.2rem;
+      font-size: 1.2rem;
     }
   }
-`
+`;
 
 const About = () => {
+  const topRef = useRef(null);
+  const wasabiRef = useRef(null);
+  useEffect(() => {
+    gsap.from(topRef.current, {
+      duration: 1,
+      autoAlpha: 0,
+      x: 50,
+    });
+    gsap.from(wasabiRef.current, {
+      autoAlpha: 0,
+      duration: 1,
+      x: -50,
+    });
+  }, []);
+
   return (
-    <Container classname="">
+    <Container>
       <Me>
-        <div>
+        <div ref={topRef}>
           <h2> Hi,</h2>
           <h2>I'm Rebecca.</h2>
           <p>
-            I enjoy nature walks with my fluffy dog and <br />
+            I enjoy <span style={{ color: "teal" }}> wasabi</span> ice cream and{" "}
+            <br />
             and I love building stuff with code.
           </p>
         </div>
         <div style={{ marginLeft: "20px" }}>
-          <img className="face" src={myFace} alt="face" />
+          <img className="face" src={wasabi} ref={wasabiRef} alt="face" />
         </div>
       </Me>
       <div style={{ lineHeight: "1.5" }}>
@@ -100,11 +120,11 @@ const About = () => {
         <p style={{ lineHeight: 1.5 }}>
           I'm always interested in working with positive people on interesting
           projects. I'm currently seeking a full time role where I can be an
-          asset to an awesome team.
+          asset to a great team.
         </p>
       </div>
-      </Container>
-  )
-}
+    </Container>
+  );
+};
 
-export default About
+export default About;

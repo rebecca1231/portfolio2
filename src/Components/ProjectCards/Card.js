@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import { gsap } from "gsap";
+import { useHistory } from "react-router-dom";
 import styled from "styled-components";
 
-import Modal from "../Modal";
 
 const CarDiv = styled.div`
   width: 500px;
@@ -33,11 +33,12 @@ const CarDiv = styled.div`
   }
 `;
 
-const Card = ({ title, image1, image2, url, github, description, tech }) => {
+const Card = ({ title, image1, exp }) => {
   const [show, setShow] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
   const h3Ref = useRef(null);
   const bRef = useRef(null);
+  const history = useHistory();
+
 
   useEffect(() => {
     gsap.from(h3Ref.current, {
@@ -69,27 +70,11 @@ const Card = ({ title, image1, image2, url, github, description, tech }) => {
             <button
               ref={bRef}
               className="ui basic teal button"
-              onClick={() => setIsOpen(true)}
+              onClick={() => history.push(`/projects/${exp}`) }
             >
               Learn More
             </button>
-            {isOpen === true ? (
-              <Modal
-                open={isOpen}
-                onClose={() => {
-                  setIsOpen(false);
-                  setShow(false);
-                }}
-                image={image2}
-                tech={tech}
-                description={description}
-                url={url}
-                github={github}
-                title={title}
-              />
-            ) : (
-              ""
-            )}
+            
           </div>
         </>
       ) : (

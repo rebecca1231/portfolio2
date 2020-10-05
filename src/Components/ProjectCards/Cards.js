@@ -17,6 +17,7 @@ const Cards = () => {
           tech={obj.tech}
           skill={obj.skill}
           github={obj.github}
+          exp={exp}
         />
       </div>
     );

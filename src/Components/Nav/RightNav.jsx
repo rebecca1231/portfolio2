@@ -6,11 +6,10 @@ const Ul = styled.ul`
   list-style: none;
   display: flex;
   flex-flow: row nowrap;
-  font-size: 1.25rem;
+  font-size: 1rem;
   justify-content: flex-end;
-  border-left: 2px solid #f1f1f1;
   position: fixed;
-  right: 0;
+  right: 10px;
   top: 0;
   margin: 0;
   z-index: 20;
@@ -20,32 +19,30 @@ const Ul = styled.ul`
   .links {
     padding: 10px;
     text-decoration: none;
-    font-family: Roboto;
     color: teal;
     cursor: pointer;
   }
 
   @media (max-width: 768px) {
     flex-flow: column nowrap;
-    background-color: #f9f9f9;
+    background-color: #fafafafa;
     position: fixed;
     transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
     top: -20px;
     right: 0;
     height: 100vh;
-    width: 85vw;
+    width: 90vw;
     padding-top: 3.5rem;
     padding-bottom: 0;
     transition: transform 0.3s ease-in-out;
     justify-content: flex-start;
     border-bottom: none;
-    box-shadow: ${({ open }) => (open ? "-5px 0 5px #c0c0c0" : "none")};
+    box-shadow: ${({ open }) => (open ? "-3px 0 3px #d3d3d3" : "none")};
     z-index: 19;
 
     .links {
       padding: 10px;
       text-decoration: none;
-      font-family: Roboto;
       color: teal;
     }
   }
@@ -71,7 +68,6 @@ const RightNav = ({ open, set }) => {
           history.push("/about");
           set(!open);
         }}
-        style={{ padding: "10px", color: "teal" }}
       >
         About
       </div>
@@ -81,13 +77,11 @@ const RightNav = ({ open, set }) => {
           set(!open);
           history.push("/contact");
         }}
-        style={{ padding: "10px", color: "teal" }}
       >
         Contact
       </div>
       <div
         className="links"
-        style={{ padding: "10px", color: "teal" }}
         onClick={() => {
           set(!open);
           history.push("/projects");
@@ -98,7 +92,6 @@ const RightNav = ({ open, set }) => {
 
       <a
         className="links"
-        style={{ padding: "10px", color: "teal" }}
         href="https://www.opine.app"
         rel="noopener noreferrer"
         target="_blank"
@@ -107,7 +100,6 @@ const RightNav = ({ open, set }) => {
       </a>
       <a
         className="links"
-        style={{ padding: "10px", color: "teal" }}
         href="https://blog.rebeccahirai.com"
       >
         Blog

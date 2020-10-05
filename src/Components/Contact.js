@@ -36,7 +36,7 @@ export default function ContactUs() {
   return (
     <div
       style={{
-        backgroundColor: "#e8e8e8",
+        backgroundColor: "#fafafafa",
         width: "100%",
         paddingBottom: "15px"
       }}
@@ -53,7 +53,7 @@ export default function ContactUs() {
       <div className="ui container">
         {sent === false ? (
           <>
-            <form className="ui big form" onSubmit={sendEmail}>
+            <form className="ui form" onSubmit={sendEmail}>
               <input type="hidden" name="contact_number" />
               <div className="field">
                 <label>Name</label>
@@ -87,7 +87,7 @@ export default function ContactUs() {
               </div>
               <div className="field">
                 <input
-                  className="ui big button teal"
+                  className="ui button teal"
                   type="submit"
                   value="Send"
                 />
@@ -105,7 +105,7 @@ export default function ContactUs() {
           target="_blank"
           rel="noopener noreferrer"
           style={{ marginTop: "2rem" }}
-          className="ui basic teal basic huge icon button"
+          className="ui basic teal basic icon button"
         >
           Let's connect on <i className="large linkedin icon"></i>
         </a>
