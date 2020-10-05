@@ -100,7 +100,7 @@ const RightNav = ({ open, set }) => {
         className="links"
         style={{ padding: "10px", color: "teal" }}
         href="https://www.opine.app"
-        rel="noopener norefferer"
+        rel="noopener noreferrer"
         target="_blank"
       >
         Opine
