@@ -1,6 +1,5 @@
 import React from "react";
 import myFace from "../myFace copy.jpeg";
-import Skills from "./Skills";
 
 import styled from "styled-components";
 

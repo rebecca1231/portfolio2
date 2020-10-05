@@ -17,7 +17,6 @@ const SimpleCards = () => {
           url={obj.url}
           github={obj.github}
           details={obj.details}
-          skill={obj.skill}
         />
       </div>
     );
