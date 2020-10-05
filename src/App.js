@@ -7,6 +7,7 @@ import Landing from './Components/Landing';
 import Contact from './Components/Contact';
 import About from './Components/About'
 import Projects from './Components/Projects'
+import './styles/index.scss'
 
 
 function App() {

@@ -1,15 +1,28 @@
-import React from "react";
-import myFace from "../myFace copy.jpeg";
+import React from "react"
+import myFace from "../myFace copy.jpeg"
+import styled from "styled-components"
 
-import styled from "styled-components";
+const Container = styled.div`
+margin: 0 auto;
+max-width: 750px;
+padding: 1rem;
+line-height:1.5;
+font-size:1.25rem;
+
+
+
+display: flex;
+flex-direction: column;
+min-height: 100vh;
+
+`
 
 const Me = styled.div`
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+  align-items: space-between;
+  justify-content: center;
   margin-top: 5rem;
-  margin-bottom: 0.5rem;
   img {
     max-width: 10rem;
     border-radius: 50%;
@@ -17,33 +30,31 @@ const Me = styled.div`
   }
 
   p {
-    font-size: 1rem;
-    line-height: 1.5;
-  }
-  @media (min-width: 900px) {
     font-size: 1.5rem;
+    line-height: 1.25;
   }
 
-  @media (min-width: 1300px) {
-    img {
-      max-width: 15rem;
+  @media (max-width:750px){
+    margin-bottom:0.5rem;
+
+    p {
+      font-size:1.2rem;
     }
-    font-size: 1.75rem;
   }
-`;
+`
 
 const About = () => {
   return (
-    <div className="ui container">
+    <Container classname="">
       <Me>
         <div>
-      <h2> Hi,</h2>
+          <h2> Hi,</h2>
           <h2>I'm Rebecca.</h2>
           <p>
             I enjoy nature walks with my fluffy dog and <br />
             and I love building stuff with code.
           </p>
-          </div>
+        </div>
         <div style={{ marginLeft: "20px" }}>
           <img className="face" src={myFace} alt="face" />
         </div>
@@ -75,7 +86,7 @@ const About = () => {
         <p>
           I love to learn and grow. My latest project is a JamStack application,
           using Gatsby. It utilizes the leading open source headless CMS:
-          Strapi. It's still a work in progress, but you can check out the code
+          Strapi. It is still a work in progress, but you can check out the code
           to date on{" "}
           <a
             target="_blank"
@@ -86,14 +97,14 @@ const About = () => {
           </a>
           .
         </p>
-        <p>
+        <p style={{ lineHeight: 1.5 }}>
           I'm always interested in working with positive people on interesting
           projects. I'm currently seeking a full time role where I can be an
           asset to an awesome team.
         </p>
-        </div>
-    </div>
-  );
-};
+      </div>
+      </Container>
+  )
+}
 
-export default About;
+export default About
