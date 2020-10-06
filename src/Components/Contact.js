@@ -9,11 +9,17 @@ init(ID);
 const Triangle = styled.div`
   width: 0;
   height: 0;
-  margin: 1rem auto 0;
-  border-left: 40vw solid transparent;
-  border-right: 40vw solid transparent;
+  border-left: 400px solid transparent;
+  border-right: 400px solid transparent;
 
   border-top: 10vw solid #fff;
+
+  @media (max-width:750px) {
+    border-left: 45vw solid transparent;
+    border-right: 45vw solid transparent;
+    margin-top:2rem;
+
+  }
 `;
 
 export default function ContactUs() {
@@ -37,8 +43,10 @@ export default function ContactUs() {
     <div
       style={{
         backgroundColor: "#fafafafa",
-        width: "100%",
-        paddingBottom: "15px"
+        maxWidth: "800px",
+        margin:"auto",
+        padding: "0 15px 15px",
+        borderRadius:'10px'
       }}
     >
       <Triangle />

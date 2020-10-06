@@ -8,41 +8,39 @@ import fluffybg from "../fluffybg.jpeg";
 import { projectData } from "./ProjectCards/projectData";
 import Card from "./ProjectCards/Card";
 import Contact from "./Contact";
-import About from "./About";
 
 const Container = styled.div`
   max-width: 800px;
   margin: auto;
-  color:#585858;
+  color: #585858;
 
-  .textBox{
-    padding:10px;
-    max-width:400px;
+  .textBox {
+    padding: 10px;
+    max-width: 400px;
     margin: 0 auto;
   }
- 
 `;
 
 const FlexContainer = styled.div`
-display:flex;
-flex-direction: row;
-justify-content: space-between;
-align-items:space-between;
-flex-wrap:wrap;
-p {
-  font-size: 1rem;
-  line-height: 1.5;
-  padding: 10px 0;
-  color: #707070;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: space-between;
+  flex-wrap: wrap;
+  p {
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 10px 0;
+    color: #707070;
 
-  @media (max-width:750px){
-    display: block;
+    @media (max-width: 750px) {
+      display: block;
+    }
   }
-}
-`
+`;
 
 const Me = styled.div`
-border-radius:5px;
+  border-radius: 5px;
   max-width: 800px;
   margin: auto;
   background-image: url(${fluffybg});
@@ -86,7 +84,7 @@ const Landing = () => {
   const project1 = projectData[0];
   const project2 = projectData[1];
   const project3 = projectData[2];
-  const project4 = projectData[3]
+  const project4 = projectData[3];
 
   const animation = (ref) => {
     return {
@@ -159,17 +157,17 @@ const Landing = () => {
         </Me>
         <FlexContainer>
           <div className="textBox">
-          <p>I'm going to write more stuff about me here!</p>
-          </div><div className="textBox">
-          <p>
-            I'm super nice and easy to mentor. I really like to learn and grow.
-            I love learning new things, and cookies. I like cookies.
-          </p>
+            <p>
+
+            </p>
+          </div>
+          <div className="textBox">
+            <p>
+            </p>
           </div>
         </FlexContainer>
-        <div             style={{textAlign:"center"}}
->
-        <div
+        <div style={{ textAlign: "center" }}>
+          <div
             className="ui teal small basic button"
             onClick={() => {
               history.push("/about");
@@ -177,7 +175,7 @@ const Landing = () => {
           >
             My story{" "}
           </div>
-          </div>
+        </div>
         <div
           ref={borderRef}
           className="ui container"
@@ -191,32 +189,30 @@ const Landing = () => {
       <div style={{ marginTop: "2rem" }} ref={cardsRef}>
         <h2>What I've been working on </h2>
         <FlexContainer>
-
-        <Card
-          title={project1.title}
-          image1={project1.image1}
-          description={project1.description}
-          url={project1.url}
-        />
-        <Card
-          title={project2.title}
-          image1={project2.image1}
-          description={project2.description}
-          url={project2.url}
-        />
-        <Card
-          title={project3.title}
-          image1={project3.image1}
-          description={project3.description}
-          url={project3.url}
-        />
-         <Card
-          title={project4.title}
-          image1={project4.image1}
-          description={project4.description}
-          url={project4.url}
-        />
-
+          <Card
+            title={project1.title}
+            image1={project1.image1}
+            description={project1.description}
+            slug={project1.slug}
+          />
+          <Card
+            title={project2.title}
+            image1={project2.image1}
+            description={project2.description}
+            slug={project2.slug}
+          />
+          <Card
+            title={project3.title}
+            image1={project3.image1}
+            description={project3.description}
+            slug={project3.slug}
+          />
+          <Card
+            title={project4.title}
+            image1={project4.image1}
+            description={project4.description}
+            slug={project4.slug}
+          />
         </FlexContainer>
       </div>
       <div>

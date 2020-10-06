@@ -38,7 +38,6 @@ const CarDiv = styled.div`
 
 const Card = ({ title, image1, slug, description }) => {
   const history = useHistory();
-console.log(slug, title)
   return (
     <CarDiv key={title} id={title}>
       <div className="image-box">
@@ -48,7 +47,7 @@ console.log(slug, title)
         <h3>{title}</h3>
         <p> {description} </p>
         <a
-          style={{ color: "#585858" }}
+          style={{ color: "#585858", cursor:"pointer" }}
           onClick={() => history.push(`/projects/${slug}`)}
         >
           Learn More

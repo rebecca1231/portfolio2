@@ -1,9 +1,7 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import myFace from "../myFace copy.jpeg";
 import wasabi from "../wasabi.jpg";
 
 const Container = styled.div`

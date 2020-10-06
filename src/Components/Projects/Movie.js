@@ -1,10 +1,23 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
+import styled from "styled-components"
 
+const Container = styled.div`
+  max-width: 800px;
+  margin: auto;
+  color:#585858;
+
+  .textBox{
+    padding:10px;
+    max-width:400px;
+    margin: 0 auto;
+  }
+ 
+`;
 const Movie = () => {
   const history = useHistory();
   return (
-    <div>
+    <Container>
       <h1>Under Construction</h1>
       <p>Hi! Sorry about this!</p>
       <p>
@@ -21,7 +34,7 @@ const Movie = () => {
       >
         Head Home{" "}
       </div>
-    </div>
+    </Container>
   );
 };
 
