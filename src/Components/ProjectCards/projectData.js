@@ -1,23 +1,15 @@
-import movieFight1 from "../../projectImages/movieFight1.png";
-import movieFight2 from "../../projectImages/movieFight2.png";
-import ecomm1 from "../../projectImages/ecomm1.png";
-import ecomm2 from "../../projectImages/ecomm2.png";
-import maze1 from "../../projectImages/maze1.png";
-import maze2 from "../../projectImages/maze2.png";
-import tindog1 from "../../projectImages/tindog1.png";
-import tindog2 from "../../projectImages/tindog2.png";
-import opine1 from "../../projectImages/opine1.png";
-import opine2 from "../../projectImages/opine2.png";
-import opine3 from "../../projectImages/opine3.png";
-import fluff1 from '../../projectImages/fluff1.png'
-import fluff2 from '../../projectImages/fluff2.png'
-import fluff3 from '../../projectImages/fluff3.png'
+import movieFightCollage from "../../projectImages/movieFightCollage.jpg";
+
+import mazeCollage from "../../projectImages/mazeCollage.jpg";
+
+import opineCollage from "../../projectImages/opineCollage.jpg";
+
+import fluffCollage from '../../projectImages/fluffCollage.jpg'
+
 
 export const projectData = [
   {
-    image1: opine1,
-    image2: opine2,
-    image3: opine3,
+    image1: opineCollage,
     live: "https://www.opine.app",
     exp:"opine",
     title: "Opine",
@@ -30,9 +22,7 @@ export const projectData = [
       "Opine is my journey to discover how to build full stack React applications. I had to learn how to get the backend API and the React frontend to communicate, and how to deploy the whole application.",
   },
   {
-    image1: fluff1,
-    image2: fluff2,
-    image3: fluff3,
+    image1: fluffCollage,
     url: "https://eager-jang-815ed7.netlify.app/",
     title: "Emma's Boutique",
     description: "Users can shop pet clothing.",
@@ -46,8 +36,7 @@ export const projectData = [
       `,
   },
   {
-    image1: movieFight1,
-    image2: movieFight2,
+    image1: movieFightCollage,
     title: "Movie Fight",
     description: "Summons and compares movie stats.",
     skill: "I learned to make API calls and debounce submit functions.",
@@ -56,7 +45,19 @@ export const projectData = [
     details:
       "Movie Fight taught me a lot about how to handle API calls, how to access and utilize information from a third party.  I also learned about debouncing user interaction to prevent excessive data fetching.",
   },
+  
   {
+    image1: mazeCollage,
+    title: "Maze Game",
+    description: "You can use the asdw keys to move the ball.",
+    skill: "I learned DOM manipulation with Javascript and Matterjs.",
+    tech: "HTML, CSS, JavaScript",
+    url: "https://rebecca1231.github.io/maze/",
+    github: "https://www.github.com/rebecca1231/maze",
+    details:
+      "Making this maze game required knowledge of DOM manipulation using JavaScript.",
+  },
+  /*{
     image1: ecomm1,
     image2: ecomm2,
     title: "Online Shop Site",
@@ -68,18 +69,6 @@ export const projectData = [
       "This online shop uses cookies to track a user's cart data, including the content and how long it has been kept. This helps to determine whether to maintain or remove the information from the repository.",
   },
   {
-    image1: maze1,
-    image2: maze2,
-    title: "Maze Game",
-    description: "You can use the asdw keys to move the ball.",
-    skill: "I learned DOM manipulation with Javascript and Matterjs.",
-    tech: "HTML, CSS, JavaScript",
-    url: "https://rebecca1231.github.io/maze/",
-    github: "https://www.github.com/rebecca1231/maze",
-    details:
-      "Making this maze game required knowledge of DOM manipulation using JavaScript.",
-  },
-  {
     image1: tindog1,
     image2: tindog2,
     title: "Dog Tinder",
@@ -89,5 +78,5 @@ export const projectData = [
     github: "https://www.github.com/rebecca1231/tindog",
     details:
       "TinDog shows the importance of design principles.  I particularly paid attention proper spacing and padding, font sizing for attention, and the use of color to create areas of interest.",
-  },
+  },*/
 ];

@@ -2,7 +2,6 @@ import React, { useRef, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import myFace from "../myFace copy.jpeg";
 import styled from "styled-components";
 import fluffybg from "../fluffybg.jpeg";
 
@@ -43,6 +42,7 @@ p {
 `
 
 const Me = styled.div`
+border-radius:5px;
   max-width: 800px;
   margin: auto;
   background-image: url(${fluffybg});
@@ -83,9 +83,10 @@ const Landing = () => {
   const topRef = useRef(null);
   const headRef = useRef(null);
 
-  const project = projectData[0];
+  const project1 = projectData[0];
   const project2 = projectData[1];
   const project3 = projectData[2];
+  const project4 = projectData[3]
 
   const animation = (ref) => {
     return {
@@ -189,35 +190,31 @@ const Landing = () => {
       </div>
       <div style={{ marginTop: "2rem" }} ref={cardsRef}>
         <h2>What I've been working on </h2>
-        <h4>Opine</h4>
         <FlexContainer>
 
         <Card
-          title={project.title}
-          image1={project.image1}
-          image2={project.image2}
-          description={project.description}
-          tech={project.tech}
-          url={project.url}
-          github={project.github}
+          title={project1.title}
+          image1={project1.image1}
+          description={project1.description}
+          url={project1.url}
         />
         <Card
           title={project2.title}
           image1={project2.image1}
-          image2={project2.image2}
           description={project2.description}
-          tech={project2.tech}
           url={project2.url}
-          github={project2.github}
         />
         <Card
           title={project3.title}
           image1={project3.image1}
-          image2={project3.image2}
           description={project3.description}
-          tech={project3.tech}
           url={project3.url}
-          github={project3.github}
+        />
+         <Card
+          title={project4.title}
+          image1={project4.image1}
+          description={project4.description}
+          url={project4.url}
         />
 
         </FlexContainer>
