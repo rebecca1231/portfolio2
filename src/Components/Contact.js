@@ -100,15 +100,6 @@ export default function ContactUs() {
             <p>Your message has been sent!</p>
           </div>
         )}
-        <a
-          href="https://www.linkedin.com/in/rebeccahirai"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ marginTop: "2rem" }}
-          className="ui basic teal basic icon button"
-        >
-          Let's connect on <i className="large linkedin icon"></i>
-        </a>
       </div>
     </div>
   );

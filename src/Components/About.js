@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -50,6 +50,7 @@ const Me = styled.div`
 const About = () => {
   const topRef = useRef(null);
   const wasabiRef = useRef(null);
+  const rainbowRef = useRef(null);
   useEffect(() => {
     gsap.from(topRef.current, {
       duration: 1,

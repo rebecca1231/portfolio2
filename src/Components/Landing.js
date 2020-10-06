@@ -11,6 +11,37 @@ import Card from "./ProjectCards/Card";
 import Contact from "./Contact";
 import About from "./About";
 
+const Container = styled.div`
+  max-width: 800px;
+  margin: auto;
+  color:#585858;
+
+  .textBox{
+    padding:10px;
+    max-width:400px;
+    margin: 0 auto;
+  }
+ 
+`;
+
+const FlexContainer = styled.div`
+display:flex;
+flex-direction: row;
+justify-content: space-between;
+align-items:space-between;
+flex-wrap:wrap;
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 10px 0;
+  color: #707070;
+
+  @media (max-width:750px){
+    display: block;
+  }
+}
+`
+
 const Me = styled.div`
   max-width: 800px;
   margin: auto;
@@ -18,7 +49,7 @@ const Me = styled.div`
   background-repeat: no-repeat;
   background-size: 800px auto;
   background-position: top;
-  height: 50vh;
+  height: 40vh;
   img {
     max-width: 10rem;
     border-radius: 10px;
@@ -93,7 +124,7 @@ const Landing = () => {
   }, []);
 
   return (
-    <div>
+    <Container>
       <div style={{ marginTop: "50px" }}>
         <div
           className="ui container"
@@ -125,48 +156,27 @@ const Landing = () => {
             </div>
           </div>
         </Me>
-        <div>
-          <div style={{ textAlign: "center", margin: "auto" }}></div>
-        </div>
-
-        <div style={{ marginTop: "2rem" }} ref={cardsRef}>
-          <div
-            id="top-project"
-            className="ui large header"
-            style={{ fontSize: "2rem", marginLeft: "" }}
-          >
-            Top Projects
+        <FlexContainer>
+          <div className="textBox">
+          <p>I'm going to write more stuff about me here!</p>
+          </div><div className="textBox">
+          <p>
+            I'm super nice and easy to mentor. I really like to learn and grow.
+            I love learning new things, and cookies. I like cookies.
+          </p>
           </div>
-          <div className="ui large header"></div>
-          <Card
-            title={project.title}
-            image1={project.image1}
-            image2={project.image2}
-            description={project.description}
-            tech={project.tech}
-            url={project.url}
-            github={project.github}
-          />
-          <Card
-            title={project2.title}
-            image1={project2.image1}
-            image2={project2.image2}
-            description={project2.description}
-            tech={project2.tech}
-            url={project2.url}
-            github={project2.github}
-          />
-          <Card
-            title={project3.title}
-            image1={project3.image1}
-            image2={project3.image2}
-            description={project3.description}
-            tech={project3.tech}
-            url={project3.url}
-            github={project3.github}
-          />
-        </div>
-
+        </FlexContainer>
+        <div             style={{textAlign:"center"}}
+>
+        <div
+            className="ui teal small basic button"
+            onClick={() => {
+              history.push("/about");
+            }}
+          >
+            My story{" "}
+          </div>
+          </div>
         <div
           ref={borderRef}
           className="ui container"
@@ -176,14 +186,56 @@ const Landing = () => {
             width: "40%",
           }}
         />
-        <div id="about" ref={aboutRef}>
-          <About />
-        </div>
+      </div>
+      <div style={{ marginTop: "2rem" }} ref={cardsRef}>
+        <h2>What I've been working on </h2>
+        <h4>Opine</h4>
+        <FlexContainer>
+
+        <Card
+          title={project.title}
+          image1={project.image1}
+          image2={project.image2}
+          description={project.description}
+          tech={project.tech}
+          url={project.url}
+          github={project.github}
+        />
+        <Card
+          title={project2.title}
+          image1={project2.image1}
+          image2={project2.image2}
+          description={project2.description}
+          tech={project2.tech}
+          url={project2.url}
+          github={project2.github}
+        />
+        <Card
+          title={project3.title}
+          image1={project3.image1}
+          image2={project3.image2}
+          description={project3.description}
+          tech={project3.tech}
+          url={project3.url}
+          github={project3.github}
+        />
+
+        </FlexContainer>
       </div>
       <div>
         <Contact />
       </div>
-    </div>
+      <div style={{ margin: "0 auto", textAlign: "center" }}>
+        <a
+          href="https://www.linkedin.com/in/rebeccahirai"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="ui basic teal basic icon button"
+        >
+          Let's connect on <i className="large linkedin icon"></i>
+        </a>
+      </div>
+    </Container>
   );
 };
 
