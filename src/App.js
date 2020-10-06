@@ -7,8 +7,13 @@ import Landing from "./Components/Landing";
 import Contact from "./Components/Contact";
 import About from "./Components/About";
 import Projects from "./Components/Projects";
-import ProjectOpine from './Components/Projects/ProjectOpine'
+import Opine from './Components/Projects/Opine'
 import "./styles/index.scss";
+import Boutique from "./Components/Projects/Boutique";
+import Maze from "./Components/Projects/Maze";
+import Movie from "./Components/Projects/Movie";
+
+
 
 function App() {
   return (
@@ -19,7 +24,10 @@ function App() {
         <Route path="/contact" component={Contact} /> 
         <Route exact path="/" component={Landing} />
         <Route exact path="/projects" component={Projects} />
-        <Route path="/projects/opine" component={ProjectOpine} />
+        <Route path="/projects/opine" component={Opine} />
+        <Route path="/projects/movie" component={Movie} />
+        <Route path="/projects/maze" component={Maze} />
+        <Route path="/projects/boutique" component={Boutique} />
       </Switch>
       <Footer />
     </Router>

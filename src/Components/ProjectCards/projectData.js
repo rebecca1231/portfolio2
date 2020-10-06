@@ -4,14 +4,13 @@ import mazeCollage from "../../projectImages/mazeCollage.jpg";
 
 import opineCollage from "../../projectImages/opineCollage.jpg";
 
-import fluffCollage from '../../projectImages/fluffCollage.jpg'
-
+import fluffCollage from "../../projectImages/fluffCollage.jpg";
 
 export const projectData = [
   {
     image1: opineCollage,
     live: "https://www.opine.app",
-    exp:"opine",
+    slug: "opine",
     title: "Opine",
     description:
       "Users can send email polls and see the resulting data in charts",
@@ -23,6 +22,7 @@ export const projectData = [
   },
   {
     image1: fluffCollage,
+    slug: "boutique",
     url: "https://eager-jang-815ed7.netlify.app/",
     title: "Emma's Boutique",
     description: "Users can shop pet clothing.",
@@ -37,6 +37,7 @@ export const projectData = [
   },
   {
     image1: movieFightCollage,
+    slug: "movie",
     title: "Movie Fight",
     description: "Summons and compares movie stats.",
     skill: "I learned to make API calls and debounce submit functions.",
@@ -45,9 +46,10 @@ export const projectData = [
     details:
       "Movie Fight taught me a lot about how to handle API calls, how to access and utilize information from a third party.  I also learned about debouncing user interaction to prevent excessive data fetching.",
   },
-  
+
   {
     image1: mazeCollage,
+    slug: "maze",
     title: "Maze Game",
     description: "You can use the asdw keys to move the ball.",
     skill: "I learned DOM manipulation with Javascript and Matterjs.",

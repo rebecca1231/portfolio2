@@ -1,29 +1,49 @@
 import React from "react";
+import styled from "styled-components";
+import Cards from "./ProjectCards/Cards";
 
-import SimpleCards from "./ProjectCards/SimpleCards";
+const Container = styled.div`
+  max-width: 800px;
+  margin: auto;
+  color: #585858;
+
+  .textBox {
+    padding: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+`;
+
+const FlexContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: space-between;
+  flex-wrap: wrap;
+  p {
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 10px 0;
+    color: #707070;
+
+    @media (max-width: 750px) {
+      display: block;
+    }
+  }
+`;
 
 const Projects = () => {
   return (
-    <div className="ui container" style={{marginTop:"3.5rem"}}>
-      <div className="ui large header" style={{ fontSize: "1.5rem" }}>
-        Dream it.
-      </div>
-      <div
-        className="ui big header"
-        style={{ marginLeft: "2rem", fontSize: "2rem" }}
-      >
-        Believe it.
-      </div>
-      <div
-        className="ui huge header"
-        style={{ marginLeft: "4rem", fontSize: "2.5rem" }}
-      >
-        Build it.
-      </div>
-      <div style={{ marginTop: "2rem" }}>
-        <SimpleCards />
-      </div>
-    </div>
+    <Container>
+      <h5 style={{ fontSize: "1.5rem", marginTop: "50px", marginLeft:"0.85rem" }}>Dream it.</h5>
+      <h4 style={{ marginLeft: "2rem", fontSize: "2rem" }}>Believe it.</h4>
+      <h3 style={{ marginLeft: "4rem", fontSize: "2.5rem" }}>Build it.</h3>
+      <div style={{ marginTop: "2rem" }}> </div>
+
+      <FlexContainer>
+        <Cards />
+      </FlexContainer>
+    </Container>
   );
 };
 

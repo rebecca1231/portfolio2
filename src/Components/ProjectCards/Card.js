@@ -4,23 +4,23 @@ import styled from "styled-components";
 
 const CarDiv = styled.div`
   max-width: 400px;
-  padding:10px;
+  padding: 10px;
   margin: 0 auto 1rem;
   overflow: hidden;
   border-radius: 5px;
   transition: all 0.2s ease-in-out;
-  color:#585858;
+  color: #585858;
 
   img {
     width: 100%;
-    border-radius:5px;
+    border-radius: 5px;
   }
-  
+
   :hover {
     transform: scale(1.05);
-    a{
+    a {
       text-decoration: underline;
-      font-size:0.8rem;
+      font-size: 0.8rem;
     }
   }
 `;
@@ -36,24 +36,24 @@ const CarDiv = styled.div`
   }
  */
 
-const Card = ({ title, image1, exp }) => {
-
+const Card = ({ title, image1, slug, description }) => {
   const history = useHistory();
- 
-
+console.log(slug, title)
   return (
     <CarDiv key={title} id={title}>
       <div className="image-box">
-      <img src={image1} alt="project" />
+        <img src={image1} alt="project" />
       </div>
       <div>
-        <h3 >
-          {title}
-        </h3>
-        <a style={{color:"#585858"}} onClick={() => history.push(`/projects/${exp}`)}>
+        <h3>{title}</h3>
+        <p> {description} </p>
+        <a
+          style={{ color: "#585858" }}
+          onClick={() => history.push(`/projects/${slug}`)}
+        >
           Learn More
         </a>
-        </div>
+      </div>
     </CarDiv>
   );
 };

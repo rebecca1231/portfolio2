@@ -89,15 +89,6 @@ const RightNav = ({ open, set }) => {
       >
         Projects
       </div>
-
-      <a
-        className="links"
-        href="https://www.opine.app"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        Opine
-      </a>
       <a
         className="links"
         href="https://blog.rebeccahirai.com"
