@@ -158,7 +158,7 @@ const Landing = () => {
         <FlexContainer>
           <div className="textBox">
             <p>
-              I’m a Full Stack Developer, because I love learning and building.
+              I’m a Full Stack Developer.  I love learning and building.
             <br/>
             <br/>
               As I’ve grown as a developer, I've been mentored by senior

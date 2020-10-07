@@ -22,6 +22,7 @@ const Me = styled.div`
   align-items: space-between;
   justify-content: center;
   margin-top: 2rem;
+  height: 30vh;
   img {
     max-width: 10rem;
     border-radius: 10%;
@@ -33,16 +34,23 @@ const Me = styled.div`
 
   p {
     font-size: 1.5rem;
-    line-height: 1.25;
+    line-height: 1.5;
   }
 
   @media (max-width: 750px) {
     margin-bottom: 0.5rem;
-
+ 
     p {
       font-size: 1.2rem;
+      line-height:1.2;
     }
   }
+
+
+  @media(max-width:380px){
+    height:35vh;
+    height:auto;
+}
 `;
 
 const About = () => {
@@ -77,7 +85,7 @@ const About = () => {
           <img className="face" src={wasabi} ref={wasabiRef} alt="face" />
         </div>
       </Me>
-      <div style={{ lineHeight: "1.5" }}>
+      <div >
         <p>
           My first experience with development was when I was 13. I made my own
           web page (with all the bad poetry) and had a lot of fun creating
@@ -115,7 +123,7 @@ const About = () => {
           </a>
           .
         </p>
-        <p style={{ lineHeight: 1.5 }}>
+        <p>
           I'm always interested in working with positive people on interesting
           projects. I'm currently seeking a full time role where I can be an
           asset to a great team.
