@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import opine4 from "../../projectImages/opine4.jpg";
 import opine3 from "../../projectImages/opine3.png";
-import opineModal from '../../projectImages/opine-modal.png'
+import opineModal from "../../projectImages/opine-modal.png";
 import opineMobile from "../../projectImages/opine-mobile.png";
 
 const Container = styled.div`
@@ -127,7 +127,7 @@ const Opine = () => {
             <li>
               <a
                 href="https://opine.app"
-                rel="noopener norefferer"
+                rel="noopener noreferrer"
                 target="_blank"
               >
                 Live Site
@@ -136,7 +136,7 @@ const Opine = () => {
             <li>
               <a
                 href="https://www.github.com/rebecca1231/opine"
-                rel="noopener norefferer"
+                rel="noopener noreferrer"
                 target="_blank"
               >
                 Code{" "}
@@ -144,7 +144,12 @@ const Opine = () => {
             </li>
           </ul>
         </div>
-        <img src={opine3} alt="form" className="mobile-image" style={{margin:0}} />
+        <img
+          src={opine3}
+          alt="form"
+          className="mobile-image"
+          style={{ margin: 0 }}
+        />
       </div>
       <img src={opineModal} alt="modal" />
     </Container>
