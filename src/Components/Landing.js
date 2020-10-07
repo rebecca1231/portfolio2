@@ -15,7 +15,7 @@ const Container = styled.div`
   color: #585858;
 
   .textBox {
-    padding: 10px;
+    padding: 0 10px;
     max-width: 400px;
     margin: 0 auto;
   }
@@ -158,11 +158,18 @@ const Landing = () => {
         <FlexContainer>
           <div className="textBox">
             <p>
-
+              I’m a Full Stack Developer, because I love learning and building.
+            <br/>
+            <br/>
+              As I’ve grown as a developer, I've been mentored by senior
+              developers who have raised my standards and expectations.
             </p>
           </div>
           <div className="textBox">
             <p>
+              I have experience building applications from the ground up, and
+              have learned to build reusable components, like the modals in my
+              project Opine. I keep learning to write better, cleaner code.{" "}
             </p>
           </div>
         </FlexContainer>
