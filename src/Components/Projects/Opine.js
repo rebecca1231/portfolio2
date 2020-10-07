@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import opine4 from "../../projectImages/opine4.jpg";
+import opine3 from "../../projectImages/opine3.png";
+import opineModal from '../../projectImages/opine-modal.png'
 import opineMobile from "../../projectImages/opine-mobile.png";
 
 const Container = styled.div`
@@ -8,7 +10,16 @@ const Container = styled.div`
   margin: 5rem auto;
   color: #585858;
   line-height: 1.5;
-
+  ul {
+    list-style-type: none;
+    font-size: 1rem;
+  }
+  a {
+    color: #585858;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
   p {
     padding: 10px;
     max-width: 500px;
@@ -39,9 +50,7 @@ const Container = styled.div`
     .flex {
       flex-direction: column;
     }
-    .mobile-image {
-      max-width: 10rem;
-    }
+
     img {
       max-width: 15rem;
     }
@@ -82,7 +91,7 @@ const Opine = () => {
       </div>
 
       <div className="flex">
-        <img src={opine4} alt="charts"/>
+        <img src={opine4} alt="charts" />
         <div className="distance">
           <h3>Lessons learned</h3>
           <p>
@@ -99,6 +108,45 @@ const Opine = () => {
           </p>
         </div>
       </div>
+      <h3>At a glance</h3>
+      <div className="flex">
+        <div>
+          <h4>Stack</h4>
+          <ul>
+            <li>Node</li>
+            <li>React</li>
+            <li>Express</li>
+            <li>MongoDB</li>
+            <li>Redux</li>
+            <li>D3</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Links</h4>
+          <ul>
+            <li>
+              <a
+                href="https://opine.app"
+                rel="noopener norefferer"
+                target="_blank"
+              >
+                Live Site
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.github.com/rebecca1231/opine"
+                rel="noopener norefferer"
+                target="_blank"
+              >
+                Code{" "}
+              </a>
+            </li>
+          </ul>
+        </div>
+        <img src={opine3} alt="form" className="mobile-image" style={{margin:0}} />
+      </div>
+      <img src={opineModal} alt="modal" />
     </Container>
   );
 };
