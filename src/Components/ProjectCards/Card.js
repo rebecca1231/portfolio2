@@ -18,23 +18,12 @@ const CarDiv = styled.div`
 
   :hover {
     transform: scale(1.05);
-    a {
+    .a-link {
       text-decoration: underline;
-      font-size: 0.8rem;
     }
   }
 `;
-/*
- @media (max-width: 500px) {
-    width: 300px;
-    height: 175px;
-    overflow: hidden;
-  }
-  @media (min-width: 900px) {
-    width: 800px;
-    height: 450px;
-  }
- */
+
 
 const Card = ({ title, image1, slug, description }) => {
   const history = useHistory();
@@ -46,12 +35,13 @@ const Card = ({ title, image1, slug, description }) => {
       <div>
         <h3>{title}</h3>
         <p> {description} </p>
-        <a
+        <p 
+        className="a-link"
           style={{ color: "#585858", cursor:"pointer" }}
           onClick={() => history.push(`/projects/${slug}`)}
         >
           Learn More
-        </a>
+        </p>
       </div>
     </CarDiv>
   );

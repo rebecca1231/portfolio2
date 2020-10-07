@@ -48,7 +48,6 @@ const Me = styled.div`
 const About = () => {
   const topRef = useRef(null);
   const wasabiRef = useRef(null);
-  const rainbowRef = useRef(null);
   useEffect(() => {
     gsap.from(topRef.current, {
       duration: 1,
