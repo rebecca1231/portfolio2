@@ -1,5 +1,4 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
 import styled from "styled-components";
 import opine4 from "../../projectImages/opine4.jpg";
 import opineMobile from "../../projectImages/opine-mobile.png";
@@ -49,7 +48,6 @@ const Container = styled.div`
   }
 `;
 const Opine = () => {
-  const history = useHistory();
   return (
     <Container>
       <h1>Opine</h1>
@@ -84,7 +82,7 @@ const Opine = () => {
       </div>
 
       <div className="flex">
-        <img src={opine4} />
+        <img src={opine4} alt="charts"/>
         <div className="distance">
           <h3>Lessons learned</h3>
           <p>
