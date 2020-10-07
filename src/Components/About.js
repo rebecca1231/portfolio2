@@ -55,13 +55,18 @@ const Me = styled.div`
 
 const About = () => {
   const topRef = useRef(null);
+  const wasabiRef = useRef(null);
   useEffect(() => {
     gsap.from(topRef.current, {
       duration: 1,
       autoAlpha: 0,
       x: 50,
     });
-
+    gsap.from(wasabiRef.current, {
+      autoAlpha: 0,
+      duration: 1,
+      x: -50,
+    });
   }, []);
 
   return (
@@ -77,7 +82,7 @@ const About = () => {
           </p>
         </div>
         <div style={{ marginLeft: "20px" }}>
-          <img className="face" src={wasabi} alt="face" />
+          <img className="face" src={wasabi} ref={wasabiRef} alt="face" />
         </div>
       </Me>
       <div >
