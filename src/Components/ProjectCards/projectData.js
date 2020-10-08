@@ -1,9 +1,6 @@
 import movieFightCollage from "../../projectImages/movieFightCollage.jpg";
-
 import mazeCollage from "../../projectImages/mazeCollage.jpg";
-
 import opineCollage from "../../projectImages/opineCollage.jpg";
-
 import fluffCollage from "../../projectImages/fluffCollage.jpg";
 
 export const projectData = [
@@ -25,7 +22,7 @@ export const projectData = [
     slug: "boutique",
     url: "https://eager-jang-815ed7.netlify.app/",
     title: "Emma's Boutique",
-    description: "This is an interbet shop, currently stoking adorable pet clothing and accessories.",
+    description: "This is an internet shop, currently stocking adorable pet clothing and accessories.",
     skill:
       "I built a JamStack frontend and a custom Strapi CMS on the backend.",
     tech: "React, Gatsby.js, Node.js, GraphQl, Strapi, Cloudinary",
@@ -39,7 +36,7 @@ export const projectData = [
     image1: movieFightCollage,
     slug: "movie",
     title: "Movie Fight",
-    description: "This simple front-end application fetches movie statistic and compares them.",
+    description: "This simple front-end application fetches movie statistics and compares them.",
     skill: "I learned to make API calls and debounce submit functions.",
     tech: "HTML, CSS, JavaScript",
     github: "https://www.github.com/rebecca1231/movieFight",
