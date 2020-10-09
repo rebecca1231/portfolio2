@@ -1,4 +1,4 @@
-import movieFightCollage from "../../projectImages/movieFightCollage.jpg";
+import movieQuizCollage from "../../projectImages/movieQuizCollage.jpg";
 import mazeCollage from "../../projectImages/mazeCollage.jpg";
 import opineCollage from "../../projectImages/opineCollage.jpg";
 import fluffCollage from "../../projectImages/fluffCollage.jpg";
@@ -33,10 +33,10 @@ export const projectData = [
       `,
   },
   {
-    image1: movieFightCollage,
-    slug: "movie",
-    title: "Movie Fight",
-    description: "This simple front-end application fetches movie statistics and compares them.",
+    image1: movieQuizCollage,
+    slug: "movie-quiz",
+    title: "Movie Quiz",
+    description: "This frontend React application lets you search for movies, plugs the information into a quiz, and then shows a visualization of your results.",
     skill: "I learned to make API calls and debounce submit functions.",
     tech: "HTML, CSS, JavaScript",
     github: "https://www.github.com/rebecca1231/movieFight",

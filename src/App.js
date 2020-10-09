@@ -11,7 +11,7 @@ import Opine from './Components/Projects/Opine'
 import "./styles/index.scss";
 import Boutique from "./Components/Projects/Boutique";
 import Maze from "./Components/Projects/Maze";
-import Movie from "./Components/Projects/Movie";
+import MovieQuiz from "./Components/Projects/MovieQuiz";
 
 
 
@@ -25,7 +25,7 @@ function App() {
         <Route exact path="/" component={Landing} />
         <Route exact path="/projects" component={Projects} />
         <Route path="/projects/opine" component={Opine} />
-        <Route path="/projects/movie" component={Movie} />
+        <Route path="/projects/movie-quiz" component={MovieQuiz} />
         <Route path="/projects/maze" component={Maze} />
         <Route path="/projects/boutique" component={Boutique} />
       </Switch>
