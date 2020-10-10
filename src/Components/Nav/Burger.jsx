@@ -49,12 +49,14 @@ const Burger = () => {
 
   return (
     <>
+    
       <StyledBurger open={open} onClick={() => setOpen(!open)}>
         <div />
         <div />
         <div />
       </StyledBurger>
       <RightNav open={open} set={setOpen} />
+      
     </>
   );
 };
