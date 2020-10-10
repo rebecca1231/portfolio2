@@ -12,6 +12,7 @@ import "./styles/index.scss";
 import Boutique from "./Components/Projects/Boutique";
 import Maze from "./Components/Projects/Maze";
 import MovieQuiz from "./Components/Projects/MovieQuiz";
+import NewNav from './Components/NewNav/nav'
 
 
 

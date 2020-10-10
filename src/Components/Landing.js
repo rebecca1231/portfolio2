@@ -183,15 +183,7 @@ const Landing = () => {
             My story{" "}
           </div>
         </div>
-        <div
-          ref={borderRef}
-          className="ui container"
-          style={{
-            marginTop: "2rem",
-            borderBottom: "40px dotted rgba(0, 128, 128, 0.25)",
-            width: "40%",
-          }}
-        />
+       
       </div>
       <div style={{ marginTop: "2rem" }} ref={cardsRef}>
         <h2>What I've been working on </h2>

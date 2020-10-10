@@ -18,14 +18,16 @@ const Ul = styled.ul`
 
   .links {
     padding: 10px;
+    color: hsla(0, 0%, 0%, 0.8);
     text-decoration: none;
-    color: teal;
     cursor: pointer;
+  }
+  .links:hover{
+    color:#008891;
   }
 
   @media (max-width: 768px) {
     flex-flow: column nowrap;
-    background-color: #fafafafa;
     position: fixed;
     transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
     top: -20px;
@@ -43,7 +45,6 @@ const Ul = styled.ul`
     .links {
       padding: 10px;
       text-decoration: none;
-      color: teal;
     }
   }
 `;
