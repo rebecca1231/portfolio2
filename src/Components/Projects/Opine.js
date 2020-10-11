@@ -151,7 +151,20 @@ const Opine = () => {
           style={{ margin: 0 }}
         />
       </div>
-      <img src={opineModal} alt="modal" />
+      <div className="flex">
+        <img src={opineModal} alt="modal" />
+        <div className="distance">
+          <h3>Reusable Components</h3>
+          <p>
+            This modal is an example of how I create reusable components. This
+            particular component was created by using React portal. It is fully
+            customizable. Details, such as title and handler functions, are
+            customized by injecting props, which can be added or removed as
+            needed. Creating reusable components like this helps me to write
+            cleaner code.
+          </p>
+        </div>
+      </div>
     </Container>
   );
 };

@@ -124,7 +124,7 @@ const Opine = () => {
           <ul>
             <li>
               <a
-                href="https://infallible-dubinsky-dfb626.netlify.app/"
+                href="https://movie-quiz-app.netlify.app/"
                 rel="noopener noreferrer"
                 target="_blank"
               >

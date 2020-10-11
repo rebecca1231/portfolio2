@@ -158,11 +158,11 @@ const Landing = () => {
         <FlexContainer>
           <div className="textBox">
             <p>
-              I’m a Full Stack Developer.  I love learning and building.
+              I’m a Software Engineer.  I love learning and building.
             <br/>
             <br/>
-              As I’ve grown as a developer, I've been mentored by senior
-              developers who have raised my standards and expectations.
+              As I’ve grown as a engineer, I've been mentored by senior
+              engineers who have raised my standards and expectations.
             </p>
           </div>
           <div className="textBox">
