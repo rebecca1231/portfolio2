@@ -76,11 +76,15 @@ const Opine = () => {
           </p>
           <h3>Bumps along the way</h3>
           <p>
-            There are so many pieces to this project. I had to maintain good
-            organization or risk getting lost in the clutter. This was true
-            within components as well. It was a good lesson in splitting up
-            large components to single purpose entities, and in naming things
-            clearly.
+            There are many pieces to this project. I had to maintain good
+            organization or risk getting lost in the clutter. It was a good
+            lesson in splitting up large files and naming things clearly. In
+            particular, the backend requires several routes for authentication
+            and others for database interaction. I had to learn how to separate
+            these while maintaining the same instance of the Express app across
+            all routes. Keeping the user in mind, I made sure to create paths
+            for the creation, editing, retrieval and deletion of data with
+            mongoose.
           </p>
         </div>
         <img
@@ -89,7 +93,30 @@ const Opine = () => {
           alt="mobile-landing-page"
         />
       </div>
-
+      <div className="flex">
+        <div style={{ margin: "1rem" }}>
+          {" "}
+          <h3>Full Stack Implications</h3>
+          <p>
+            A major challenge in building Opine was linking my Node/Express
+            backend to the user facing frontend. I researched two options,
+            either to completely separate, or build together. For this project,
+            I chose to house the whole thing altogether. (If you would like to
+            see an example of a project I separated, please look at Movie Quiz
+            or Emma’s.)
+            <br />
+            <br />
+            One advantage of housing the whole application in one folder, meant
+            I could start both servers to run concurrently with one script. This
+            makes development more efficient. I was also able to deploy the
+            whole application on heroku (as opposed to Movie Quiz or Emma’s
+            which are deployed separately). It did require some extra script
+            writing to properly implement, but thankfully heroku has excellent
+            documentation.
+          </p>
+        </div>
+        <div style={{ width: "20rem" }}></div>
+      </div>
       <div className="flex">
         <img src={opine4} alt="charts" />
         <div className="distance">
@@ -100,12 +127,12 @@ const Opine = () => {
             and no update to my state. Specifically, the charting pages were a
             challenge because I initially wired them up to fetch only one piece
             of data. Later it occurred to me that it would be nice to be able to
-            shuffle between different polls and compare charts. When I rewrote
-            the data loading aspect, I was getting no errors, but also no data.
-            Some quality time with Redux Dev Tools and a lot of trial and error
-            finally got my charts up and running. This gave me a much deeper
-            understanding of state.
+            shuffle between different polls and compare charts. The rewrite
+            yielded no errors, but also no data. Trial and error finally got my
+            charts up and running. This gave me a much deeper understanding of
+            state.
           </p>
+          <p></p>
         </div>
       </div>
       <h3>At a glance</h3>
