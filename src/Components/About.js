@@ -39,18 +39,17 @@ const Me = styled.div`
 
   @media (max-width: 750px) {
     margin-bottom: 0.5rem;
- 
+
     p {
       font-size: 1.2rem;
-      line-height:1.2;
+      line-height: 1.2;
     }
   }
 
-
-  @media(max-width:380px){
-    height:35vh;
-    height:auto;
-}
+  @media (max-width: 380px) {
+    height: 35vh;
+    height: auto;
+  }
 `;
 
 const About = () => {
@@ -85,7 +84,7 @@ const About = () => {
           <img className="face" src={wasabi} ref={wasabiRef} alt="face" />
         </div>
       </Me>
-      <div >
+      <div>
         <p>
           My first experience with development was when I was 13. I made my own
           web page (with all the bad poetry) and had a lot of fun creating
@@ -111,15 +110,15 @@ const About = () => {
         </p>
         <p>
           I love to learn and grow. My latest project is a JamStack application,
-          using Gatsby. It utilizes the leading open source headless CMS:
-          Strapi. It is still a work in progress, but you can check out the code
-          to date on{" "}
+          using Gatsby. I'm building a customized headless CMS, currently
+          deployed on heroku. It is still a work in progress, but you can check
+          out the application as is 
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://github.com/rebecca1231/ecomm-strapi"
+            href="https://emmas-boutique.netlify.app"
           >
-            Github
+            here
           </a>
           .
         </p>
