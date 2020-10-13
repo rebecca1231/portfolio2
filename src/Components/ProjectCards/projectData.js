@@ -18,6 +18,21 @@ export const projectData = [
   },
   
   {
+    image1: fluffCollage,
+    slug: "boutique",
+    url: "https://eager-jang-815ed7.netlify.app/",
+    title: "Emma's Boutique",
+    description: "This is internet shop features a custom backend CMS, currently stocking adorable pet clothing and accessories.",
+    skill:
+      "I built a JamStack frontend and a custom Strapi CMS on the backend.",
+    tech: "React, Gatsby.js, Node.js, GraphQl, Strapi, Cloudinary",
+    github: "https://www.github.com/rebecca1231/ecomm-strapi",
+    details: `Creating Emma's Boutique taught me how to use Gatsby and GraphQl to build pages based on data at deploy.
+      I learned how to set up a continuous deployment integration, so as data is updated, so is the application.  
+      This is still a work in progress!  I'm currently restyling the UI.
+      `,
+  },
+  {
     image1: movieQuizCollage,
     slug: "movie-quiz",
     title: "Movie Quiz",
@@ -27,21 +42,6 @@ export const projectData = [
     github: "https://www.github.com/rebecca1231/movieFight",
     details:
       "Movie Fight taught me a lot about how to handle API calls, how to access and utilize information from a third party.  I also learned about debouncing user interaction to prevent excessive data fetching.",
-  },
-  {
-    image1: fluffCollage,
-    slug: "boutique",
-    url: "https://eager-jang-815ed7.netlify.app/",
-    title: "Emma's Boutique",
-    description: "This is an internet shop, currently stocking adorable pet clothing and accessories.",
-    skill:
-      "I built a JamStack frontend and a custom Strapi CMS on the backend.",
-    tech: "React, Gatsby.js, Node.js, GraphQl, Strapi, Cloudinary",
-    github: "https://www.github.com/rebecca1231/ecomm-strapi",
-    details: `Creating Emma's Boutique taught me how to use Gatsby and GraphQl to build pages based on data at deploy.
-      I learned how to set up a continuous deployment integration, so as data is updated, so is the application.  
-      This is still a work in progress!  I'm currently restyling the UI.
-      `,
   },
 /*
   {

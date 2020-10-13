@@ -101,16 +101,14 @@ const Opine = () => {
             A major challenge in building Opine was linking my Node/Express
             backend to the user facing frontend. I researched two options,
             either to completely separate, or build together. For this project,
-            I chose to house the whole thing altogether. (If you would like to
-            see an example of a project I separated, please look at Movie Quiz
-            or Emma’s.)
+            I chose to house the whole thing altogether. 
             <br />
             <br />
             One advantage of housing the whole application in one folder, meant
             I could start both servers to run concurrently with one script. This
             makes development more efficient. I was also able to deploy the
             whole application on heroku (as opposed to Movie Quiz or Emma’s
-            which are deployed separately). It did require some extra script
+            which are currently deployed separately). It did require some extra script
             writing to properly implement, but thankfully heroku has excellent
             documentation.
           </p>
@@ -146,6 +144,7 @@ const Opine = () => {
             <li>MongoDB</li>
             <li>Redux</li>
             <li>D3</li>
+            <li>Jest</li>
           </ul>
         </div>
         <div>
@@ -188,7 +187,7 @@ const Opine = () => {
             customizable. Details, such as title and handler functions, are
             customized by injecting props, which can be added or removed as
             needed. Creating reusable components like this helps me to write
-            cleaner code.
+            clean, maintainable code.
           </p>
         </div>
       </div>

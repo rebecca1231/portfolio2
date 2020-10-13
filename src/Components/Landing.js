@@ -157,9 +157,9 @@ const Landing = () => {
         <FlexContainer>
           <div className="textBox">
             <p>
-              I’m a Software Engineer.  I love learning and building.
-            <br/>
-            <br/>
+              I’m a Software Engineer. I love learning and building.
+              <br />
+              <br />
               As I’ve grown as a engineer, I've been mentored by senior
               engineers who have raised my standards and expectations.
             </p>
@@ -182,13 +182,10 @@ const Landing = () => {
             My story{" "}
           </div>
         </div>
-       
       </div>
       <div style={{ marginTop: "2rem" }} ref={cardsRef}>
         <h2>What I've been working on </h2>
         <FlexContainer>
-          
-         
           <Card
             title={project1.title}
             image1={project1.image1}
@@ -196,18 +193,17 @@ const Landing = () => {
             slug={project1.slug}
           />
           <Card
-            title={project3.title}
-            image1={project3.image1}
-            description={project3.description}
-            slug={project3.slug}
-          />
-           <Card
             title={project2.title}
             image1={project2.image1}
             description={project2.description}
             slug={project2.slug}
           />
-          
+          <Card
+            title={project3.title}
+            image1={project3.image1}
+            description={project3.description}
+            slug={project3.slug}
+          />
         </FlexContainer>
       </div>
       <div>
