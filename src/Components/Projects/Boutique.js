@@ -71,14 +71,18 @@ const Boutique = () => {
           <p>
             The main purpose of this project was to learn how to create a
             JamStack application, and grow more comfortable with GraphQl. I also
-            wanted to learn how to build a content managament system on the
-            backend.
+            wanted to learn how to build a custom content managament system on
+            the backend.
           </p>
           <h3>Bumps along the way</h3>
           <p>
-            This is still a work in progress, so more bumps may be coming. At
-            the moment, I'm working on creating a better UI, including a fresh
-            landing page and checkout component.
+            Jamstack applications build their content on deploy, so they load
+            really fast. In order to utilize data from the backend and
+            dynamically create pages, I had to learn to use GraphQl. This was a
+            new technology for me, but I found it to be very intuitive. The
+            built in tools for GraphQl Playground make it easy to compose
+            accurate queries and inject data smoothly into templates. That only
+            leaves the question of how to draft the backend.
           </p>
         </div>
         <img src={fluff2} alt="mobile-landing-page" />
@@ -89,7 +93,14 @@ const Boutique = () => {
         <div className="distance">
           <h3>Lessons learned</h3>
           <p>
-            More to come!
+            There are a lot of options for data storage. For this application I
+            chose to use a quick start CMS which I could customize and deploy to
+            heroku. On that platform, I linked my backend to Postgres to store
+            product and user information. However, heroku will not store photos,
+            so in addition, I used Cloudinary for image storage. The backend is
+            a CMS style setup, so writing data models and relationships was
+            different from creating mongoose schemas as I've previusly done. I
+            learned a new way to manage data.
           </p>
         </div>
       </div>
