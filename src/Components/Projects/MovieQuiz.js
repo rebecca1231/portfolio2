@@ -56,7 +56,7 @@ const Container = styled.div`
     }
   }
 `;
-const Opine = () => {
+const MovieQuiz = () => {
   return (
     <Container>
       <h1>Movie Quiz</h1>
@@ -65,13 +65,15 @@ const Opine = () => {
           <h3>Overview</h3>
           <p>
             Movie Quiz utilizes information from Open IMDb to fetch movie
-            information and injects it into a quiz.
+            information and injects it into a quiz. I'm currently creating a
+            database connection and authentication routes so users will be able
+            to track their progress.
           </p>
           <h3>Goals</h3>
           <p>
-            The main purpose of this project was to develop a deeper
-            understanding of how and when to use state and context to create a
-            dynamic application.
+            I had two goals for this application: to create a dynamic quiz into
+            which a variety of data can easily be injected, and to have the
+            ability to track results.
           </p>
         </div>
         <img src={movieQuiz} alt="quiz" />
@@ -91,21 +93,22 @@ const Opine = () => {
           </p>
           <h3>Lessons Learned</h3>
           <p>
-            I initially created this application with only a frontend. However,
-            everytime I made an api call to fetch movie data, my api key was put
-            right into the url. I knew to put my api key in a .env file, but I
-            wasn’t sure how to handle the data fetching. I tweeted about it, and
-            the dev community led me in the right direction. I created a simple
-            backend to handle the data requests. This experience helped me
-            better understand security.
+            I created the quiz components of this application first. Then, I
+            began creating the backend server and routing. I've deployed the
+            back and front ends separately, but have developed a continuous
+            deployment pipeline for each. I'm learning how to manage these
+            separate deploys and to connect the API securely to the frontend.
           </p>
         </div>
       </div>
-      <h3>Possibilities</h3>
+      <h3>Current Work In Progress</h3>
       <p>
-        I think it might be interesting to expand this project to track quiz
-        results over time. I could also add a leaderboard and social media
-        links, so users could share and compare their quiz results.
+        I'm really enjoying creating this new project. I'm learning a lot about
+        managing APIs and doing my best to keep the user in mind as I develop
+        new features. I'm working on my data models, database, and routes for
+        common tasks, like saving, retrieving and deleting data. In future, I
+        could possibly add a leaderboard and social media links, so users could
+        share and compare their quiz results.
       </p>
 
       <h3>At a glance</h3>
@@ -154,4 +157,4 @@ const Opine = () => {
   );
 };
 
-export default Opine;
+export default MovieQuiz;

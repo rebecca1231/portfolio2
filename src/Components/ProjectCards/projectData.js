@@ -1,5 +1,4 @@
 import movieQuizCollage from "../../projectImages/movieQuizCollage.jpg";
-import mazeCollage from "../../projectImages/mazeCollage.jpg";
 import opineCollage from "../../projectImages/opineCollage.jpg";
 import fluffCollage from "../../projectImages/fluffCollage.jpg";
 
@@ -17,6 +16,18 @@ export const projectData = [
     details:
       "Opine is my journey to discover how to build full stack React applications. I had to learn how to get the backend API and the React frontend to communicate, and how to deploy the whole application.",
   },
+  
+  {
+    image1: movieQuizCollage,
+    slug: "movie-quiz",
+    title: "Movie Quiz",
+    description: "This fullstack application fetches data from APIs and dynamically creates quizzes.  I'm currently working on the backend.",
+    skill: "I learned to make API calls and debounce submit functions.",
+    tech: "HTML, CSS, JavaScript",
+    github: "https://www.github.com/rebecca1231/movieFight",
+    details:
+      "Movie Fight taught me a lot about how to handle API calls, how to access and utilize information from a third party.  I also learned about debouncing user interaction to prevent excessive data fetching.",
+  },
   {
     image1: fluffCollage,
     slug: "boutique",
@@ -32,18 +43,7 @@ export const projectData = [
       This is still a work in progress!  I'm currently restyling the UI.
       `,
   },
-  {
-    image1: movieQuizCollage,
-    slug: "movie-quiz",
-    title: "Movie Quiz",
-    description: "This frontend React application lets you search for movies, plugs the information into a quiz, and then shows a visualization of your results.",
-    skill: "I learned to make API calls and debounce submit functions.",
-    tech: "HTML, CSS, JavaScript",
-    github: "https://www.github.com/rebecca1231/movieFight",
-    details:
-      "Movie Fight taught me a lot about how to handle API calls, how to access and utilize information from a third party.  I also learned about debouncing user interaction to prevent excessive data fetching.",
-  },
-
+/*
   {
     image1: mazeCollage,
     slug: "maze",
@@ -56,7 +56,7 @@ export const projectData = [
     details:
       "Making this maze game required knowledge of DOM manipulation using JavaScript.",
   },
-  /*{
+  {
     image1: ecomm1,
     image2: ecomm2,
     title: "Online Shop Site",

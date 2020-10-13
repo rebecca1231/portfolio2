@@ -84,7 +84,6 @@ const Landing = () => {
   const project1 = projectData[0];
   const project2 = projectData[1];
   const project3 = projectData[2];
-  const project4 = projectData[3];
 
   const animation = (ref) => {
     return {
@@ -188,6 +187,8 @@ const Landing = () => {
       <div style={{ marginTop: "2rem" }} ref={cardsRef}>
         <h2>What I've been working on </h2>
         <FlexContainer>
+          
+         
           <Card
             title={project1.title}
             image1={project1.image1}
@@ -195,23 +196,18 @@ const Landing = () => {
             slug={project1.slug}
           />
           <Card
-            title={project2.title}
-            image1={project2.image1}
-            description={project2.description}
-            slug={project2.slug}
-          />
-          <Card
             title={project3.title}
             image1={project3.image1}
             description={project3.description}
             slug={project3.slug}
           />
-          <Card
-            title={project4.title}
-            image1={project4.image1}
-            description={project4.description}
-            slug={project4.slug}
+           <Card
+            title={project2.title}
+            image1={project2.image1}
+            description={project2.description}
+            slug={project2.slug}
           />
+          
         </FlexContainer>
       </div>
       <div>

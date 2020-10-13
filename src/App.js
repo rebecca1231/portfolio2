@@ -10,7 +10,6 @@ import Projects from "./Components/Projects";
 import Opine from './Components/Projects/Opine'
 import "./styles/index.scss";
 import Boutique from "./Components/Projects/Boutique";
-import Maze from "./Components/Projects/Maze";
 import MovieQuiz from "./Components/Projects/MovieQuiz";
 
 
@@ -25,7 +24,6 @@ function App() {
         <Route exact path="/projects" component={Projects} />
         <Route path="/projects/opine" component={Opine} />
         <Route path="/projects/movie-quiz" component={MovieQuiz} />
-        <Route path="/projects/maze" component={Maze} />
         <Route path="/projects/boutique" component={Boutique} />
       </Switch>
       <Footer />
