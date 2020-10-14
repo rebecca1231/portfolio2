@@ -112,7 +112,7 @@ const About = () => {
           I love to learn and grow. My latest project is a JamStack application,
           using Gatsby. I'm building a customized headless CMS, currently
           deployed on heroku. It is still a work in progress, but you can check
-          out the application as is 
+          out the application as is {" "}
           <a
             target="_blank"
             rel="noopener noreferrer"

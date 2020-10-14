@@ -8,7 +8,6 @@ import fluffybg from "../fluffybg.jpeg";
 import { projectData } from "./ProjectCards/projectData";
 import Card from "./ProjectCards/Card";
 import Contact from "./Contact";
-import Skills from './Skills'
 
 const Container = styled.div`
   max-width: 800px;
@@ -19,13 +18,6 @@ const Container = styled.div`
     padding: 0 10px;
     max-width: 400px;
     margin: 0 auto;
-  }
-
-  .skillbox {
-    padding:10px;
-    p {
-      font-size:1rem;
-    }
   }
 `;
 
@@ -215,9 +207,6 @@ const Landing = () => {
         </FlexContainer>
       </div>
       <div>
-        <div className="skillbox">
-          <Skills />
-        </div>
         <Contact />
       </div>
       <div style={{ margin: "0 auto", textAlign: "center" }}>
