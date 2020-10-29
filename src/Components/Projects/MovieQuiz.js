@@ -60,7 +60,7 @@ const Container = styled.div`
 const MovieQuiz = () => {
   return (
     <Container>
-      <h1>Movie Quiz</h1>
+      <h1>Quizzie</h1>
       <div className="flex">
         <div>
           <h3>Overview</h3>
@@ -71,7 +71,7 @@ const MovieQuiz = () => {
           </p>
           <h3>Goals</h3>
           <p>
-            had two goals for this application. First, I wanted to create a fun,
+            I had two goals for this application. First, I wanted to create a fun,
             dynamic quiz into which any data could easily be injected. Secondly,
             I really wanted to learn more about GraphQL, especially on the
             backend.
