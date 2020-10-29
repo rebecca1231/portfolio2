@@ -154,7 +154,7 @@ const MovieQuiz = () => {
           <ul>
             <li>
               <a
-                href="https://movie-quiz-app.netlify.app/"
+                href="https://quizzie-app.netlify.app/"
                 rel="noopener noreferrer"
                 target="_blank"
               >
@@ -163,7 +163,7 @@ const MovieQuiz = () => {
             </li>
             <li>
               <a
-                href="https://www.github.com/rebecca1231/quiz"
+                href="https://www.github.com/rebecca1231/movie-quiz"
                 rel="noopener noreferrer"
                 target="_blank"
               >
