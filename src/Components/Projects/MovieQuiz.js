@@ -4,6 +4,7 @@ import dataPoster from "../../projectImages/movieQuiz-data-poster.png";
 import movieQuiz from "../../projectImages/movieQuiz.png";
 import pie from "../../projectImages/movieQuiz-pie.png";
 import quizzes from "../../projectImages/movieQuiz-quizzes.png";
+import finished from "../../projectImages/movieQuiz-finished-quiz.png";
 
 const Container = styled.div`
   max-width: 1000px;
@@ -32,7 +33,7 @@ const Container = styled.div`
   }
 
   img {
-    max-width: 28rem;
+    max-width: 22rem;
     align-self: center;
     box-shadow: 0px 2px 5px #c0c0c0;
     margin: 20px;
@@ -42,6 +43,10 @@ const Container = styled.div`
   }
   .distance {
     margin-top: 1rem;
+  }
+
+  .more-distance {
+    margin-top: 1.5rem;
   }
 
   @media (max-width: 750px) {
@@ -71,16 +76,15 @@ const MovieQuiz = () => {
           </p>
           <h3>Goals</h3>
           <p>
-            I had two goals for this application. First, I wanted to create a fun,
-            dynamic quiz into which any data could easily be injected. Secondly,
-            I really wanted to learn more about GraphQL, especially on the
-            backend.
+            I had two goals for this application. First, I wanted to create a
+            fun, dynamic quiz into which any data could easily be injected.
+            Secondly, I really wanted to learn more about GraphQL, especially on
+            the backend.
           </p>
         </div>
         <img src={movieQuiz} alt="quiz" />
       </div>
       <div className="flex">
-        <img src={dataPoster} alt="quiz" />
         <div className="distance">
           <h3>Process</h3>
           <p>
@@ -112,9 +116,10 @@ const MovieQuiz = () => {
             retrieving a chunk that has to be reformatted.
           </p>
         </div>
+        <img src={dataPoster} alt="quiz" />
       </div>
       <div className="flex">
-        <img src={quizzes} alt="quiz" />
+        <img src={quizzes} style={{ maxWidth: "28rem" }} alt="quiz" />
         <div className="distance">
           <h3>Lessons Learned</h3>
           <p>
@@ -174,10 +179,28 @@ const MovieQuiz = () => {
         </div>
         <img
           className="mobile-image"
+          src={finished}
+          alt="form"
+          style={{ margin: 0 }}
+        />
+      </div>
+      <div className="flex more-distance">
+        <img
+          className="mobile-image"
           src={pie}
           alt="form"
           style={{ margin: 0 }}
         />
+        <div>
+          <h3>Reusable Components</h3>
+          <p>
+            If you've looked at Opine, you may think this pie chart looks
+            familiar. This is an example of a reusable component. I strive to
+            write code that performs a specific purpose and can be customized.
+            In this way, I can create complex applications much more quickly and
+            efficiently.
+          </p>
+        </div>
       </div>
     </Container>
   );

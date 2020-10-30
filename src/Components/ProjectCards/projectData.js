@@ -1,4 +1,4 @@
-import movieQuizCollage from "../../projectImages/movieQuizCollage.jpg";
+import movieQuizCollage from "../../projectImages/quiz-collage.jpg";
 import opineCollage from "../../projectImages/opineCollage.jpg";
 import fluffCollage from "../../projectImages/fluffCollage.jpg";
 

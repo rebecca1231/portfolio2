@@ -33,6 +33,7 @@ const Container = styled.div`
 
   img {
     max-width: 28rem;
+    align-self:center;
     box-shadow: 0px 2px 5px #c0c0c0;
     margin: 20px;
   }
