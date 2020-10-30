@@ -76,9 +76,9 @@ const MovieQuiz = () => {
           </p>
           <h3>Goals</h3>
           <p>
-            I had two goals for this application. First, I wanted to create a
+            I had two goals for this application.  First, I wanted to create a
             fun, dynamic quiz into which any data could easily be injected.
-            Secondly, I really wanted to learn more about GraphQL, especially on
+            Additionally, I really wanted to learn more about GraphQL, especially on
             the backend.
           </p>
         </div>

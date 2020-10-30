@@ -192,18 +192,17 @@ const Landing = () => {
             description={project1.description}
             slug={project1.slug}
           />
-          
-          <Card
-            title={project3.title}
-            image1={project3.image1}
-            description={project3.description}
-            slug={project3.slug}
-          />
           <Card
             title={project2.title}
             image1={project2.image1}
             description={project2.description}
             slug={project2.slug}
+          />
+          <Card
+            title={project3.title}
+            image1={project3.image1}
+            description={project3.description}
+            slug={project3.slug}
           />
         </FlexContainer>
       </div>
