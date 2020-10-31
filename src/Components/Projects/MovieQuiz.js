@@ -65,7 +65,7 @@ const Container = styled.div`
 const MovieQuiz = () => {
   return (
     <Container>
-      <h1>Quizzie</h1>
+      <h1>Movie Quiz</h1>
       <div className="flex">
         <div>
           <h3>Overview</h3>
@@ -123,7 +123,7 @@ const MovieQuiz = () => {
         <div className="distance">
           <h3>Lessons Learned</h3>
           <p>
-            I built Quizzie front to back or in a product-centric manner. It
+            I built Movie Quiz front to back or in a product-centric manner. It
             began with the product: what views, interactions, information does
             it require to be compelling. Then, I took those ideas to the
             backend, and built out solutions to make them function. For
@@ -134,7 +134,7 @@ const MovieQuiz = () => {
             Originally, at the end of the quiz, I simply had the page change to
             show scores. It felt very abrupt, and I realized, there needed to be
             a moment of celebration. So, I built some confetti. Engineering
-            Quizzie in a product-centric way has created a better user
+            Movie Quiz in a product-centric way has created a better user
             experience.
           </p>
         </div>

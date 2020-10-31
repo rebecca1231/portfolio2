@@ -11,7 +11,7 @@ export const projectData = [
     description:
       "This web application gathers information via email, and charts the resulting data.",
     skill: "Fullstack site with custom backend API and database.",
-    tech: "React, Node.js, D3.js, MongoDB, Express.js, Redux",
+    tech: "JavaScript, React, Node.js, D3.js, MongoDB, Express.js, Redux",
     github: "https://www.github.com/rebecca1231/opine",
     details:
       "Opine is my journey to discover how to build full stack React applications. I had to learn how to get the backend API and the React frontend to communicate, and how to deploy the whole application.",
@@ -23,8 +23,8 @@ export const projectData = [
     description:
       "This fullstack application fetches data from APIs and dynamically creates quizzes that can be liked or commented on by users.",
     skill: "I learned to make API calls and debounce submit functions.",
-    tech: "HTML, CSS, JavaScript",
-    github: "https://www.github.com/rebecca1231/movieFight",
+    tech: "JavaScript, React, GraphQL, Node.js, D3.js, MongoDB, Mongoose, Apollo Server",
+    github: "https://www.github.com/rebecca1231/",
     details:
       "Movie Fight taught me a lot about how to handle API calls, how to access and utilize information from a third party.  I also learned about debouncing user interaction to prevent excessive data fetching.",
   },
