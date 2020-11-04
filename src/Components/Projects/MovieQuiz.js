@@ -33,7 +33,7 @@ const Container = styled.div`
   }
 
   img {
-    max-width: 22rem;
+    max-width: 25rem;
     align-self: center;
     box-shadow: 0px 2px 5px #c0c0c0;
     margin: 20px;
@@ -76,10 +76,10 @@ const MovieQuiz = () => {
           </p>
           <h3>Goals</h3>
           <p>
-            I had two goals for this application.  First, I wanted to create a
+            I had two goals for this application. First, I wanted to create a
             fun, dynamic quiz into which any data could easily be injected.
-            Additionally, I really wanted to learn more about GraphQL, especially on
-            the backend.
+            Additionally, I really wanted to learn more about GraphQL,
+            especially on the backend.
           </p>
         </div>
         <img src={movieQuiz} alt="quiz" />
@@ -118,8 +118,8 @@ const MovieQuiz = () => {
         </div>
         <img src={dataPoster} alt="quiz" />
       </div>
-      <div className="flex">
-        <img src={quizzes} style={{ maxWidth: "28rem" }} alt="quiz" />
+      <div className="flex distance">
+        <img src={quizzes} alt="quiz" />
         <div className="distance">
           <h3>Lessons Learned</h3>
           <p>
@@ -139,7 +139,7 @@ const MovieQuiz = () => {
           </p>
         </div>
       </div>
-      <h3>At a glance</h3>
+      <h3 className="distance">At a glance</h3>
       <div className="flex">
         <div>
           <h4>Stack</h4>
@@ -191,8 +191,8 @@ const MovieQuiz = () => {
           alt="form"
           style={{ margin: 0 }}
         />
-        <div>
-          <h3>Reusable Components</h3>
+        <div className="distance">
+          <h3 className="distance">Reusable Components</h3>
           <p>
             If you've looked at Opine, you may think this pie chart looks
             familiar. This is an example of a reusable component. I strive to
