@@ -159,7 +159,7 @@ const MovieQuiz = () => {
           <ul>
             <li>
               <a
-                href="https://quizzie-app.netlify.app/"
+                href="https://movie-quiz.app/"
                 rel="noopener noreferrer"
                 target="_blank"
               >
