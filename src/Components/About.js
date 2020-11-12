@@ -17,6 +17,8 @@ const Container = styled.div`
 
   span{
     color: hsla(0, 0%, 0%, 0.8);
+    text-decoration: underline;
+
   }
 
   span:hover{
