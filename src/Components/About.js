@@ -32,12 +32,17 @@ const Container = styled.div`
 const Me = styled.div`
   display: flex;
   flex-direction: row;
-  align-items: space-between;
-  justify-content: center;
+  justify-content: space-between;
   margin-top: 2rem;
-  height: 30vh;
-  img {
-    max-width: 10rem;
+  height: auto;
+
+  .img-container {
+    width: 200px;
+    border-radius: 10%;
+    overflow:hidden;
+  }
+  img{
+    width: 200px;
     border-radius: 10%;
   }
 
@@ -60,7 +65,6 @@ const Me = styled.div`
   }
 
   @media (max-width: 380px) {
-    height: 35vh;
     height: auto;
   }
 `;
@@ -78,7 +82,7 @@ const About = () => {
       x: 20
     });
     gsap.from(wasabiRef.current, {
-      duration: 2,
+      duration: 1,
       autoAlpha: 0,
     });
   }, []);
@@ -86,7 +90,7 @@ const About = () => {
   return (
     <Container>
       <Me>
-        <div ref={topRef}>
+        <div className="intro" ref={topRef}>
           <h2> Hi,</h2>
           <h2>I'm Rebecca.</h2>
           <p>
@@ -95,8 +99,8 @@ const About = () => {
             and I love building stuff with code.
           </p>
         </div>
-        <div style={{ marginLeft: "20px" }}>
-          <img className="face" src={wasabi} ref={wasabiRef} alt="face" />
+        <div className="image-container" ref={wasabiRef}>
+          <img className="face" src={wasabi}  alt="face" />
         </div>
       </Me>
       <div>
