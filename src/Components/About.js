@@ -75,10 +75,10 @@ const About = () => {
       duration: 1,
       autoAlpha: 0,
       y: 20,
-      x:20
+      x: 20
     });
     gsap.from(wasabiRef.current, {
-      duration: 1,
+      duration: 2,
       autoAlpha: 0,
     });
   }, []);
