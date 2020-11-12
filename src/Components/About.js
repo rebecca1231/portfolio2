@@ -69,12 +69,17 @@ const About = () => {
   const history = useHistory();
 
   const topRef = useRef(null);
+  const wasabiRef = useRef(null)
   useEffect(() => {
     gsap.from(topRef.current, {
       duration: 1,
       autoAlpha: 0,
       y: 20,
       x:20
+    });
+    gsap.from(wasabiRef.current, {
+      duration: 1,
+      autoAlpha: 0,
     });
   }, []);
 
@@ -91,7 +96,7 @@ const About = () => {
           </p>
         </div>
         <div style={{ marginLeft: "20px" }}>
-          <img className="face" src={wasabi} alt="face" />
+          <img className="face" src={wasabi} ref={wasabiRef} alt="face" />
         </div>
       </Me>
       <div>
