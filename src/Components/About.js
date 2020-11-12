@@ -35,6 +35,7 @@ const Me = styled.div`
   align-items: space-between;
   justify-content: center;
   margin-top: 2rem;
+  height: 30vh;
   img {
     max-width: 10rem;
     border-radius: 10%;
