@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { gsap } from "gsap";
 import { useHistory } from "react-router-dom";
 
-import wasabi from "../wasabi.jpg";
+import wasabi from "../wasabi.webp";
 
 const Container = styled.div`
   margin: 0 auto;
