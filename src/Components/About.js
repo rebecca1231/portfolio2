@@ -7,13 +7,14 @@ import wasabi from "../wasabi.webp";
 
 const Container = styled.div`
   margin: 0 auto;
-  max-width: 750px;
+  max-width: 800px;
   padding: 1rem;
   line-height: 1.5;
-  font-size: 1.25rem;
+  font-size: 1rem;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  color: #707070;
 
   span{
     color: hsla(0, 0%, 0%, 0.8);
