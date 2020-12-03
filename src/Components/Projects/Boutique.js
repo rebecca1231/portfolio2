@@ -70,7 +70,7 @@ const Boutique = () => {
           <h3>Goals</h3>
           <p>
             The main purpose of this project was to learn how to create a
-            JamStack application, and grow more comfortable with GraphQl. I also
+            JamStack application, and grow more comfortable with GraphQL. I also
             wanted to learn how to build a custom content managament system on
             the backend.
           </p>
@@ -78,7 +78,7 @@ const Boutique = () => {
           <p>
             Jamstack applications build their content on deploy, so they load
             really fast. In order to utilize data from the backend and
-            dynamically create pages, I had to learn to use GraphQl. This was a
+            dynamically create pages, I had to learn to use GraphQL. This was a
             new technology for me, but I found it to be very intuitive. The
             built in tools for GraphQl Playground make it easy to compose
             accurate queries and inject data smoothly into templates. That only

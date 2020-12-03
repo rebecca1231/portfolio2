@@ -41,7 +41,7 @@ const Projects = () => {
       <div style={{ marginTop: "2rem" }}> </div>
 
       <FlexContainer>
-        <Cards />
+        <Cards/>
       </FlexContainer>
     </Container>
   );

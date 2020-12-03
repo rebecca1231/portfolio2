@@ -76,8 +76,6 @@ const Landing = () => {
   const history = useHistory();
 
   const cardsRef = useRef(null);
-  const aboutRef = useRef(null);
-  const borderRef = useRef(null);
   const topRef = useRef(null);
   const headRef = useRef(null);
 
@@ -109,16 +107,7 @@ const Landing = () => {
         start: "top center+=200",
       },
     });
-    gsap.from(borderRef.current, {
-      duration: 1,
-      x: -500,
-      scrollTrigger: {
-        trigger: borderRef.current,
-        start: "top center+=200",
-      },
-    });
 
-    gsap.from(aboutRef.current, animation(aboutRef));
   }, []);
 
   return (
@@ -219,6 +208,8 @@ const Landing = () => {
           Let's connect on <i className="large linkedin icon"></i>
         </a>
       </div>
+      {console.log('%cWelcome! %cHappy to see you!', 'font-weight:bold', 'color: teal')}
+
     </Container>
   );
 };

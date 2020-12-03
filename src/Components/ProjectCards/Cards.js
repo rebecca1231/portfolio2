@@ -4,7 +4,7 @@ import Card from "./Card";
 import { projectData } from "./projectData";
 
 const Cards = () => {
-  return projectData.map((obj) => {
+  return projectData.map((obj, index) => {
     return (
       <div>
         <Card
@@ -13,6 +13,8 @@ const Cards = () => {
           description={obj.description}
           tech={obj.tech}
           slug={obj.slug}
+          key={index}
+          index={index}
        />
       </div>
     );
