@@ -21,6 +21,7 @@ const Triangle = styled.div`
   }
 `
 
+
 export default function ContactUs() {
   const [sent, setSent] = useState(false)
   const [sending, setSending] = useState(false)
@@ -51,7 +52,8 @@ export default function ContactUs() {
         maxWidth: '800px',
         margin: 'auto',
         padding: '0 15px 15px',
-        borderRadius: '10px'
+        borderRadius: '10px',
+        minHeight:'300px'
       }}
     >
       <Triangle />
@@ -110,13 +112,13 @@ export default function ContactUs() {
                 />
               </div>
               <div className={`ui medium text loader ${activeSpinner}`}>
-                Loading
+                Sending
               </div>
             </form>
           </div>
         </>
       ) : (
-        <div style={{ textAlign: 'center' }}>
+        <div style={{ textAlign: 'center', marginTop:'50px' }}>
           <h3 style={{ marginTop: '1rem' }}>Thanks for getting in touch!</h3>
           <h4>I'm looking forward to reading your message.</h4>
         </div>
