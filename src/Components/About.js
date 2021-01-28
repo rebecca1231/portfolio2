@@ -1,9 +1,9 @@
-import React, { useEffect, useRef } from "react";
-import styled from "styled-components";
-import { gsap } from "gsap";
-import { useHistory } from "react-router-dom";
+import React, { useEffect, useRef } from 'react'
+import styled from 'styled-components'
+import { gsap } from 'gsap'
+import { useHistory } from 'react-router-dom'
 
-import wasabi from "../wasabi.webp";
+import wasabi from '../wasabi.webp'
 
 const Container = styled.div`
   margin: 0 auto;
@@ -16,19 +16,17 @@ const Container = styled.div`
   min-height: 100vh;
   color: #707070;
 
-  span{
+  span {
     color: hsla(0, 0%, 0%, 0.8);
     text-decoration: underline;
-
   }
 
-  span:hover{
-    cursor:pointer;
+  span:hover {
+    cursor: pointer;
     text-decoration: underline;
-    color:#008891;
-
+    color: #008891;
   }
-`;
+`
 
 const Me = styled.div`
   display: flex;
@@ -40,9 +38,9 @@ const Me = styled.div`
   .img-container {
     width: 200px;
     border-radius: 10%;
-    overflow:hidden;
+    overflow: hidden;
   }
-  img{
+  img {
     width: 200px;
     border-radius: 10%;
   }
@@ -68,12 +66,12 @@ const Me = styled.div`
   @media (max-width: 380px) {
     height: auto;
   }
-`;
+`
 
 const About = () => {
-  const history = useHistory();
+  const history = useHistory()
 
-  const topRef = useRef(null);
+  const topRef = useRef(null)
   const wasabiRef = useRef(null)
   useEffect(() => {
     gsap.from(topRef.current, {
@@ -81,12 +79,12 @@ const About = () => {
       autoAlpha: 0,
       y: 20,
       x: 20
-    });
+    })
     gsap.from(wasabiRef.current, {
       duration: 1,
-      autoAlpha: 0,
-    });
-  }, []);
+      autoAlpha: 0
+    })
+  }, [])
 
   return (
     <Container>
@@ -95,13 +93,13 @@ const About = () => {
           <h2> Hi,</h2>
           <h2>I'm Rebecca.</h2>
           <p>
-            I enjoy <span style={{ color: "teal" }}> wasabi</span> ice cream and{" "}
+            I enjoy <span style={{ color: 'teal' }}> wasabi</span> ice cream and{' '}
             <br />
             and I love building stuff with code.
           </p>
         </div>
         <div className="image-container" ref={wasabiRef}>
-          <img className="face" src={wasabi}  alt="face" />
+          <img className="face" src={wasabi} alt="face" />
         </div>
       </Me>
       <div>
@@ -117,7 +115,7 @@ const About = () => {
           was looking for something new to learn, and stumbled across
           freecodecamp. I started at the beginning with responsive web design,
           HTML and CSS. Enjoying learning, I continued to Data Structures and
-          Algorithms with JavaScript, and fell in love with coding.{" "}
+          Algorithms with JavaScript, and fell in love with coding.{' '}
         </p>
         <p>
           The thing that’s really exciting about learning JavaScript is DOM
@@ -130,11 +128,11 @@ const About = () => {
         <p>
           I love to learn and grow. My latest project is a full stack quiz
           application. It consumes outside API data to dynamically create fun
-          quizzes. I built it with GraphQL, Node, and React. Please check it out {" "}
+          quizzes. I built it with GraphQL, Node, and React. Please check it out{' '}
           <span
             target="_blank"
             rel="noopener noreferrer"
-            onClick={() => history.push("/projects/movie-quiz")}
+            onClick={() => history.push('/projects/movie-quiz')}
           >
             here
           </span>
@@ -142,12 +140,12 @@ const About = () => {
         </p>
         <p>
           I'm always interested in working with positive people on interesting
-          projects. I'm currently seeking a full time role where I can be an
-          asset to a great team.
+          projects. I'm currently writing front end code with Vue for an awesome
+          ed tech startup.
         </p>
       </div>
     </Container>
-  );
-};
+  )
+}
 
-export default About;
+export default About

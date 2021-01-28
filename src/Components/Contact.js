@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import styled from "styled-components";
+import React, { useState } from 'react'
+import styled from 'styled-components'
 
-import emailjs from "emailjs-com";
-import { init } from "emailjs-com";
+import emailjs from 'emailjs-com'
+import { init } from 'emailjs-com'
 const ID = process.env.REACT_APP_ID
-init(ID);
+init(ID)
 
 const Triangle = styled.div`
   width: 0;
@@ -14,53 +14,60 @@ const Triangle = styled.div`
 
   border-top: 10vw solid #fff;
 
-  @media (max-width:750px) {
+  @media (max-width: 750px) {
     border-left: 45vw solid transparent;
     border-right: 45vw solid transparent;
-    margin-top:2rem;
-
+    margin-top: 2rem;
   }
-`;
+`
 
 export default function ContactUs() {
-  const [sent, setSent] = useState(false);
+  const [sent, setSent] = useState(false)
+  const [sending, setSending] = useState(false)
+
+  const activeSpinner = sending ? 'active' : ''
 
   function sendEmail(e) {
-    e.preventDefault();
+    e.preventDefault()
+    setSending(true)
 
-    emailjs.sendForm("service_ts0cbib", "template_ymcpv5c", e.target, ID).then(
+    emailjs.sendForm('service_ts0cbib', 'template_ymcpv5c', e.target, ID).then(
       (result) => {
-        console.log(result.text);
-        setSent(true);
+        console.log(result.text)
+        setSent(true)
+        setSending(false)
       },
       (error) => {
-        console.log(error.text);
+        console.log(error.text)
+        setSending(false)
       }
-    );
+    )
   }
 
   return (
     <div
       style={{
-        backgroundColor: "#fafafafa",
-        maxWidth: "800px",
-        margin:"auto",
-        padding: "0 15px 15px",
-        borderRadius:'10px'
+        backgroundColor: '#fafafafa',
+        maxWidth: '800px',
+        margin: 'auto',
+        padding: '0 15px 15px',
+        borderRadius: '10px'
       }}
     >
       <Triangle />
-      <div className="ui container large header"
-        id="contact"
-        style={{
-          marginBottom:"1rem"
-        }}
-      >
-        Get in Touch
-      </div>
-      <div className="ui container">
-        {sent === false ? (
-          <>
+
+      {sent === false ? (
+        <>
+          <h2
+            className="ui container large header"
+            id="contact"
+            style={{
+              marginBottom: '1rem'
+            }}
+          >
+            Get in Touch
+          </h2>
+          <div className="ui container">
             <form className="ui form" onSubmit={sendEmail}>
               <input type="hidden" name="contact_number" />
               <div className="field">
@@ -80,7 +87,7 @@ export default function ContactUs() {
                   type="email"
                   name="user_email"
                   placeholder="email@example.com"
-                  style={{ padding: "5px" }}
+                  style={{ padding: '5px' }}
                 />
               </div>
               <div className="field">
@@ -93,22 +100,27 @@ export default function ContactUs() {
                   placeholder="Write your message here."
                 />
               </div>
+
               <div className="field">
                 <input
                   className="ui button teal"
+                  disabled={sending}
                   type="submit"
-                  value="Send"
+                  value={!sending ? 'Send' : 'Sending...'}
                 />
               </div>
+              <div className={`ui medium text loader ${activeSpinner}`}>
+                Loading
+              </div>
             </form>
-          </>
-        ) : (
-          <div className="ui huge header">
-            <h3 style={{ marginTop: "1rem" }}>Thank you!</h3>
-            <p>Your message has been sent!</p>
           </div>
-        )}
-      </div>
+        </>
+      ) : (
+        <div style={{ textAlign: 'center' }}>
+          <h3 style={{ marginTop: '1rem' }}>Thanks for getting in touch!</h3>
+          <h4>I'm looking forward to reading your message.</h4>
+        </div>
+      )}
     </div>
-  );
+  )
 }
