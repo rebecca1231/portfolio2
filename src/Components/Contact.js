@@ -21,10 +21,10 @@ const Triangle = styled.div`
   }
 `
 
-
 export default function ContactUs() {
   const [sent, setSent] = useState(false)
   const [sending, setSending] = useState(false)
+  const [error, setError] = useState(false)
 
   const activeSpinner = sending ? 'active' : ''
 
@@ -41,8 +41,29 @@ export default function ContactUs() {
       (error) => {
         console.log(error.text)
         setSending(false)
+        setError(true)
       }
     )
+  }
+
+  function showMessage() {
+    if (sent) {
+      return (
+        <>
+          <h3 style={{ marginTop: '1rem' }}>Thanks for getting in touch!</h3>
+          <h4>I'm looking forward to reading your message.</h4>
+        </>
+      )
+    }
+    if (error) {
+      return (
+        <>
+          <h3 style={{ marginTop: '1rem' }}>Oops!</h3>
+          <h4>It seems you've encountered a network error.</h4>
+          <h4>Please reload the page and try again.</h4>
+        </>
+      )
+    }
   }
 
   return (
@@ -53,12 +74,12 @@ export default function ContactUs() {
         margin: 'auto',
         padding: '0 15px 15px',
         borderRadius: '10px',
-        minHeight:'300px'
+        minHeight: '300px'
       }}
     >
       <Triangle />
 
-      {sent === false ? (
+      {sent === false && error === false ? (
         <>
           <h2
             className="ui container large header"
@@ -106,8 +127,8 @@ export default function ContactUs() {
               <div className="field">
                 <input
                   className="ui button teal"
-                  disabled={sending}
                   type="submit"
+                  disabled={sending}
                   value={!sending ? 'Send' : 'Sending...'}
                 />
               </div>
@@ -118,9 +139,8 @@ export default function ContactUs() {
           </div>
         </>
       ) : (
-        <div style={{ textAlign: 'center', marginTop:'50px' }}>
-          <h3 style={{ marginTop: '1rem' }}>Thanks for getting in touch!</h3>
-          <h4>I'm looking forward to reading your message.</h4>
+        <div style={{ textAlign: 'center', marginTop: '50px' }}>
+          {showMessage()}
         </div>
       )}
     </div>
