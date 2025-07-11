@@ -92,7 +92,7 @@ const RightNav = ({ open, set }) => {
       </div>
       <a
         className="links"
-        href="https://blog.rebeccahirai.com"
+        href="https://blog.rebeccapage.org"
       >
         Blog
       </a>

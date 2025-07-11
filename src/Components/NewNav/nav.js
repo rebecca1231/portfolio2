@@ -48,7 +48,7 @@ const Header = () => {
             <a
               className={navStyles.navItem}
               activeClassName={navStyles.activeNavItem}
-              href="https://blog.rebeccahirai.com"
+              href="https://blog.rebeccapage.org"
             >
               Blog
             </a>
