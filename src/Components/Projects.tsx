@@ -1,6 +1,5 @@
-import React from "react";
-import styled from "styled-components";
-import Cards from "./ProjectCards/Cards";
+import styled from 'styled-components'
+import { Cards } from './ProjectCards/Cards'
 
 const Container = styled.div`
   max-width: 800px;
@@ -12,7 +11,7 @@ const Container = styled.div`
     max-width: 400px;
     margin: 0 auto;
   }
-`;
+`
 
 const FlexContainer = styled.div`
   display: flex;
@@ -30,21 +29,19 @@ const FlexContainer = styled.div`
       display: block;
     }
   }
-`;
+`
 
-const Projects = () => {
+export function Projects() {
   return (
     <Container>
-      <h5 style={{ fontSize: "1.5rem", marginTop: "50px", marginLeft:"0.85rem" }}>Dream it.</h5>
-      <h4 style={{ marginLeft: "2rem", fontSize: "2rem" }}>Believe it.</h4>
-      <h3 style={{ marginLeft: "4rem", fontSize: "2.5rem" }}>Build it.</h3>
-      <div style={{ marginTop: "2rem" }}> </div>
+      <h5 style={{ fontSize: '1.5rem', marginTop: '50px', marginLeft: '0.85rem' }}>Dream it.</h5>
+      <h4 style={{ marginLeft: '2rem', fontSize: '2rem' }}>Believe it.</h4>
+      <h3 style={{ marginLeft: '4rem', fontSize: '2.5rem' }}>Build it.</h3>
+      <div style={{ marginTop: '2rem' }}> </div>
 
       <FlexContainer>
-        <Cards/>
+        <Cards />
       </FlexContainer>
     </Container>
-  );
-};
-
-export default Projects;
+  )
+}

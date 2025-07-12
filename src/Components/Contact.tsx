@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { FormEvent, useState } from 'react'
 import styled from 'styled-components'
 
 import emailjs from 'emailjs-com'
@@ -21,14 +21,14 @@ const Triangle = styled.div`
   }
 `
 
-export default function ContactUs() {
+export function Contact() {
   const [sent, setSent] = useState(false)
   const [sending, setSending] = useState(false)
   const [error, setError] = useState(false)
 
   const activeSpinner = sending ? 'active' : ''
 
-  function sendEmail(e) {
+  function sendEmail(e: FormEvent<HTMLFormElement> | any) {
     e.preventDefault()
     setSending(true)
 
@@ -74,74 +74,60 @@ export default function ContactUs() {
         margin: 'auto',
         padding: '0 15px 15px',
         borderRadius: '10px',
-        minHeight: '300px'
+        minHeight: '300px',
       }}
     >
       <Triangle />
 
-      {sent === false && error === false ? (
+      {!sent && !error ? (
         <>
           <h2
-            className="ui container large header"
-            id="contact"
+            className='ui container large header'
+            id='contact'
             style={{
-              marginBottom: '1rem'
+              marginBottom: '1rem',
             }}
           >
             Get in Touch
           </h2>
-          <div className="ui container">
-            <form className="ui form" onSubmit={sendEmail}>
-              <input type="hidden" name="contact_number" />
-              <div className="field">
+          <div className='ui container'>
+            <form className='ui form' onSubmit={sendEmail}>
+              <input type='hidden' name='contact_number' />
+              <div className='field'>
                 <label>Name</label>
-                <input
-                  required
-                  type="text"
-                  name="user_name"
-                  placeholder="First Last"
-                />
+                <input required type='text' name='user_name' placeholder='First Last' />
               </div>
-              <div className="field">
+              <div className='field'>
                 <label>Email</label>
                 <input
                   required
-                  className="field"
-                  type="email"
-                  name="user_email"
-                  placeholder="email@example.com"
+                  className='field'
+                  type='email'
+                  name='user_email'
+                  placeholder='email@example.com'
                   style={{ padding: '5px' }}
                 />
               </div>
-              <div className="field">
+              <div className='field'>
                 <label>Message</label>
 
-                <textarea
-                  required
-                  className="field"
-                  name="message"
-                  placeholder="Write your message here."
-                />
+                <textarea required className='field' name='message' placeholder='Write your message here.' />
               </div>
 
-              <div className="field">
+              <div className='field'>
                 <input
-                  className="ui button teal"
-                  type="submit"
+                  className='ui button teal'
+                  type='submit'
                   disabled={sending}
                   value={!sending ? 'Send' : 'Sending...'}
                 />
               </div>
-              <div className={`ui medium text loader ${activeSpinner}`}>
-                Sending
-              </div>
+              <div className={`ui medium text loader ${activeSpinner}`}>Sending</div>
             </form>
           </div>
         </>
       ) : (
-        <div style={{ textAlign: 'center', marginTop: '50px' }}>
-          {showMessage()}
-        </div>
+        <div style={{ textAlign: 'center', marginTop: '50px' }}>{showMessage()}</div>
       )}
     </div>
   )

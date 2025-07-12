@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import Burger from "./Burger";
+import React from 'react'
+import styled from 'styled-components'
+import { Burger } from './Burger'
 
 const Nav = styled.nav`
   width: 100%;
@@ -12,18 +12,16 @@ const Nav = styled.nav`
 
   .logo {
     padding: 15px 0;
-    font-family:"Poppins";
-    font-size:2rem;
+    font-family: 'Poppins';
+    font-size: 2rem;
   }
-`;
+`
 
-const Navbar = () => {
+export function Navbar() {
   return (
     <Nav>
-      <div className="logo">Rebecca</div>
+      <div className='logo'>Rebecca</div>
       <Burger />
     </Nav>
-  );
-};
-
-export default Navbar;
+  )
+}

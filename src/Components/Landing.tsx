@@ -1,14 +1,12 @@
-import React, { useRef, useEffect } from "react";
-// import { useHistory } from "react-router-dom";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import styled from "styled-components";
-import fluffybg from "../assets/fluffybg.jpeg"
+import { useRef, useEffect, RefObject } from 'react'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import styled from 'styled-components'
+import fluffybg from '../assets/fluffybg.jpeg'
 
-
-import { projectData } from "./ProjectCards/projectData";
-import Card from "./ProjectCards/Card";
-import Contact from "./Contact";
+import { projectData } from './ProjectCards/projectData'
+import { Card } from './ProjectCards/Card'
+import { Contact } from './Contact'
 
 const Container = styled.div`
   max-width: 800px;
@@ -20,7 +18,7 @@ const Container = styled.div`
     max-width: 400px;
     margin: 0 auto;
   }
-`;
+`
 
 const FlexContainer = styled.div`
   display: flex;
@@ -37,7 +35,7 @@ const FlexContainer = styled.div`
       display: block;
     }
   }
-`;
+`
 
 const Me = styled.div`
   border-radius: 5px;
@@ -68,58 +66,57 @@ const Me = styled.div`
       font-size: 1.2rem;
     }
   }
-`;
+`
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger)
 
-const Landing = () => {
-  // const history = useHistory();
+export function Landing() {
+  const cardsRef = useRef(null) as RefObject<HTMLDivElement | null>
+  const topRef: RefObject<HTMLDivElement | null> = useRef(null)
+  const headRef: RefObject<HTMLDivElement | null> = useRef(null)
 
-  const cardsRef = useRef(null);
-  const topRef = useRef(null);
-  const headRef = useRef(null);
+  const project1 = projectData[0]
+  const project2 = projectData[1]
+  const project3 = projectData[2]
 
-  const project1 = projectData[0];
-  const project2 = projectData[1];
-  const project3 = projectData[2];
-
-  const animation = (ref) => {
+  const animation = (ref: RefObject<HTMLDivElement | null>) => {
     return {
       duration: 0.75,
       autoAlpha: 0,
       y: 10,
-      ease: "power4.in",
+      ease: 'power4.in',
       scrollTrigger: {
         trigger: ref.current,
-        start: "top center+=200",
+        start: 'top center+=200',
       },
-    };
-  };
+    }
+  }
 
   useEffect(() => {
-    gsap.from(cardsRef.current, animation(cardsRef));
-    gsap.from(topRef.current, animation(topRef));
+    console.log('%cWelcome! %cHappy to see you!', 'font-weight:bold', 'color: teal')
+
+    gsap.from(cardsRef.current, animation(cardsRef))
+    gsap.from(topRef.current, animation(topRef))
     gsap.from(headRef.current, {
       duration: 1,
       x: 200,
       scrollTrigger: {
         trigger: headRef.current,
-        start: "top center+=200",
+        start: 'top center+=200',
       },
-    });
-
-  }, []);
+    })
+  }, [])
 
   return (
     <Container>
-      <div style={{ marginTop: "50px" }}>
+      <div style={{ marginTop: '50px' }}>
         <div
-          className="ui container"
+          className='ui container'
           style={{
-            marginTop: "7rem",
-            maxWidth: "750px",
-            padding: "2px",
-            marginBottom: "1rem",
+            marginTop: '7rem',
+            maxWidth: '750px',
+            padding: '2px',
+            marginBottom: '1rem',
           }}
         >
           <h2> Hi,</h2>
@@ -128,51 +125,45 @@ const Landing = () => {
         <Me ref={topRef}>
           <div
             style={{
-              backgroundColor: "rgba(255,255,255, 0.75)",
+              backgroundColor: 'rgba(255,255,255, 0.75)',
             }}
           >
-            <div
-              ref={headRef}
-              className="ui container"
-              style={{ maxWidth: "750px", padding: "2px" }}
-            >
+            <div ref={headRef} className='ui container' style={{ maxWidth: '750px', padding: '2px' }}>
               <p>
-                I enjoy nature with my fluffy dog and <br />I love building
-                stuff with code.
+                I enjoy nature with my fluffy dog and <br />I love building stuff with code.
               </p>
             </div>
           </div>
         </Me>
         <FlexContainer>
-          <div className="textBox">
+          <div className='textBox'>
             <p>
               I’m a Software Engineer. I love learning and building.
               <br />
               <br />
-              As I’ve grown as a engineer, I've been mentored by senior
-              engineers who have raised my standards and expectations.
+              As I’ve grown as a engineer, I've been mentored by senior engineers who have raised my standards and
+              expectations.
             </p>
           </div>
-          <div className="textBox">
+          <div className='textBox'>
             <p>
-              I have experience building applications from the ground up, and
-              have learned to build reusable components, like the modals in my
-              project Opine. I keep learning to write better, cleaner code.{" "}
+              I have experience building applications from the ground up, and have learned to build reusable components,
+              like the modals in my project Opine. I keep learning to write better, cleaner code.{' '}
             </p>
           </div>
         </FlexContainer>
-        <div style={{ textAlign: "center" }}>
+        <div style={{ textAlign: 'center' }}>
           <div
-            className="ui teal small basic button"
+            className='ui teal small basic button'
             onClick={() => {
               // history.push("/about");
             }}
           >
-            My story{" "}
+            My story{' '}
           </div>
         </div>
       </div>
-      <div style={{ marginTop: "2rem" }} ref={cardsRef}>
+      <div style={{ marginTop: '2rem' }} ref={cardsRef}>
         <h2>What I've been working on </h2>
         <FlexContainer>
           <Card
@@ -198,20 +189,16 @@ const Landing = () => {
       <div>
         <Contact />
       </div>
-      <div style={{ margin: "0 auto", textAlign: "center" }}>
+      <div style={{ margin: '0 auto', textAlign: 'center' }}>
         <a
-          href="https://www.linkedin.com/in/swe-rebeccapage"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="ui basic teal basic icon button"
+          href='https://www.linkedin.com/in/swe-rebeccapage'
+          target='_blank'
+          rel='noopener noreferrer'
+          className='ui basic teal basic icon button'
         >
-          Let's connect on <i className="large linkedin icon"></i>
+          Let's connect on <i className='large linkedin icon'></i>
         </a>
       </div>
-      {console.log('%cWelcome! %cHappy to see you!', 'font-weight:bold', 'color: teal')}
-
     </Container>
-  );
-};
-
-export default Landing;
+  )
+}

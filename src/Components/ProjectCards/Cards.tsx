@@ -1,9 +1,7 @@
-import React from "react";
+import { Card } from './Card'
+import { projectData } from './projectData'
 
-import Card from "./Card";
-import { projectData } from "./projectData";
-
-const Cards = () => {
+export function Cards() {
   return projectData.map((obj, index) => {
     return (
       <div>
@@ -15,10 +13,8 @@ const Cards = () => {
           slug={obj.slug}
           key={index}
           index={index}
-       />
+        />
       </div>
-    );
-  });
-};
-
-export default Cards;
+    )
+  })
+}

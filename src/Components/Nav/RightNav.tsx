@@ -1,12 +1,12 @@
-import React from "react";
-import styled from "styled-components";
-import {Link} from 'react-router-dom'
+import React from 'react'
+import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 interface RightNavProps {
-  open: boolean;
-  set: (open: boolean) => void;
+  open: boolean
+  set: (open: boolean) => void
 }
-  const Ul = styled.ul<{ open: boolean }>`
+const Ul = styled.ul<{ open: boolean }>`
   list-style: none;
   display: flex;
   flex-flow: row nowrap;
@@ -26,14 +26,14 @@ interface RightNavProps {
     text-decoration: none;
     cursor: pointer;
   }
-  .links:hover{
-    color:#008891;
+  .links:hover {
+    color: #008891;
   }
 
   @media (max-width: 768px) {
     flex-flow: column nowrap;
     position: fixed;
-    transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
+    transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(100%)')};
     top: -20px;
     right: 0;
     height: 100vh;
@@ -43,7 +43,7 @@ interface RightNavProps {
     transition: transform 0.3s ease-in-out;
     justify-content: flex-start;
     border-bottom: none;
-    box-shadow: ${({ open }) => (open ? "-3px 0 3px #d3d3d3" : "none")};
+    box-shadow: ${({ open }) => (open ? '-3px 0 3px #d3d3d3' : 'none')};
     z-index: 19;
 
     .links {
@@ -51,51 +51,27 @@ interface RightNavProps {
       text-decoration: none;
     }
   }
-`;
+`
 
-const RightNav: React.FC<RightNavProps> = ({ open, set }) => {
-  // const history = useHistory();
-
+export function RightNav({ open, set }: RightNavProps) {
   return (
     <Ul open={open}>
-      <Link
-        className="links"
-        to="/"
-        onClick={() => set(!open)}
-      >
+      <Link className='links' to='/' onClick={() => set(!open)}>
         Home
       </Link>
-      <Link
-        className="links"
-        to="/about"
-        onClick={() => set(!open)}
-      >
+      <Link className='links' to='/about' onClick={() => set(!open)}>
         About
       </Link>
-      <Link
-        className="links"
-        to="/contact"
-        onClick={() => set(!open)}
-      >
+      <Link className='links' to='/contact' onClick={() => set(!open)}>
         Contact
       </Link>
-              <Link
-        className="links"
-        to="/projects"
-        onClick={() => set(!open)}
-              >
+      <Link className='links' to='/projects' onClick={() => set(!open)}>
         Projects
-              </Link>
+      </Link>
 
-
-      <a
-        className="links"
-        href="https://blog.rebeccapage.org"
-      >
+      <a className='links' href='https://blog.rebeccapage.org'>
         Blog
       </a>
     </Ul>
-  );
-};
-
-export default RightNav;
+  )
+}

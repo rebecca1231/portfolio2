@@ -1,12 +1,9 @@
-import React from "react";
-import Burger from "./Nav/Burger"
+import { Burger } from './Nav/Burger'
 
-
-const Header = () => {
+export function Header() {
   return (
-  <div>
+    <div>
       <Burger />
-      </div>)
-};
-
-export default Header;
+    </div>
+  )
+}

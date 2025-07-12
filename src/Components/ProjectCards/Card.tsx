@@ -1,6 +1,7 @@
-import React from "react";
+import React from 'react'
 // import { useHistory } from "react-router-dom";
-import styled from "styled-components";
+import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 const CarDiv = styled.div`
   max-width: 400px;
@@ -22,29 +23,27 @@ const CarDiv = styled.div`
       text-decoration: underline;
     }
   }
-`;
+`
 
-
-const Card = ({ title, image1, slug, description }) => {
-  // const history = useHistory();
+interface CardProps {
+  title: string
+  image1: string
+  slug: string
+  description: string
+}
+export function Card({ title, image1, slug, description }: CardProps) {
   return (
     <CarDiv key={title} id={title}>
-      <div className="image-box">
-        <img src={image1} alt="project" />
+      <div className='image-box'>
+        <img src={image1} alt='project' />
       </div>
       <div>
         <h3>{title}</h3>
         <p> {description} </p>
-        <p 
-        className="a-link"
-          style={{ color: "#585858", cursor:"pointer" }}
-          // onClick={() => history.push(`/projects/${slug}`)}
-        >
+        <Link className='a-link' style={{ color: '#585858' }} to={`/projects/${slug}`}>
           Learn More
-        </p>
+        </Link>
       </div>
     </CarDiv>
-  );
-};
-
-export default Card;
+  )
+}

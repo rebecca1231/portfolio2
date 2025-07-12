@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react'
+import styled from 'styled-components'
 
 const CardBox = styled.div`
   width: 500px;
@@ -17,7 +17,7 @@ const CardBox = styled.div`
 
   .links {
     display: flex;
-    padding:10px;
+    padding: 10px;
   }
 
   img {
@@ -36,65 +36,55 @@ const CardBox = styled.div`
   @media (min-width: 900px) {
     width: 800px;
   }
-`;
+`
 
-const SimpleCard = ({
-  title,
-  image1,
-  url,
-  description,
-  tech,
-  github,
-  details,
-  skill
-}) => {
+interface SimpleCardProps {
+  title: string
+  image1: string
+  url: string
+  description: string
+  tech: string
+  github: string
+  details: string
+  skill: string
+}
+
+export function SimpleCard({ title, image1, url, description, tech, github, details, skill }: SimpleCardProps) {
   return (
-    <CardBox key={title} id={title} >
-      <div className="image-box"  >
-        <img src={image1} alt="project" />
+    <CardBox key={title} id={title}>
+      <div className='image-box'>
+        <img src={image1} alt='project' />
       </div>
-      <div className="ui container text">
-        <h3 className="ui large header">{title}</h3>
+      <div className='ui container text'>
+        <h3 className='ui large header'>{title}</h3>
 
         <p>
           <strong>About: </strong>
           {details}
         </p>
         <p>
-        <strong>Skill: </strong>
-{skill}
-          </p>
+          <strong>Skill: </strong>
+          {skill}
+        </p>
         <p>
           <strong>Main Tools: </strong>
           {tech}
         </p>
-        <div className="links">
+        <div className='links'>
           {url ? (
             <>
-              <a
-                className="ui basic big button teal"
-                href={url}
-                target="_blank"
-                rel="noopener noreferrer"
-                >
+              <a className='ui basic big button teal' href={url} target='_blank' rel='noopener noreferrer'>
                 See Live Site
-              </a>{" "}
+              </a>{' '}
             </>
           ) : (
-            ""
+            ''
           )}
-          <a
-            className="ui basic big button"
-            href={github}
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Code <i className="github icon"></i>
+          <a className='ui basic big button' href={github} rel='noopener noreferrer' target='_blank'>
+            Code <i className='github icon'></i>
           </a>
         </div>
       </div>
     </CardBox>
-  );
-};
-
-export default SimpleCard;
+  )
+}
