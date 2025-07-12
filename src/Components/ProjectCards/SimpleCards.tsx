@@ -1,9 +1,7 @@
-import React from "react";
+import { SimpleCard } from './SimpleCard'
+import { projectData } from './projectData'
 
-import SimpleCard from "./SimpleCard";
-import { projectData } from "./projectData";
-
-const SimpleCards = () => {
+export function SimpleCards() {
   return projectData.map((obj) => {
     return (
       <div>
@@ -19,8 +17,6 @@ const SimpleCards = () => {
           details={obj.details}
         />
       </div>
-    );
-  });
-};
-
-export default SimpleCards;
+    )
+  })
+}

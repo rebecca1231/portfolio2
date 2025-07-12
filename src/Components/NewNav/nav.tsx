@@ -1,19 +1,15 @@
-import React from "react";
-import { useHistory } from "react-router-dom";
-import rebLogo from "../../rebLogo.jpg";
+import rebLogo from '../../assets/rebLogo.jpg'
 
-import navStyles from "./nav.module.scss";
+import navStyles from './nav.module.scss'
 
-const Header = () => {
-  const history = useHistory();
-
+export function Header() {
   return (
     <header className={navStyles.header}>
       <nav>
         <ul className={navStyles.navList}>
           <li>
-            <div className={navStyles.title} onClick={() => history.push("/")}>
-              <img src={rebLogo} alt="logo" className={navStyles.img} />
+            <div className={navStyles.title} onClick={() => {}}>
+              <img src={rebLogo} alt='logo' className={navStyles.img} />
             </div>
           </li>
 
@@ -21,7 +17,7 @@ const Header = () => {
             <div
               className={navStyles.navItem}
               activeClassName={navStyles.activeNavItem}
-              onClick={() => history.push("/about")}
+              onClick={() => history.push('/about')}
             >
               About
             </div>
@@ -30,7 +26,7 @@ const Header = () => {
             <div
               className={navStyles.navItem}
               activeClassName={navStyles.activeNavItem}
-              onClick={() => history.push("/contact")}
+              onClick={() => history.push('/contact')}
             >
               Contact
             </div>
@@ -39,7 +35,7 @@ const Header = () => {
             <div
               className={navStyles.navItem}
               activeClassName={navStyles.activeNavItem}
-              onClick={() => history.push("/projects")}
+              onClick={() => history.push('/projects')}
             >
               Projects
             </div>
@@ -48,7 +44,7 @@ const Header = () => {
             <a
               className={navStyles.navItem}
               activeClassName={navStyles.activeNavItem}
-              href="https://blog.rebeccahirai.com"
+              href='https://blog.rebeccapage.org'
             >
               Blog
             </a>
@@ -56,7 +52,5 @@ const Header = () => {
         </ul>
       </nav>
     </header>
-  );
-};
-
-export default Header;
+  )
+}
