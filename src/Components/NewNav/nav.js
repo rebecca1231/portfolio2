@@ -1,18 +1,18 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
-import rebLogo from "../../rebLogo.jpg";
+// import { useHistory } from "react-router-dom";
+import rebLogo from "../../assets/rebLogo.jpg";
 
 import navStyles from "./nav.module.scss";
 
 const Header = () => {
-  const history = useHistory();
+  // const history = useHistory();
 
   return (
     <header className={navStyles.header}>
       <nav>
         <ul className={navStyles.navList}>
           <li>
-            <div className={navStyles.title} onClick={() => history.push("/")}>
+            <div className={navStyles.title} onClick={()=>{}}>
               <img src={rebLogo} alt="logo" className={navStyles.img} />
             </div>
           </li>

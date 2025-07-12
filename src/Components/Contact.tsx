@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 import emailjs from 'emailjs-com'
 import { init } from 'emailjs-com'
-const ID = process.env.REACT_APP_ID
+const ID = 'ID'
 init(ID)
 
 const Triangle = styled.div`

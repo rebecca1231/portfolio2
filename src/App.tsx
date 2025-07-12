@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
@@ -11,21 +11,22 @@ import Opine from './Components/Projects/Opine'
 import "./styles/index.scss";
 import Boutique from "./Components/Projects/Boutique";
 import MovieQuiz from "./Components/Projects/MovieQuiz";
+import {Routes} from "react-router";
 
 
 function App() {
   return (
     <Router>
       <Header />
-      <Switch>
-        <Route path="/about" component={About} />
-        <Route path="/contact" component={Contact} /> 
-        <Route exact path="/" component={Landing} />
-        <Route exact path="/projects" component={Projects} />
-        <Route path="/projects/opine" component={Opine} />
-        <Route path="/projects/movie-quiz" component={MovieQuiz} />
-        <Route path="/projects/boutique" component={Boutique} />
-      </Switch>
+      <Routes>
+        <Route path="/about" Component={About} />
+        <Route path="/contact" Component={Contact} />
+        <Route  path="/" Component={Landing} />
+        <Route  path="/projects" Component={Projects} />
+        <Route path="/projects/opine" Component={Opine} />
+        <Route path="/projects/movie-quiz" Component={MovieQuiz} />
+        <Route path="/projects/boutique" Component={Boutique} />
+      </Routes>
       <Footer />
     </Router>
   );

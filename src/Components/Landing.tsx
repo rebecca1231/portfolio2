@@ -1,9 +1,10 @@
 import React, { useRef, useEffect } from "react";
-import { useHistory } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import styled from "styled-components";
-import fluffybg from "../fluffybg.jpeg";
+import fluffybg from "../assets/fluffybg.jpeg"
+
 
 import { projectData } from "./ProjectCards/projectData";
 import Card from "./ProjectCards/Card";
@@ -25,7 +26,6 @@ const FlexContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: space-between;
   flex-wrap: wrap;
   p {
     font-size: 1rem;
@@ -73,7 +73,7 @@ const Me = styled.div`
 gsap.registerPlugin(ScrollTrigger);
 
 const Landing = () => {
-  const history = useHistory();
+  // const history = useHistory();
 
   const cardsRef = useRef(null);
   const topRef = useRef(null);
@@ -165,7 +165,7 @@ const Landing = () => {
           <div
             className="ui teal small basic button"
             onClick={() => {
-              history.push("/about");
+              // history.push("/about");
             }}
           >
             My story{" "}
@@ -200,7 +200,7 @@ const Landing = () => {
       </div>
       <div style={{ margin: "0 auto", textAlign: "center" }}>
         <a
-          href="https://www.linkedin.com/in/rebeccahirai"
+          href="https://www.linkedin.com/in/swe-rebeccapage"
           target="_blank"
           rel="noopener noreferrer"
           className="ui basic teal basic icon button"

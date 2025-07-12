@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import RightNav from "./RightNav";
 
-const StyledBurger = styled.div`
+const StyledBurger = styled.div<{ open: boolean }>`
   width: 2rem;
   height: 2rem;
   position: fixed;

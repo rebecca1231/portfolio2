@@ -1,5 +1,5 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
 import styled from "styled-components";
 
 const CarDiv = styled.div`
@@ -26,7 +26,7 @@ const CarDiv = styled.div`
 
 
 const Card = ({ title, image1, slug, description }) => {
-  const history = useHistory();
+  // const history = useHistory();
   return (
     <CarDiv key={title} id={title}>
       <div className="image-box">
@@ -38,7 +38,7 @@ const Card = ({ title, image1, slug, description }) => {
         <p 
         className="a-link"
           style={{ color: "#585858", cursor:"pointer" }}
-          onClick={() => history.push(`/projects/${slug}`)}
+          // onClick={() => history.push(`/projects/${slug}`)}
         >
           Learn More
         </p>

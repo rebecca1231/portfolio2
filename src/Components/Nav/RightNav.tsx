@@ -1,8 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import { useHistory } from "react-router-dom";
+import {Link} from 'react-router-dom'
 
-const Ul = styled.ul`
+interface RightNavProps {
+  open: boolean;
+  set: (open: boolean) => void;
+}
+  const Ul = styled.ul<{ open: boolean }>`
   list-style: none;
   display: flex;
   flex-flow: row nowrap;
@@ -49,47 +53,41 @@ const Ul = styled.ul`
   }
 `;
 
-const RightNav = ({ open, set }) => {
-  const history = useHistory();
+const RightNav: React.FC<RightNavProps> = ({ open, set }) => {
+  // const history = useHistory();
 
   return (
     <Ul open={open}>
-      <div
+      <Link
         className="links"
-        onClick={() => {
-          history.push("/");
-          set(!open);
-        }}
+        to="/"
+        onClick={() => set(!open)}
       >
         Home
-      </div>
-      <div
+      </Link>
+      <Link
         className="links"
-        onClick={() => {
-          history.push("/about");
-          set(!open);
-        }}
+        to="/about"
+        onClick={() => set(!open)}
       >
         About
-      </div>
-      <div
+      </Link>
+      <Link
         className="links"
-        onClick={() => {
-          set(!open);
-          history.push("/contact");
-        }}
+        to="/contact"
+        onClick={() => set(!open)}
       >
         Contact
-      </div>
-      <div
+      </Link>
+              <Link
         className="links"
-        onClick={() => {
-          set(!open);
-          history.push("/projects");
-        }}
-      >
+        to="/projects"
+        onClick={() => set(!open)}
+              >
         Projects
-      </div>
+              </Link>
+
+
       <a
         className="links"
         href="https://blog.rebeccapage.org"

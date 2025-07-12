@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from 'react'
 import styled from 'styled-components'
 import { gsap } from 'gsap'
-import { useHistory } from 'react-router-dom'
+// import { useHistory } from 'react-router-dom'
 
-import wasabi from '../wasabi.webp'
+import wasabi from '../assets/wasabi.webp'
 
 const Container = styled.div`
   margin: 0 auto;
@@ -69,7 +69,7 @@ const Me = styled.div`
 `
 
 const About = () => {
-  const history = useHistory()
+  // const history = useHistory()
 
   const topRef = useRef(null)
   const wasabiRef = useRef(null)
@@ -132,7 +132,7 @@ const About = () => {
           <span
             target="_blank"
             rel="noopener noreferrer"
-            onClick={() => history.push('/projects/movie-quiz')}
+            // onClick={() => history.push('/projects/movie-quiz')}
           >
             here
           </span>
