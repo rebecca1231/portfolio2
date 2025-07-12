@@ -17,7 +17,6 @@ const FlexContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: space-between;
   flex-wrap: wrap;
   p {
     font-size: 1rem;

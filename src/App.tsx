@@ -1,4 +1,3 @@
-import React from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 import { Header } from './Components/Header'
@@ -13,7 +12,7 @@ import { Boutique } from './Components/Projects/Boutique'
 import { MovieQuiz } from './Components/Projects/MovieQuiz'
 import { Routes } from 'react-router'
 
-function App() {
+export function App() {
   return (
     <Router>
       <Header />
@@ -30,5 +29,3 @@ function App() {
     </Router>
   )
 }
-
-export default App
