@@ -619,6 +619,12 @@ pre tt:after {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
+.pr-2{
+  padding-right: 1rem;
+}
+.pl-2{
+  padding-left: 1rem;
+}
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;

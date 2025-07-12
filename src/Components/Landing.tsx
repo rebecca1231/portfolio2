@@ -10,16 +10,13 @@ import { Contact } from './Contact'
 import { Link } from 'react-router-dom'
 
 const Container = styled.div`
-  max-width: 1000px;
+  max-width: 1020px;
   margin: auto;
   color: #585858;
 
   .textBox {
     max-width: 500px;
     margin: 0 auto;
-  }
-  .px-2 {
-    padding: 0 10px;
   }
 `
 
@@ -28,13 +25,16 @@ const FlexContainer = styled.div`
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
+  gap: 20px;
   p {
     font-size: 1rem;
     line-height: 1.5;
     color: #707070;
+    margin: 10px;
 
-    @media (max-width: 750px) {
+    @media (max-width: 1000px) {
       display: block;
+      margin: 1rem auto;
     }
   }
 `
@@ -149,17 +149,15 @@ export function Landing() {
         <FlexContainer>
           <div className='textBox'>
             <p>
-              I’m a Software Engineer. I love learning and building.
-              <br />
-              <br />
-              As I’ve grown as a engineer, I've been mentored by senior engineers who have raised my standards and
-              expectations.
+              I'm a Software Engineer with expertise in mobile development, UI/UX design, and backend architecture. I
+              love learning and building scalable solutions that drive user success. As I've grown as an engineer, I've
+              been mentored by senior engineers who have raised my standards - and now I get to mentor others too.
             </p>
           </div>
           <div className='textBox'>
             <p>
-              I have experience building applications from the ground up, and have learned to build reusable components,
-              like the modals in my project Opine. I keep learning to write better, cleaner code.{' '}
+              I have experience building applications from the ground up - from full stack platforms to React Native
+              mobile apps. I keep learning to write better code faster, while helping my team do the same.
             </p>
           </div>
         </FlexContainer>
@@ -169,8 +167,9 @@ export function Landing() {
           </Link>
         </div>
       </div>
-      <div style={{ marginTop: '2rem' }} ref={cardsRef}>
+      <div className={'ui container'} style={{ marginTop: '2rem' }} ref={cardsRef}>
         <h2>What I've been working on </h2>
+
         <FlexContainer>
           <Card
             title={project1.title}

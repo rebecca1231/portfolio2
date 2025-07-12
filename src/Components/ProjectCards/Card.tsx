@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
 const CarDiv = styled.div`
-  max-width: 400px;
+  max-width: 500px;
   padding: 10px;
   margin: 0 auto 1rem;
   overflow: hidden;

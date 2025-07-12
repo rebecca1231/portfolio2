@@ -1,14 +1,11 @@
 import React, { useEffect, useRef } from 'react'
 import styled from 'styled-components'
 import { gsap } from 'gsap'
-// import { useHistory } from 'react-router-dom'
-
 import wasabi from '../assets/wasabi.webp'
-import { Link } from 'react-router-dom'
 
 const Container = styled.div`
   margin: 0 auto;
-  max-width: 800px;
+  max-width: 1000px;
   padding: 1rem;
   line-height: 1.5;
   font-size: 1rem;
@@ -73,17 +70,26 @@ export function About() {
   const topRef = useRef(null)
   const wasabiRef = useRef(null)
   useEffect(() => {
-    gsap.from(topRef.current, {
-      duration: 1,
+    gsap.set([topRef.current, topRef.current, wasabiRef.current], {
       autoAlpha: 0,
-      y: 20,
-      x: 20,
-    })
-    gsap.from(wasabiRef.current, {
-      duration: 1,
-      autoAlpha: 0,
+      y: 0,
+      x: 0,
     })
   }, [])
+  useEffect(() => {
+    if (topRef.current && wasabiRef.current) {
+      gsap.to(topRef.current, {
+        duration: 1,
+        autoAlpha: 1,
+        y: 20,
+        x: 20,
+      })
+      gsap.to(wasabiRef.current, {
+        duration: 1,
+        autoAlpha: 1,
+      })
+    }
+  }, [topRef.current, wasabiRef.current])
 
   return (
     <Container>
@@ -96,39 +102,38 @@ export function About() {
             and I love building stuff with code.
           </p>
         </div>
-        <div className='image-container' ref={wasabiRef}>
-          <img className='face' src={wasabi} alt='face' />
+        <div ref={wasabiRef}>
+          <img style={{ visibility: 'visible', opacity: 1 }} src={wasabi} alt='face' />
         </div>
       </Me>
       <div>
         <p>
-          My first experience with development was when I was 13. I made my own web page and had a lot of fun creating
-          styles. I would look at the source code of other sites and dissect how they worked. I used that knowledge to
-          make a hover effect with a racing rainbow background and bold white text that I was very proud of at the time.
+          I got into development by making my own web page and having a lot of fun creating styles. I would look at the
+          source code of other sites and dissect how they worked. I used that knowledge to make a hover effect with a
+          racing rainbow background and bold white text that I was very proud of at the time. Years later, I decided to
+          try learning JavaScript and got hooked.
+        </p>
+
+        <p>
+          <b className={'pr-2'}>What started as curiosity has become my career.</b>My experience spans modern frameworks
+          and technologies: React, React Native, Vue, TypeScript, Node.js, GraphQL, and C#/.NET. I've worked on
+          everything from interactive educational platforms to mobile apps, always focusing on creating solutions that
+          truly serve users.
         </p>
         <p>
-          Years later, I decided to try learning JavaScript and got hooked. I was looking for something new to learn,
-          and stumbled across freecodecamp. I started at the beginning with responsive web design, HTML and CSS.
-          Enjoying learning, I continued to Data Structures and Algorithms with JavaScript, and fell in love with
-          coding.{' '}
+          <b className={'pr-2'}>I love the problem-solving aspect of engineering </b>- whether it's refactoring legacy
+          code to improve performance, designing database schemas, or implementing dynamic data visualizations with D3.
+          There's something satisfying about taking complex requirements and turning them into clean, maintainable code.
         </p>
         <p>
-          The thing that’s really exciting about learning JavaScript is DOM manipulation and all the behind the scenes
-          action that make applications jump and dance. There’s a lot to do with data: getting it, and then charting,
-          listing, or sending it somewhere. It’s about wanting something to work a certain way and learning how to make
-          it happen. JavaScript is like a superpower.
+          <b className={'pr-2'}>I'm always learning and growing. </b>Recently, I've been diving deeper into system
+          design and architectural patterns, while also exploring how AI tools can enhance developer productivity. I
+          believe the best engineers are those who stay curious and adapt to new technologies while maintaining a strong
+          foundation in fundamentals.
         </p>
         <p>
-          I love to learn and grow. My latest project is a full stack quiz application. It consumes outside API data to
-          dynamically create fun quizzes. I built it with GraphQL, Node, and React. Please check it out{' '}
-          <Link target='_blank' rel='noopener noreferrer' to='/projects/movie-quiz'>
-            here
-          </Link>
-          .
-        </p>
-        <p>
-          I'm always interested in working with positive people on interesting projects. I'm currently writing front end
-          code with Vue for an awesome ed tech startup.
+          I'm always interested in working with positive people on interesting projects. Let's connect and see what we
+          can build together.
         </p>
       </div>
     </Container>
