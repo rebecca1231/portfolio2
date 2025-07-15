@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 import emailjs from 'emailjs-com'
 import { init } from 'emailjs-com'
-const ID = 'ID'
+const ID = import.meta.env.VITE_ID as string
 init(ID)
 
 const Triangle = styled.div`
