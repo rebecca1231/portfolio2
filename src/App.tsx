@@ -16,7 +16,7 @@ export function App() {
   return (
     <Router>
       <div className={'vertical-flex-container'}>
-        <div style={{ padding: 0, margin: '0 auto' }}>
+        <div className={'vertical-flex-main'}>
           <Header />
           <Routes>
             <Route path='/about' Component={About} />

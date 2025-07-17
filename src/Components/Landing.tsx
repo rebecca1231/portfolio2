@@ -114,14 +114,14 @@ export function Landing() {
 
   return (
     <Container>
-      <div className='ui container' style={{ marginTop: '5rem' }}>
+      <div style={{ marginTop: '5rem' }}>
         <div
           style={{
             maxWidth: '750px',
             padding: '10px',
           }}
         >
-          <h2 className={'ui header'}> Hi there! I'm Rebecca.</h2>
+          <h2> Hi there! I'm Rebecca.</h2>
         </div>
         <LandingImageWithText ref={topRef}>
           <div
@@ -159,7 +159,7 @@ export function Landing() {
           </Link>
         </div>
       </div>
-      <div className={'ui container'} style={{ marginTop: '2rem' }} ref={cardsRef}>
+      <div style={{ marginTop: '2rem' }} ref={cardsRef}>
         <h2 className={'ui header'} style={{ paddingLeft: '10px' }}>
           What I've been working on{' '}
         </h2>

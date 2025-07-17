@@ -68,7 +68,7 @@ export function Contact() {
       {!sent && !error ? (
         <div style={{ padding: '1rem 2rem', backgroundColor: '#fafafa' }}>
           <h2
-            className='ui container large header'
+            className='ui large header'
             id='contact'
             style={{
               marginBottom: '1rem',
