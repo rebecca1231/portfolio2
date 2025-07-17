@@ -61,16 +61,6 @@ const LandingImageWithText = styled.div`
     line-height: 1.5;
     padding: 10px;
   }
-
-  @media (max-width: 750px) {
-    margin-bottom: 0.5rem;
-    background-size: 700px auto;
-    background-position: top;
-
-    p {
-      font-size: 1.2rem;
-    }
-  }
 `
 
 gsap.registerPlugin(ScrollTrigger)
