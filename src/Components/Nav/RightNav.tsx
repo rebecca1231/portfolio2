@@ -13,8 +13,8 @@ const Ul = styled.ul<{ open: boolean }>`
   font-size: 1rem;
   justify-content: flex-end;
   position: fixed;
-  right: 10px;
-  top: 0;
+  right: 25px;
+  top: 15px;
   margin: 0;
   z-index: 20;
   background-color: #fff;

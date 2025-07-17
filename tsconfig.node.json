@@ -4,5 +4,7 @@
     "module": "es2022",
     "moduleResolution": "node"
   },
-  "include": ["vite.config.ts"]
+  "include": [
+    "vite.config.js"
+  ]
 }

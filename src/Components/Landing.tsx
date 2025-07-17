@@ -17,6 +17,10 @@ const Container = styled.div`
   .textBox {
     max-width: 500px;
     margin: 0 auto;
+    font-size: 2rem;
+    p {
+      font-size: 1.1rem;
+    }
   }
 `
 
@@ -39,7 +43,7 @@ const FlexContainer = styled.div`
   }
 `
 
-const Me = styled.div`
+const LandingImageWithText = styled.div`
   border-radius: 5px;
   max-width: 1000px;
   margin: auto;
@@ -47,16 +51,15 @@ const Me = styled.div`
   background-repeat: no-repeat;
   background-size: 1000px auto;
   background-position: top;
-  height: 500px;
+  height: 450px;
   img {
     max-width: 10rem;
     border-radius: 10px;
   }
-
   p {
     font-size: 1.5rem;
     line-height: 1.5;
-    padding: 10px 0;
+    padding: 10px;
   }
 
   @media (max-width: 750px) {
@@ -73,8 +76,6 @@ const Me = styled.div`
 gsap.registerPlugin(ScrollTrigger)
 
 export function Landing() {
-  console.log('%cWelcome! %cHappy to see you!', 'font-weight:bold', 'color: teal')
-
   const cardsRef = useRef(null) as RefObject<HTMLDivElement | null>
   const topRef: RefObject<HTMLDivElement | null> = useRef(null)
   const headRef: RefObject<HTMLDivElement | null> = useRef(null)
@@ -82,6 +83,10 @@ export function Landing() {
   const project1 = projectData[0]
   const project2 = projectData[1]
   const project3 = projectData[2]
+
+  useEffect(() => {
+    // console.log('%cWelcome!', 'font-weight:bold;color: teal')
+  }, [])
 
   const animation = (ref: RefObject<HTMLDivElement | null>) => {
     return {
@@ -119,33 +124,30 @@ export function Landing() {
 
   return (
     <Container>
-      <div style={{ marginTop: '50px' }}>
+      <div className='ui container' style={{ marginTop: '5rem' }}>
         <div
-          className='ui container'
           style={{
-            marginTop: '7rem',
             maxWidth: '750px',
-            padding: '2px',
-            marginBottom: '1rem',
+            padding: '10px',
           }}
         >
-          <h2> Hi there! I'm Rebecca.</h2>
+          <h2 className={'ui header'}> Hi there! I'm Rebecca.</h2>
         </div>
-        <Me ref={topRef}>
+        <LandingImageWithText ref={topRef}>
           <div
             style={{
               backgroundColor: 'rgba(255,255,255, 0.75)',
             }}
           >
-            <div ref={headRef} className='ui container px-2' style={{ maxWidth: '750px', padding: '2px' }}>
-              <p className={'px-2'}>
+            <div ref={headRef} style={{ maxWidth: '750px' }}>
+              <p>
                 I love building stuff with code.
                 <br />
                 This is Emma. She helps.
               </p>
             </div>
           </div>
-        </Me>
+        </LandingImageWithText>
         <FlexContainer>
           <div className='textBox'>
             <p>
@@ -161,14 +163,16 @@ export function Landing() {
             </p>
           </div>
         </FlexContainer>
-        <div style={{ textAlign: 'center' }}>
+        <div style={{ textAlign: 'center', marginTop: '2rem' }}>
           <Link className='ui teal small basic button' to='/about'>
             My story
           </Link>
         </div>
       </div>
       <div className={'ui container'} style={{ marginTop: '2rem' }} ref={cardsRef}>
-        <h2>What I've been working on </h2>
+        <h2 className={'ui header'} style={{ paddingLeft: '10px' }}>
+          What I've been working on{' '}
+        </h2>
 
         <FlexContainer>
           <Card

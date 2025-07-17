@@ -2,15 +2,10 @@ import styled from 'styled-components'
 import { Cards } from './ProjectCards/Cards'
 
 const Container = styled.div`
-  max-width: 800px;
-  margin: auto;
+  max-width: 1020px;
+  margin-top: 100px;
+  margin-left: 0.85rem;
   color: #585858;
-
-  .textBox {
-    padding: 10px;
-    max-width: 400px;
-    margin: 0 auto;
-  }
 `
 
 const FlexContainer = styled.div`

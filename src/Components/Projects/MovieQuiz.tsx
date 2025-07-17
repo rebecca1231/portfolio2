@@ -1,4 +1,3 @@
-import React from 'react'
 import styled from 'styled-components'
 import dataPoster from '../../projectImages/movieQuiz-data-poster.png'
 import movieQuiz from '../../projectImages/movieQuiz.png'

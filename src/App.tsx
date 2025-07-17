@@ -7,7 +7,7 @@ import { Contact } from './Components/Contact'
 import { About } from './Components/About'
 import { Projects } from './Components/Projects'
 import { Opine } from './Components/Projects/Opine'
-import './styles/index.scss'
+import './styles/index.css'
 import { Boutique } from './Components/Projects/Boutique'
 import { MovieQuiz } from './Components/Projects/MovieQuiz'
 import { Routes } from 'react-router'
@@ -15,17 +15,21 @@ import { Routes } from 'react-router'
 export function App() {
   return (
     <Router>
-      <Header />
-      <Routes>
-        <Route path='/about' Component={About} />
-        <Route path='/contact' Component={Contact} />
-        <Route path='/' Component={Landing} />
-        <Route path='/projects' Component={Projects} />
-        <Route path='/projects/opine' Component={Opine} />
-        <Route path='/projects/movie-quiz' Component={MovieQuiz} />
-        <Route path='/projects/boutique' Component={Boutique} />
-      </Routes>
-      <Footer />
+      <div className={'vertical-flex-container'}>
+        <div className={'ui container'}>
+          <Header />
+          <Routes>
+            <Route path='/about' Component={About} />
+            <Route path='/contact' Component={Contact} />
+            <Route path='/' Component={Landing} />
+            <Route path='/projects' Component={Projects} />
+            <Route path='/projects/opine' Component={Opine} />
+            <Route path='/projects/movie-quiz' Component={MovieQuiz} />
+            <Route path='/projects/boutique' Component={Boutique} />
+          </Routes>
+        </div>
+        <Footer />
+      </div>
     </Router>
   )
 }

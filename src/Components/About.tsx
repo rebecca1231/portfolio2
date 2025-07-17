@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import styled from 'styled-components'
 import { gsap } from 'gsap'
 import wasabi from '../assets/wasabi.webp'
@@ -10,7 +10,6 @@ const Container = styled.div`
   font-size: 1rem;
   display: flex;
   flex-direction: column;
-  height: 80vh;
   color: #707070;
 
   span {
@@ -32,11 +31,6 @@ const Me = styled.div`
   margin-top: 2rem;
   height: auto;
 
-  .img-container {
-    width: 200px;
-    border-radius: 10%;
-    overflow: hidden;
-  }
   img {
     width: 200px;
     border-radius: 10%;

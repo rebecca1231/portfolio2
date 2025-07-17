@@ -1,4 +1,3 @@
-import React from 'react'
 import opine4 from '../../projectImages/opine4.jpg'
 import opine3 from '../../projectImages/opine3.png'
 import opineModal from '../../projectImages/opine-modal.png'

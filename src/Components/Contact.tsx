@@ -1,11 +1,24 @@
 import { FormEvent, useState } from 'react'
 
-import emailjs from 'emailjs-com'
-import { init } from 'emailjs-com'
+import emailjs, { init } from '@emailjs/browser'
 import { Container } from './Projects/MovieQuiz'
+import styled from 'styled-components'
 const ID = import.meta.env.VITE_ID as string
 init(ID)
 
+const Triangle = styled.div`
+  width: 0;
+  height: 0;
+  border-left: 500px solid transparent;
+  border-right: 500px solid transparent;
+  background: #fafafa;
+  border-top: 10vw solid #fff;
+
+  @media (max-width: 1000px) {
+    border-left: 50vw solid transparent;
+    border-right: 50vw solid transparent;
+  }
+`
 export function Contact() {
   const [sent, setSent] = useState(false)
   const [sending, setSending] = useState(false)
@@ -51,6 +64,7 @@ export function Contact() {
 
   return (
     <Container>
+      <Triangle />
       {!sent && !error ? (
         <div style={{ padding: '1rem 2rem', backgroundColor: '#fafafa' }}>
           <h2
@@ -64,7 +78,6 @@ export function Contact() {
           </h2>
           <div className='ui container'>
             <form className='ui form' onSubmit={sendEmail}>
-              <input type='hidden' name='contact_number' />
               <div className='field'>
                 <label>Name</label>
                 <input required type='text' name='user_name' placeholder='First Last' />
@@ -88,7 +101,6 @@ export function Contact() {
 
               <div className='field send-button'>
                 <button className='ui button teal' type='submit' disabled={sending}>
-                  {' '}
                   {sending ? 'Sending...' : 'Send'}
                 </button>
               </div>
