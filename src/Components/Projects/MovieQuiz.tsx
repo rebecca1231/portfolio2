@@ -6,7 +6,7 @@ import pie from '../../projectImages/movieQuiz-pie.png'
 import quizzes from '../../projectImages/movieQuiz-quizzes.png'
 import finished from '../../projectImages/movieQuiz-finished-quiz.png'
 
-const Container = styled.div`
+export const Container = styled.div`
   max-width: 1000px;
   margin: 5rem auto;
   color: #585858;
@@ -35,7 +35,7 @@ const Container = styled.div`
   img {
     max-width: 25rem;
     align-self: center;
-    box-shadow: 0px 2px 5px #c0c0c0;
+    box-shadow: 0 2px 5px #c0c0c0;
     margin: 20px;
   }
   .mobile-image {

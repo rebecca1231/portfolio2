@@ -5,10 +5,10 @@ import opineModal from '../../projectImages/opine-modal.png'
 import opineMobile from '../../projectImages/opine-mobile.png'
 import { Container } from './MovieQuiz'
 
-export function Opine() {
+export function HexGridGame() {
   return (
     <Container>
-      <h1>Opine</h1>
+      <h1>Hex Grid Game</h1>
       <div className='flex'>
         <div>
           <h3>Overview</h3>
@@ -35,7 +35,6 @@ export function Opine() {
       </div>
       <div className='flex'>
         <div style={{ margin: '1rem' }}>
-          {' '}
           <h3>Full Stack Implications</h3>
           <p>
             A major challenge in building Opine was linking my Node/Express backend to the user facing frontend. I
@@ -84,13 +83,8 @@ export function Opine() {
           <h4>Links</h4>
           <ul>
             <li>
-              <a href='https://opine.app' rel='noopener noreferrer' target='_blank'>
-                Live Site
-              </a>
-            </li>
-            <li>
               <a href='https://www.github.com/rebecca1231/opine' rel='noopener noreferrer' target='_blank'>
-                Code{' '}
+                Code
               </a>
             </li>
           </ul>

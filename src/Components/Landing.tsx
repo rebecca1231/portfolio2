@@ -194,7 +194,7 @@ export function Landing() {
       <div>
         <Contact />
       </div>
-      <div style={{ margin: '0 auto', textAlign: 'center' }}>
+      <div style={{ margin: '1rem auto', textAlign: 'center' }}>
         <a
           href='https://www.linkedin.com/in/rebeccapage-swe'
           target='_blank'

@@ -4,14 +4,13 @@ import { gsap } from 'gsap'
 import wasabi from '../assets/wasabi.webp'
 
 const Container = styled.div`
-  margin: 0 auto;
+  margin: 2rem auto;
   max-width: 1000px;
-  padding: 1rem;
   line-height: 1.5;
   font-size: 1rem;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  height: 80vh;
   color: #707070;
 
   span {

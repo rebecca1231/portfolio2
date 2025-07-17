@@ -1,59 +1,8 @@
-import styled from 'styled-components'
 import fluff2 from '../../projectImages/fluff2.png'
 import fluff3 from '../../projectImages/fluff3.png'
 import fluff1 from '../../projectImages/fluff1.png'
+import { Container } from './MovieQuiz'
 
-const Container = styled.div`
-  max-width: 1000px;
-  margin: 5rem auto;
-  color: #585858;
-  line-height: 1.5;
-  ul {
-    list-style-type: none;
-    font-size: 1rem;
-  }
-  a {
-    color: #585858;
-  }
-  a:hover {
-    text-decoration: underline;
-  }
-  p {
-    padding: 10px;
-    max-width: 500px;
-    font-size: 0.9rem;
-  }
-  .flex {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-  }
-
-  img {
-    max-width: 28rem;
-    box-shadow: 0px 2px 5px #c0c0c0;
-    margin: 20px;
-  }
-  .mobile-image {
-    max-width: 15rem;
-  }
-  .distance {
-    margin-top: 1rem;
-  }
-
-  @media (max-width: 750px) {
-    padding: 10px;
-    margin: 2rem auto;
-
-    .flex {
-      flex-direction: column;
-    }
-
-    img {
-      max-width: 15rem;
-    }
-  }
-`
 export function Boutique() {
   return (
     <Container>

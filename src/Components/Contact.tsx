@@ -1,25 +1,10 @@
 import { FormEvent, useState } from 'react'
-import styled from 'styled-components'
 
 import emailjs from 'emailjs-com'
 import { init } from 'emailjs-com'
+import { Container } from './Projects/MovieQuiz'
 const ID = import.meta.env.VITE_ID as string
 init(ID)
-
-const Triangle = styled.div`
-  width: 0;
-  height: 0;
-  border-left: 400px solid transparent;
-  border-right: 400px solid transparent;
-
-  border-top: 10vw solid #fff;
-
-  @media (max-width: 750px) {
-    border-left: 45vw solid transparent;
-    border-right: 45vw solid transparent;
-    margin-top: 2rem;
-  }
-`
 
 export function Contact() {
   const [sent, setSent] = useState(false)
@@ -34,12 +19,10 @@ export function Contact() {
 
     emailjs.sendForm('service_ts0cbib', 'template_ymcpv5c', e.target, ID).then(
       (result) => {
-        console.log(result.text)
         setSent(true)
         setSending(false)
       },
       (error) => {
-        console.log(error.text)
         setSending(false)
         setError(true)
       }
@@ -49,10 +32,10 @@ export function Contact() {
   function showMessage() {
     if (sent) {
       return (
-        <>
-          <h3 style={{ marginTop: '1rem' }}>Thanks for getting in touch!</h3>
+        <div style={{ paddingBottom: '2rem' }}>
+          <h3>Thanks for getting in touch!</h3>
           <h4>I'm looking forward to reading your message.</h4>
-        </>
+        </div>
       )
     }
     if (error) {
@@ -67,20 +50,9 @@ export function Contact() {
   }
 
   return (
-    <div
-      style={{
-        backgroundColor: '#fafafafa',
-        maxWidth: '800px',
-        margin: 'auto',
-        padding: '0 15px 15px',
-        borderRadius: '10px',
-        minHeight: '300px',
-      }}
-    >
-      <Triangle />
-
+    <Container>
       {!sent && !error ? (
-        <>
+        <div style={{ padding: '1rem 2rem', backgroundColor: '#fafafa' }}>
           <h2
             className='ui container large header'
             id='contact'
@@ -114,21 +86,19 @@ export function Contact() {
                 <textarea required className='field' name='message' placeholder='Write your message here.' />
               </div>
 
-              <div className='field'>
-                <input
-                  className='ui button teal'
-                  type='submit'
-                  disabled={sending}
-                  value={!sending ? 'Send' : 'Sending...'}
-                />
+              <div className='field send-button'>
+                <button className='ui button teal' type='submit' disabled={sending}>
+                  {' '}
+                  {sending ? 'Sending...' : 'Send'}
+                </button>
               </div>
               <div className={`ui medium text loader ${activeSpinner}`}>Sending</div>
             </form>
           </div>
-        </>
+        </div>
       ) : (
         <div style={{ textAlign: 'center', marginTop: '50px' }}>{showMessage()}</div>
       )}
-    </div>
+    </Container>
   )
 }
