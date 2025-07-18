@@ -1,5 +1,4 @@
 import React from 'react'
-// import { useHistory } from "react-router-dom";
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
@@ -23,6 +22,10 @@ const CarDiv = styled.div`
       text-decoration: underline;
     }
   }
+  .image-box {
+    min-height: 300px;
+    margin: 0 auto;
+  }
 `
 
 interface CardProps {
@@ -34,9 +37,7 @@ interface CardProps {
 export function Card({ title, image1, slug, description }: CardProps) {
   return (
     <CarDiv key={title} id={title}>
-      <div className='image-box'>
-        <img src={image1} alt='project' />
-      </div>
+      <div className='image-box'>{image1 ? <img src={image1} alt='project' /> : <h2> WIP </h2>}</div>
       <div>
         <h3>{title}</h3>
         <p> {description} </p>
