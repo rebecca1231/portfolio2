@@ -123,21 +123,19 @@ export function Landing() {
         >
           <h2> Hi there! I'm Rebecca.</h2>
         </div>
-        <LandingImageWithText ref={topRef}>
-          <div
-            style={{
-              backgroundColor: 'rgba(255,255,255, 0.75)',
-            }}
-          >
-            <div ref={headRef} style={{ maxWidth: '750px' }}>
-              <p>
-                I love building stuff with code.
-                <br />
-                This is Emma. She helps.
-              </p>
-            </div>
-          </div>
-        </LandingImageWithText>
+        {/*<LandingImageWithText ref={topRef}>*/}
+        {/*  <div*/}
+        {/*    style={{*/}
+        {/*      backgroundColor: 'rgba(255,255,255, 0.75)',*/}
+        {/*    }}*/}
+        {/*  >*/}
+        {/*    <div ref={headRef} style={{ maxWidth: '750px' }}>*/}
+        {/*      <p>*/}
+        {/*        <br />*/}
+        {/*      </p>*/}
+        {/*    </div>*/}
+        {/*  </div>*/}
+        {/*</LandingImageWithText>*/}
         <FlexContainer>
           <div className='textBox'>
             <p>
